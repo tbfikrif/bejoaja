@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">B370</string>
     <string name="loading">Loading</string>
+    <string name="logo">Logo</string>
+    <string name="welcomeText">Hai, Selamat Datang ;)\naku adalah seseorang yang\nbisa melakukan segalahal\nhanya dengan melalui sms</string>
+    <string name="wall">wall</string>
+    <string name="table">table</string>
+    <string name="btnplay">Play</string>
 </resources>
