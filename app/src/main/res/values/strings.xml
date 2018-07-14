@@ -6,4 +6,7 @@
     <string name="wall">wall</string>
     <string name="table">table</string>
     <string name="btnplay">Play</string>
+    <string name="quest">Quest</string>
+    <string name="berbohong">Berbohong</string>
+    <string name="tanda_tanya">\???</string>
 </resources>
