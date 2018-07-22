@@ -1,13 +1,13 @@
 package com.babage.b370;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class SplashScreenTemp extends AppCompatActivity {
+public class SplashScreenTemp extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -54,6 +54,7 @@ public class QuestActivity extends Activity {
 
             @Override
             public void onClick(View v) {
+                dialog.dismiss();
                 Intent intent = new Intent(QuestActivity.this, LevelOne.class);
                 startActivity(intent);
             }

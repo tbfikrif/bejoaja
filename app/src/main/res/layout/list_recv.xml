@@ -13,7 +13,7 @@
         android:text=""
 
         android:padding="10dp"
-        android:textColor="#ffffff"
+        android:textColor="@android:color/white"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="10dp"
         app:arrowWidth="8dp"
@@ -21,7 +21,7 @@
         app:arrowHeight="8dp"
         app:arrowPosition="8dp"
         app:arrowLocation="right"
-        app:bubbleColor="#333699"
+        app:bubbleColor="@color/textColor"
         app:arrowCenter="true"
 
 

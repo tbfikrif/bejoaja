@@ -13,14 +13,14 @@
         android:id="@+id/bubbleChat"
         android:text=""
         android:padding="10dp"
-        android:textColor="#ffffff"
+        android:textColor="#2a292b"
         android:layout_marginBottom="10dp"
         app:arrowWidth="8dp"
         app:angle="8dp"
         app:arrowHeight="8dp"
         app:arrowPosition="8dp"
         app:arrowLocation="left"
-        app:bubbleColor="#7EC0EE"
+        app:bubbleColor="#eae9eb"
         app:arrowCenter="true"
 
 

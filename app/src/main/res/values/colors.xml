@@ -6,5 +6,6 @@
     <color name="textColor">#E51F28</color>
     <color name="rightMask">#EAE9E9</color>
     <color name="background">#222222</color>
+    <color name="backgroundThin">#4c4b4d</color>
     <color name="table">#492811</color>
 </resources>

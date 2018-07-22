@@ -8,6 +8,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
+    android:background="@color/background"
     tools:context=".LevelOne">
 
 
@@ -29,14 +30,14 @@
     <EditText android:id="@+id/e1"
 
         android:hint="Jawab"
-        android:textColorHint="#000000"
+        android:textColorHint="@android:color/white"
+        android:backgroundTint="@color/textColor"
         android:clickable="true"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-
 
         />
 
