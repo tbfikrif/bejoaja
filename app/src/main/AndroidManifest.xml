@@ -24,18 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashScreen">
-
-        </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".MainSmartphoneActivity">
-
-        </activity>
-        <activity android:name=".QuestActivity">
-
-        </activity>
+        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainSmartphoneActivity"></activity>
+        <activity android:name=".QuestActivity"></activity>
+        <activity android:name=".LevelOne"></activity>
     </application>
 
 </manifest>

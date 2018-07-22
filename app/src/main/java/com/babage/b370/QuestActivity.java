@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -43,7 +44,8 @@ public class QuestActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                dialog.dismiss();
+                Intent intent = new Intent(QuestActivity.this, LevelOne.class);
+                startActivity(intent);
             }
         });
 
