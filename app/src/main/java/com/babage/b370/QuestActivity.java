@@ -13,10 +13,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 public class QuestActivity extends Activity {
 
     final Context context = this;
+    Button Q2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,14 @@ public class QuestActivity extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_quest);
+        Q2 = (Button)findViewById(R.id.Q2);
+
+        Q2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                level2();
+            }
+        });
     }
 
     public void berbohongOnClick(View v){
@@ -49,6 +59,25 @@ public class QuestActivity extends Activity {
             }
         });
 
+
         dialog.show();
     }
+
+    public void level2(){
+        final DatabaseHelper dbHelper = new DatabaseHelper(this);
+        User user = dbHelper.queryUser("l1");
+        if (user != null) {
+            //Bundle mBundle = new Bundle();
+            //mBundle.putString("user", user.getValue());
+            Intent intent = new Intent(QuestActivity.this, LevelTwo.class);
+            //intent.putExtras(mBundle);
+            startActivity(intent);
+            Toast.makeText(QuestActivity.this, "Level Unlock ", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(QuestActivity.this, "Level Locked", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+
 }

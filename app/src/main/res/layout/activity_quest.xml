@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:text="@string/tanda_tanya"
+                android:text="BERBAIK"
                 android:textSize="30sp" />
 
             <Button

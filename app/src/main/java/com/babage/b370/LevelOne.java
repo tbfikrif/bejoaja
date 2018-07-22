@@ -81,6 +81,9 @@ public class LevelOne extends AppCompatActivity {
                     //masuk dialog ketiga
                     dialog3();
 
+                } else if (isi=="4"){
+
+                    doneSubmit();
                 }
 
 
@@ -425,6 +428,13 @@ public class LevelOne extends AppCompatActivity {
 
 
 
+    }
+
+    public void doneSubmit(){
+
+        final DatabaseHelper dbHelper = new DatabaseHelper(this);
+        dbHelper.addUser(new User("l1"));
+        Toast.makeText(LevelOne.this, "Level Done", Toast.LENGTH_SHORT).show();
     }
 
 }
