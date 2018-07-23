@@ -24,12 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashScreen" />
+        <activity android:name=".IntroScreen" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainSmartphoneActivity" />
         <activity android:name=".QuestActivity" />
-        <activity android:name=".LevelOne" />
-        <activity android:name=".LevelTwo"></activity>
+        <activity android:name=".LevelOne"
+            android:label="@string/quest1name"/>
+        <activity android:name=".LevelTwo"/>
     </application>
 
 </manifest>

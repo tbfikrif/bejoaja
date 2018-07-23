@@ -24,7 +24,7 @@ public class SplashScreenTemp extends Activity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), IntroScreen.class));
                 finish();
             }
         }, 3000L); //3000 L = 3 detik
