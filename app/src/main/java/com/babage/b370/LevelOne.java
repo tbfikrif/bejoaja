@@ -552,6 +552,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -566,6 +567,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -591,6 +593,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -605,6 +608,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -713,8 +717,6 @@ public class LevelOne extends AppCompatActivity {
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
 
-
-
             final CharSequence[] Q3 = {
                     "1900", "1902", "1920"
             };
@@ -742,6 +744,7 @@ public class LevelOne extends AppCompatActivity {
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                         startActivity(intent);
+                                        LevelOne.this.finish();
                                     }
                                 });
                                 AlertDialog aldiaer = aldia.create();
@@ -756,6 +759,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
                                 Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                 startActivity(intent);
+                                LevelOne.this.finish();
                             }
                         }, 4300); // Millisecond 1000 = 1 sec
 
@@ -881,6 +885,7 @@ public class LevelOne extends AppCompatActivity {
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                         startActivity(intent);
+                                        LevelOne.this.finish();
                                     }
                                 });
                                 AlertDialog aldiaer = aldia.create();
@@ -895,6 +900,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
                                 Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                 startActivity(intent);
+                                LevelOne.this.finish();
                             }
                         }, 4300); // Millisecond 1000 = 1 sec
 
@@ -945,6 +951,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -959,6 +966,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1083,6 +1091,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -1097,6 +1106,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1258,6 +1268,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -1272,6 +1283,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1296,6 +1308,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -1310,6 +1323,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1347,7 +1361,6 @@ public class LevelOne extends AppCompatActivity {
                 if (Q3[i]=="Nina")
                 {
 
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -1361,6 +1374,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -1375,6 +1389,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1485,6 +1500,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -1499,6 +1515,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1549,6 +1566,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -1563,6 +1581,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1686,6 +1705,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -1700,6 +1720,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1753,6 +1774,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -1767,6 +1789,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1793,6 +1816,7 @@ public class LevelOne extends AppCompatActivity {
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
+                                    LevelOne.this.finish();
                                 }
                             });
                             AlertDialog aldiaer = aldia.create();
@@ -1807,6 +1831,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                             startActivity(intent);
+                            LevelOne.this.finish();
                         }
                     }, 4300); // Millisecond 1000 = 1 sec
 
@@ -1910,10 +1935,12 @@ public class LevelOne extends AppCompatActivity {
                     Toast.makeText(LevelOne.this, "Level Done", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                     startActivity(intent);
+                    LevelOne.this.finish();
                 } else {
                     Toast.makeText(getApplicationContext(),"Misi Gagal Tersangka Melarikan diri",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                     startActivity(intent);
+                    LevelOne.this.finish();
                 }
             }
         });
