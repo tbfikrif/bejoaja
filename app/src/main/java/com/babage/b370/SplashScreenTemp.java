@@ -4,10 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Bundle;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.view.Window;
 import android.view.WindowManager;
 
 public class SplashScreenTemp extends Activity {
+
+    private static int WELCOME_TIMEOUT = 4000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +24,13 @@ public class SplashScreenTemp extends Activity {
 
         setContentView(R.layout.activity_splash_screen_temp);
 
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), IntroScreen.class));
+                Intent welcome = new Intent(SplashScreenTemp.this, IntroScreen.class);
+                startActivity(welcome);
                 finish();
             }
-        }, 3000L); //3000 L = 3 detik
+        }, WELCOME_TIMEOUT); //4000 L = 4 detik
     }
 }

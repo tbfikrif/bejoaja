@@ -4,65 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgmainmenu"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:alpha="0.8">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="@color/textColor"
-        android:textSize="100sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="283dp"
+            android:layout_height="320dp"
+            android:alpha="1"
+            android:src="@drawable/blood2" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="176dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="playGame"
-        android:text="Mulai"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:background="#000"
-        android:textColor="@color/textColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.318"
-        tools:text="Mulai" />
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="283dp"
+            android:layout_height="320dp"
+            android:alpha="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/blood3" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="176dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:onClick="exitGame"
-        android:text="Keluar"
-        android:textColor="#FFF"
-        android:background="#E51F28"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.014"
-        tools:text="Keluar" />
+        <TextView
+            android:id="@+id/gameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/decription"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/youmurdererbb_reg"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="150sp" />
+
+        <TextView
+            android:id="@+id/decription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mid"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:text="Chat Game : Die or Alive"
+            android:textSize="30sp"
+            android:textColor="#aaaaaa"
+            android:fontFamily="@font/youmurdererbb_reg"/>
+
+        <View
+            android:id="@+id/mid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/mid"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/blood1"
+            android:fontFamily="@font/youmurdererbb_reg"
+            android:onClick="playGame"
+            android:text="Mulai"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            tools:text="Mulai" />
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/playButton"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/blood1"
+            android:fontFamily="@font/youmurdererbb_reg"
+            android:onClick="exitGame"
+            android:text="Keluar"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            tools:text="Keluar" />
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

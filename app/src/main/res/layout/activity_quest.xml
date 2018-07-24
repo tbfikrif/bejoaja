@@ -21,94 +21,215 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/Q1"
-                android:textColor="#FFF"
-                android:background="#E51F28"
-                android:layout_width="200dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:onClick="berbohongOnClick"
-                android:text="Dead Chat"
-                android:textSize="30sp" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:background="@color/backgroundThin">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/topeng2"/>
 
-            <Button
-                android:textColor="#FFF"
-                android:background="#E51F28"
-                android:id="@+id/Q2"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:text="WHO AM I"
-                android:textSize="30sp" />
+                <Button
+                    android:id="@+id/Q1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="berbohongOnClick"
+                    android:text="Dead Chat"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/youmurdererbb_reg"
+                    android:textSize="50sp" />
+            </LinearLayout>
 
-            <Button
-                android:textColor="#FFF"
-                android:background="#E51F28"
-                android:id="@+id/Q3"
-                android:layout_width="200dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:text="@string/tanda_tanya"
-                android:textSize="30sp" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:background="@color/textColor">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/topeng2"/>
+                <Button
+                    android:id="@+id/Q2"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:text="WHO AM I"
+                    android:fontFamily="@font/youmurdererbb_reg"
+                    android:textSize="50sp" />
+            </LinearLayout>
 
-            <Button
-                android:textColor="#FFF"
-                android:background="#E51F28"
-                android:id="@+id/Q4"
-                android:layout_width="200dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:text="@string/tanda_tanya"
-                android:textSize="30sp" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:background="@color/backgroundThin">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/topeng2"/>
+                <Button
+                    android:id="@+id/Q3"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:text="@string/tanda_tanya"
+                    android:fontFamily="@font/youmurdererbb_reg"
+                    android:textSize="50sp" />
+            </LinearLayout>
 
-            <Button
-                android:textColor="#FFF"
-                android:background="#E51F28"
-                android:id="@+id/Q5"
-                android:layout_width="200dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:text="@string/tanda_tanya"
-                android:textSize="30sp" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:background="@color/textColor">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/topeng2"/>
+                <Button
+                    android:id="@+id/Q4"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:text="@string/tanda_tanya"
+                    android:fontFamily="@font/youmurdererbb_reg"
+                    android:textSize="50sp" />
+            </LinearLayout>
 
-            <Button
-                android:textColor="#FFF"
-                android:background="#E51F28"
-                android:id="@+id/Q6"
-                android:layout_width="200dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:text="@string/tanda_tanya"
-                android:textSize="30sp" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:background="@color/backgroundThin">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/topeng2"/>
+                <Button
+                    android:id="@+id/Q5"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:text="@string/tanda_tanya"
+                    android:fontFamily="@font/youmurdererbb_reg"
+                    android:textSize="50sp" />
+            </LinearLayout>
 
-            <Button
-                android:textColor="#FFF"
-                android:background="#E51F28"
-                android:id="@+id/Q7"
-                android:layout_width="200dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:text="@string/tanda_tanya"
-                android:textSize="30sp" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:background="@color/textColor">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/topeng2"/>
+                <Button
+                    android:id="@+id/Q6"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:text="@string/tanda_tanya"
+                    android:fontFamily="@font/youmurdererbb_reg"
+                    android:textSize="50sp" />
+            </LinearLayout>
 
-            <Button
-                android:textColor="#FFF"
-                android:background="#E51F28"
-                android:id="@+id/Q8"
-                android:layout_width="200dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:text="@string/tanda_tanya"
-                android:textSize="30sp" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:background="@color/backgroundThin">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/topeng2"/>
+                <Button
+                    android:id="@+id/Q7"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:text="@string/tanda_tanya"
+                    android:fontFamily="@font/youmurdererbb_reg"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:background="@color/textColor">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/topeng2"/>
+                <Button
+                    android:id="@+id/Q8"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/transparent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:text="@string/tanda_tanya"
+                    android:fontFamily="@font/youmurdererbb_reg"
+                    android:textSize="50sp" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
@@ -120,7 +241,8 @@
         android:text="Mission List"
         android:textStyle="bold"
         android:textColor="#E51F28"
-        android:textSize="48sp"
+        android:fontFamily="@font/youmurdererbb_reg"
+        android:textSize="80sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

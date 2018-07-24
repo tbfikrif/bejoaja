@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Bundle;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -32,6 +34,7 @@ public class IntroScreen extends Activity {
     public void ScreenTap(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         finish();
     }
 }
