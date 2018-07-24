@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
                 android:onClick="berbohongOnClick"
-                android:text="@string/berbohong"
+                android:text="Dead Chat"
                 android:textSize="30sp" />
 
             <Button
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:text="BERBAIK"
+                android:text="WHO AM I"
                 android:textSize="30sp" />
 
             <Button

@@ -1,6 +1,7 @@
 package com.babage.b370;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Handler;
 import android.util.AttributeSet;
 
@@ -31,6 +32,8 @@ public class TypeWriter extends android.support.v7.widget.AppCompatTextView {
                 mHandler.postDelayed(characterAdder, mDelay);
             } else {
                 typeDone = true;
+
+
             }
         }
     };

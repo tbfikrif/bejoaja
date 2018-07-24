@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#000</item>
+        <item name="android:textColor">#E51F28</item>
+        <item name="android:textColorPrimary">#E51F28</item>
+        <item name="textColorAlertDialogListItem">#E51F28</item>
+
+    </style>
+
 </resources>
