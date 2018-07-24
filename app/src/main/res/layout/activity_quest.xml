@@ -23,6 +23,8 @@
 
             <Button
                 android:id="@+id/Q1"
+                android:textColor="#FFF"
+                android:background="#E51F28"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -32,6 +34,8 @@
                 android:textSize="30sp" />
 
             <Button
+                android:textColor="#FFF"
+                android:background="#E51F28"
                 android:id="@+id/Q2"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -41,6 +45,8 @@
                 android:textSize="30sp" />
 
             <Button
+                android:textColor="#FFF"
+                android:background="#E51F28"
                 android:id="@+id/Q3"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -50,6 +56,8 @@
                 android:textSize="30sp" />
 
             <Button
+                android:textColor="#FFF"
+                android:background="#E51F28"
                 android:id="@+id/Q4"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -59,6 +67,8 @@
                 android:textSize="30sp" />
 
             <Button
+                android:textColor="#FFF"
+                android:background="#E51F28"
                 android:id="@+id/Q5"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -68,6 +78,8 @@
                 android:textSize="30sp" />
 
             <Button
+                android:textColor="#FFF"
+                android:background="#E51F28"
                 android:id="@+id/Q6"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -77,6 +89,8 @@
                 android:textSize="30sp" />
 
             <Button
+                android:textColor="#FFF"
+                android:background="#E51F28"
                 android:id="@+id/Q7"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -86,6 +100,8 @@
                 android:textSize="30sp" />
 
             <Button
+                android:textColor="#FFF"
+                android:background="#E51F28"
                 android:id="@+id/Q8"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -101,8 +117,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="@string/quest"
-        android:textColor="@android:color/white"
+        android:text="Mission List"
+        android:textStyle="bold"
+        android:textColor="#E51F28"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"

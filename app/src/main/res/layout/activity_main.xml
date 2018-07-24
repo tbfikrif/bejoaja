@@ -7,6 +7,7 @@
     android:background="@drawable/bgmainmenu"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -16,6 +17,7 @@
         android:textAlignment="center"
         android:textColor="@color/textColor"
         android:textSize="100sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +35,8 @@
         android:text="Mulai"
         android:textAlignment="center"
         android:textSize="30sp"
-        android:background="@color/backgroundThin"
-        android:textColor="@android:color/white"
+        android:background="#000"
+        android:textColor="@color/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +54,8 @@
         android:layout_marginTop="32dp"
         android:onClick="exitGame"
         android:text="Keluar"
+        android:textColor="#FFF"
+        android:background="#E51F28"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
