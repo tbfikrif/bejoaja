@@ -29,7 +29,8 @@
         <activity android:name=".MainSmartphoneActivity" />
         <activity android:name=".QuestActivity" />
         <activity android:name=".LevelOne"
-            android:label="@string/quest1name"/>
+            android:screenOrientation="portrait"
+            android:label="The Quiz"/>
         <activity android:name=".LevelTwo"/>
     </application>
 

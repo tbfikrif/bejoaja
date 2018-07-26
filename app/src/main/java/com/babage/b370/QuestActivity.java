@@ -76,6 +76,7 @@ public class QuestActivity extends Activity {
                 dialog.dismiss();
                 Intent intent = new Intent(QuestActivity.this, LevelOne.class);
                 startActivity(intent);
+                QuestActivity.this.finish();
             }
         });
 
@@ -92,6 +93,7 @@ public class QuestActivity extends Activity {
             Intent intent = new Intent(QuestActivity.this, LevelTwo.class);
             //intent.putExtras(mBundle);
             startActivity(intent);
+            QuestActivity.this.finish();
             Toast.makeText(QuestActivity.this, "Level Unlock ", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(QuestActivity.this, "Level Locked", Toast.LENGTH_SHORT).show();
