@@ -73,7 +73,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Selamat Datang Di Acara D ChatQuiz", true));
+                lstChat.add(new ChatModel("Selamat saudari Neysa, karena anda telah beruntung terpilih sebagai peserta the quiz berikutnya", true));
             }
         }, 2000); // Millisecond 1000 = 1 sec
 
@@ -86,7 +86,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Jika anda salah, anda akan terbunuh", true));
+                lstChat.add(new ChatModel("Aturan quiz ini cukup sederhana, yaitu jika anda salah menjawab, anda akan mati.", true));
             }
         }, 4000); // Millisecond 1000 = 1 sec
 
@@ -99,7 +99,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Mengerikan Bukan?", true));
+                lstChat.add(new ChatModel("Jangan terlalu dipikirkan karena bagaimanapun cepat atau lambat kematian akan menjemput kita bukan?", true));
             }
         }, 6000); // Millisecond 1000 = 1 sec
 
@@ -112,7 +112,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Yang cukup anda lakukan hanya membalas", true));
+                lstChat.add(new ChatModel("Karena sebenarnya kematian selalu tersenyum kepada kita dan yang bisa kita lakukan hanya tersenyum balik", true));
             }
         }, 8000); // Millisecond 1000 = 1 sec
 
@@ -125,7 +125,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("dan saya tidak menerima pertanyaan", true));
+                lstChat.add(new ChatModel("Baiklah, mungkin sekarang kita bisa menuju acara utama. Yang harus anda lakukan hanya menjawab semua pertanyaan yang saya berikan", true));
             }
         }, 10000); // Millisecond 1000 = 1 sec
 
@@ -138,7 +138,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Anda Sudah Siap?", true));
+                lstChat.add(new ChatModel("Jadi tidak ada yang perlu dikhawatirkan, kalau begitu anda sudah siap?", true));
             }
         }, 12000); // Millisecond 1000 = 1 sec
 
@@ -150,7 +150,6 @@ public class LevelOne extends AppCompatActivity {
 
             }
         }, 12100); // Millisecond 1000 = 1 sec
-
 
 
         e1.setOnClickListener(new View.OnClickListener() {
@@ -213,7 +212,7 @@ public class LevelOne extends AppCompatActivity {
         lstView.setDividerHeight(0);
 
         final CharSequence[] Q1 = {
-                "Saya Siap", "Tentu, saya menunggu pertanyaanya", "Boleh"
+                "Saya Siap", "Tentu", "Saya tidak mengerti"
         };
 
 
@@ -242,11 +241,11 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya Siap",false));
-                            lstChat.add(new ChatModel("Bagus, anda tenang sekali", true));
+                            lstChat.add(new ChatModel("Saya tidak begitu mengerti situasi ini, tapi saya siap",false));
+                            lstChat.add(new ChatModel("Wow, saya tau anda orang yang sangat bersemangat, tapi saya tidak tau anda bisa seberani ini ", true));
 
                         }
-                    }, 700); // Millisecond 1000 = 1 sec
+                    }, 600); // Millisecond 1000 = 1 sec
 
 
                     new Handler().postDelayed(new Runnable() {
@@ -259,9 +258,9 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya ikut senang mendengarnya", true));
+                            lstChat.add(new ChatModel("Saya terharu mengetahuinya", true));
                         }
-                    }, 2000); // Millisecond 1000 = 1 sec
+                    }, 2600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -272,25 +271,11 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Baiklah mari kita mulai", true));
+                            lstChat.add(new ChatModel("Saya punya firasat permainan ini akan menarik", true));
 
                         }
-                    }, 4000); // Millisecond 1000 = 1 sec
+                    }, 4600); // Millisecond 1000 = 1 sec
 
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                            lstView.setAdapter(adapter);
-                            lstView.setDivider(null);
-                            lstView.setDividerHeight(0);
-                            mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan pertama", true));
-                        }
-                    }, 6000); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -302,9 +287,23 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Apakah Hitler benci binatang?", true));
+                            lstChat.add(new ChatModel("Kalau begitu pertanyaan pertama adalah", true));
                         }
-                    }, 8000); // Millisecond 1000 = 1 sec
+                    }, 6600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", true));
+                        }
+                    }, 8600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -313,8 +312,7 @@ public class LevelOne extends AppCompatActivity {
                            e1.setEnabled(true);
                            e1.setHint("Jawab");
                         }
-                    }, 8100); // Millisecond 1000 = 1 sec
-
+                    }, 8601); // Millisecond 1000 = 1 sec
 
 
 
@@ -322,7 +320,7 @@ public class LevelOne extends AppCompatActivity {
                     alur="1a";
                 } else
 
-                if (Q1[i]=="Tentu, saya menunggu pertanyaanya")
+                if (Q1[i]=="Tentu")
                 {
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
@@ -343,10 +341,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tentu, saya menunggu pertanyaanya",false));
-                            lstChat.add(new ChatModel("Wah Anda bersemangat sekali", true));
+                            lstChat.add(new ChatModel("Tentu, saya sudah mengetahui sejak awal bahwa saya adalah korban berikutnya",false));
+                            lstChat.add(new ChatModel("Apa itu benar?, kalau begitu penilaian saya selama ini kepada anda salah", true));
                         }
-                    }, 2000); // Millisecond 1000 = 1 sec
+                    }, 600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -358,9 +356,9 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Berarti anda sudah siap mati", true));
+                            lstChat.add(new ChatModel("Saya hanya menduga bahwa anda hanya perempuan yang suka bermain dengan setiap laki-laki", true));
                         }
-                    }, 4000); // Millisecond 1000 = 1 sec
+                    }, 2600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -371,25 +369,11 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Baiklah Mari kita mulai", true));
+                            lstChat.add(new ChatModel("Baiklah mari kita mulai permainan mengasikkan ini", true));
 
                         }
-                    }, 6000); // Millisecond 1000 = 1 sec
+                    }, 4600); // Millisecond 1000 = 1 sec
 
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                            lstView.setAdapter(adapter);
-                            lstView.setDivider(null);
-                            lstView.setDividerHeight(0);
-                            mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan pertama", true));
-                        }
-                    }, 8000); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -401,9 +385,23 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Apakah Hitler benci binatang?", true));
+                            lstChat.add(new ChatModel("Pertanyaan KE-1", true));
                         }
-                    }, 10000); // Millisecond 1000 = 1 sec
+                    }, 6600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", true));
+                        }
+                    }, 8600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -412,7 +410,7 @@ public class LevelOne extends AppCompatActivity {
                             e1.setEnabled(true);
                             e1.setHint("Jawab");
                         }
-                    }, 10100); // Millisecond 1000 = 1 sec
+                    }, 8600); // Millisecond 1000 = 1 sec
 
 
                     isi="2";
@@ -420,7 +418,7 @@ public class LevelOne extends AppCompatActivity {
 
                 } else
 
-                if (Q1[i]=="Boleh")
+                if (Q1[i]=="Saya tidak mengerti")
                 {
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
@@ -439,10 +437,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Boleh",false));
-                            lstChat.add(new ChatModel("Anda kurang bersemangat", true));
+                            lstChat.add(new ChatModel("Tolong jelaskan ada apa ini?, kamu siapa?",false));
+                            lstChat.add(new ChatModel("Tidak ada apa-apa hanya saja malaikat maut tertarik kepada anda", true));
                         }
-                    }, 700); // Millisecond 1000 = 1 sec
+                    }, 600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -454,9 +452,9 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pasti karena anda selalu sendirian", true));
+                            lstChat.add(new ChatModel("Mungkin karena anda sealu menyakiti perasaan orang lain", true));
                         }
-                    }, 2700); // Millisecond 1000 = 1 sec
+                    }, 2600); // Millisecond 1000 = 1 sec
 
 
                     new Handler().postDelayed(new Runnable() {
@@ -468,10 +466,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Baiklah Mari kita mulai", true));
+                            lstChat.add(new ChatModel("atau karena anda adalah orang egois?. Tapi bagi saya pribadi, saya lebih setuju dengan alasan pertama.", true));
 
                         }
-                    }, 4700); // Millisecond 1000 = 1 sec
+                    }, 4600); // Millisecond 1000 = 1 sec
 
 
                     new Handler().postDelayed(new Runnable() {
@@ -484,9 +482,9 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan pertama", true));
+                            lstChat.add(new ChatModel("Tanpa berbasa-basi lebih lama, mari langsung saja ke pertanyaan pertama", true));
                         }
-                    }, 6700); // Millisecond 1000 = 1 sec
+                    }, 6600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -498,9 +496,9 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Apakah Hitler benci binatang?", true));
+                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", true));
                         }
-                    }, 8700); // Millisecond 1000 = 1 sec
+                    }, 8600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -509,7 +507,7 @@ public class LevelOne extends AppCompatActivity {
                             e1.setEnabled(true);
                             e1.setHint("Jawab");
                         }
-                    }, 8800); // Millisecond 1000 = 1 sec
+                    }, 8601); // Millisecond 1000 = 1 sec
 
 
                     isi="2";
@@ -520,7 +518,6 @@ public class LevelOne extends AppCompatActivity {
         });
         AlertDialog builder = alder.create();
         builder.show();
-
 
     }
 
@@ -535,16 +532,16 @@ public class LevelOne extends AppCompatActivity {
         lstView.setDividerHeight(0);
 
         final CharSequence[] Q2 = {
-                "Benci", "Tidak Peduli", "Penyayang"
+                "Orang Terdekat Anda", "Orang Lain", "Diri Anda Sendiri"
         };
 
 
-        AlertDialog.Builder alder = new AlertDialog.Builder(this,R.style.MyDialogTheme);
+        final AlertDialog.Builder alder = new AlertDialog.Builder(this,R.style.MyDialogTheme);
         alder.setTitle("");
         alder.setItems(Q2, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if (Q2[i]=="Benci")
+                if (Q2[i]=="Orang Terdekat Anda")
                 {
 
 
@@ -554,6 +551,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -577,14 +575,14 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
+                    }, 2500); // Millisecond 1000 = 1 sec
 
 
                     isi="3";
                     alur="2a";
                 } else
 
-                if (Q2[i]=="Tidak Peduli")
+                if (Q2[i]=="Orang Lain")
                 {
 
 
@@ -595,6 +593,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -618,14 +617,14 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
+                    }, 2500); // Millisecond 1000 = 1 sec
 
 
                     isi="3";
                     alur="2b";
                 } else
 
-                if (Q2[i]=="Penyayang")
+                if (Q2[i]=="Diri Anda Sendiri")
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
@@ -647,11 +646,11 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Penyayang",false));
-                            lstChat.add(new ChatModel("ding dong anda benar",true));
+                            lstChat.add(new ChatModel("Saya akan lebih memilih menyelamatkan diri saya sendiri",false));
+                            lstChat.add(new ChatModel("ding dong anda benar, ini baru neysa yang saya tau, seorang yang cantik dan egois",true));
 
                         }
-                    }, 4300); // Millisecond 1000 = 1 sec
+                    }, 600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -663,10 +662,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Selamat , kami tidak jadi meledakan rumah anda",true));
+                            lstChat.add(new ChatModel("Padahal saya pikir anda akan berpura-pura peduli terhadap orang lain, sayang sekali",true));
 
                         }
-                    }, 6300); // Millisecond 1000 = 1 sec
+                    }, 2600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -678,10 +677,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Baiklah pertanyaan selanjutnya",true));
+                            lstChat.add(new ChatModel("awal yang baik bagi anda, Mari menuju pertanyaan kedua ",true));
 
                         }
-                    }, 8300); // Millisecond 1000 = 1 sec
+                    }, 4600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -693,10 +692,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tahun berapa benito mussolini ke swiss?",true));
+                            lstChat.add(new ChatModel("Dari sekian banyak accessories, bagian mana yang paling anda suka?",true));
 
                         }
-                    }, 10300); // Millisecond 1000 = 1 sec
+                    }, 6600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -704,7 +703,7 @@ public class LevelOne extends AppCompatActivity {
                             e1.setEnabled(true);
                             e1.setHint("Jawab");
                         }
-                    }, 10400); // Millisecond 1000 = 1 sec
+                    }, 8600); // Millisecond 1000 = 1 sec
 
                     isi="3";
                     alur="2c";
@@ -726,7 +725,7 @@ public class LevelOne extends AppCompatActivity {
         lstView.setDividerHeight(0);
 
             final CharSequence[] Q3 = {
-                    "1900", "1902", "1920"
+                    "Tidak Suka", "Kalung", "Mana Saja"
             };
 
 
@@ -735,7 +734,7 @@ public class LevelOne extends AppCompatActivity {
             alder.setItems(Q3, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    if (Q3[i]=="1900")
+                    if (Q3[i]=="Tidak Suka")
                     {
 
                         new Handler().postDelayed(new Runnable() {
@@ -744,6 +743,7 @@ public class LevelOne extends AppCompatActivity {
 
                                 AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                                 aldia.setTitle("From : DeepSpeak Crop");
+                                aldia.setIcon(R.mipmap.ic_launcher_round);
                                 aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                                 aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
@@ -758,7 +758,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                             }
-                        }, 500); // Millisecond 1000 = 1 sec
+                        }, 600); // Millisecond 1000 = 1 sec
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -767,13 +767,13 @@ public class LevelOne extends AppCompatActivity {
                                 startActivity(intent);
                                 LevelOne.this.finish();
                             }
-                        }, 2500); // Millisecond 1000 = 1 sec
+                        }, 2600); // Millisecond 1000 = 1 sec
 
                         isi="4";
 
                     } else
 
-                    if (Q3[i]=="1902")
+                    if (Q3[i]=="Kalung")
                     {
 
                         ListView lstView = (ListView)findViewById(R.id.listView);
@@ -795,11 +795,11 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("1902",false));
-                                lstChat.add(new ChatModel("sepertinya anda penyuka sejarah",true));
+                                lstChat.add(new ChatModel("Saya meyukai kalung, karena saya pikir accessories itu adalah yang paling dekat dengan hati",false));
+                                lstChat.add(new ChatModel("Romantis sekali!, Tapi perkataan manis itu sudah saya dengar berkali-kali",true));
 
                             }
-                        }, 2000); // Millisecond 1000 = 1 sec
+                        }, 600); // Millisecond 1000 = 1 sec
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -811,10 +811,10 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Padahal anda pemalas",true));
+                                lstChat.add(new ChatModel("Sehingga saya bosan dan ingin muntah",true));
 
                             }
-                        }, 4000); // Millisecond 1000 = 1 sec
+                        }, 2600); // Millisecond 1000 = 1 sec
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -826,10 +826,10 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("tenang masih tersisa 6 pertanyaan lagi",true));
+                                lstChat.add(new ChatModel("hmm, maaf jika saya sedikit tidak sopan, saya hanya terbawa emosi",true));
 
                             }
-                        }, 6000); // Millisecond 1000 = 1 sec
+                        }, 4600); // Millisecond 1000 = 1 sec
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -841,10 +841,10 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("pertanyaan ke 3",true));
+                                lstChat.add(new ChatModel("Langsung saja kepertanyaan ke-3",true));
 
                             }
-                        }, 8000); // Millisecond 1000 = 1 sec
+                        }, 6600); // Millisecond 1000 = 1 sec
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -856,10 +856,10 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Berapa Jumlah Saudara Genghis khan?",true));
+                                lstChat.add(new ChatModel("Apakah anda pernah bertengkar dengan teman dekat anda?",true));
 
                             }
-                        }, 10000); // Millisecond 1000 = 1 sec
+                        }, 8600); // Millisecond 1000 = 1 sec
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -867,13 +867,13 @@ public class LevelOne extends AppCompatActivity {
                                 e1.setEnabled(true);
                                 e1.setHint("Jawab");
                             }
-                        }, 10100); // Millisecond 1000 = 1 sec
+                        }, 8601); // Millisecond 1000 = 1 sec
 
                         isi="4";
 
                     } else
 
-                    if (Q3[i]=="1920")
+                    if (Q3[i]=="Mana Saja")
                     {
 
                         new Handler().postDelayed(new Runnable() {
@@ -883,6 +883,7 @@ public class LevelOne extends AppCompatActivity {
 
                                 AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                                 aldia.setTitle("From : DeepSpeak Crop");
+                                aldia.setIcon(R.mipmap.ic_launcher_round);
                                 aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                                 aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
@@ -929,7 +930,7 @@ public class LevelOne extends AppCompatActivity {
 
 
         final CharSequence[] Q3 = {
-                "5", "8", "2"
+                "Pernah", "Tidak Pernah", "Tidak Mungkin"
         };
 
 
@@ -938,7 +939,7 @@ public class LevelOne extends AppCompatActivity {
         alder.setItems(Q3, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if (Q3[i]=="2")
+                if (Q3[i]=="Tidak Pernah")
                 {
 
 
@@ -949,6 +950,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -977,7 +979,7 @@ public class LevelOne extends AppCompatActivity {
 
                 } else
 
-                if (Q3[i]=="5")
+                if (Q3[i]=="Pernah")
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
@@ -998,11 +1000,11 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("5",false));
-                            lstChat.add(new ChatModel("Saya tidak menyangka",true));
+                            lstChat.add(new ChatModel("Semua orang pasti pernah bertengkar dengan orang lain, apalagi dengan teman dekat",false));
+                            lstChat.add(new ChatModel("Aduh mungkin pertanyaan saya terlalu mudah untuk dijawab, apa mungkin teman dekat anda itu adalah yang saya bunuh sebelumnya?",true));
 
                         }
-                    }, 2000); // Millisecond 1000 = 1 sec
+                    }, 600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1014,10 +1016,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Anda bisa sejauh ini",true));
+                            lstChat.add(new ChatModel("haha maaf, saya hanya teringat raut wajah mereka saat mereka akan mati, begitu menggairahkan",true));
 
                         }
-                    }, 4000); // Millisecond 1000 = 1 sec
+                    }, 2600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1029,10 +1031,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Masih tersisa 5 pertanyaan lagi",true));
+                            lstChat.add(new ChatModel("Jika anda ingin tersenyum, tidak masalah, karena mungkin hari ini adalah kesempatan terakhir anda untuk tersenyum",true));
 
                         }
-                    }, 6000); // Millisecond 1000 = 1 sec
+                    }, 4600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1044,10 +1046,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Jangan senang dulu",true));
+                            lstChat.add(new ChatModel("Masih banyak pertanyaan yang menunggu, relax lah sejenak",true));
 
                         }
-                    }, 8000); // Millisecond 1000 = 1 sec
+                    }, 6600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1059,10 +1061,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan berikutnya, berapa korban yang mati akibat chat ini?",true));
+                            lstChat.add(new ChatModel("Pertanyaan kali ini sedikit menarik, Mana yang kamu pilih Damian Atau Egiw?",true));
 
                         }
-                    }, 10000); // Millisecond 1000 = 1 sec
+                    }, 8600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1070,7 +1072,7 @@ public class LevelOne extends AppCompatActivity {
                             e1.setEnabled(true);
                             e1.setHint("Jawab");
                         }
-                    }, 10100); // Millisecond 1000 = 1 sec
+                    }, 8601); // Millisecond 1000 = 1 sec
 
 
 
@@ -1078,7 +1080,7 @@ public class LevelOne extends AppCompatActivity {
 
                 } else
 
-                if (Q3[i]=="8")
+                if (Q3[i]=="Tidak Mungkin")
                 {
 
                     new Handler().postDelayed(new Runnable() {
@@ -1088,185 +1090,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-                                }
-                            });
-                            AlertDialog aldiaer = aldia.create();
-                            aldia.show();
-
-
-                        }
-                    }, 500); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 2300); // Millisecond 1000 = 1 sec
-
-                    isi="5";
-
-                }
-            }
-        });
-        AlertDialog builder = alder.create();
-        builder.show();
-    }
-
-
-    public void dialog5() {
-        final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
-        ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
-        lstView.setAdapter(adapter);
-        lstView.setDivider(null);
-        lstView.setDividerHeight(0);
-
-        final CharSequence[] Q3 = {
-                "3", "5", "1"
-        };
-
-
-        AlertDialog.Builder alder = new AlertDialog.Builder(this,R.style.MyDialogTheme);
-        alder.setTitle("");
-        alder.setItems(Q3, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                if (Q3[i]=="3")
-                {
-
-                    ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                    lstView.setAdapter(adapter);
-                    lstView.setDivider(null);
-                    lstView.setDividerHeight(0);
-
-                    e1.setEnabled(false);
-                    e1.setHint("Tunggu");
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                            lstView.setAdapter(adapter);
-                            lstView.setDivider(null);
-                            lstView.setDividerHeight(0);
-                            mp.start();
-                            lstChat.add(new ChatModel("3",false));
-                            lstChat.add(new ChatModel("Wow, nampaknya saya sudah terkenal",true));
-
-                        }
-                    }, 2000); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                            lstView.setAdapter(adapter);
-                            lstView.setDivider(null);
-                            lstView.setDividerHeight(0);
-                            mp.start();
-                            lstChat.add(new ChatModel("tunggu saya 15 detik",true));
-
-                        }
-                    }, 4000); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                            lstView.setAdapter(adapter);
-                            lstView.setDivider(null);
-                            lstView.setDividerHeight(0);
-                            mp.start();
-                            lstChat.add(new ChatModel("terimakasih, karena sudah menunggu",true));
-
-                        }
-                    }, 19000); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                            lstView.setAdapter(adapter);
-                            lstView.setDivider(null);
-                            lstView.setDividerHeight(0);
-                            mp.start();
-                            lstChat.add(new ChatModel("disini memang dingin sekali",true));
-
-                        }
-                    }, 21000); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                            lstView.setAdapter(adapter);
-                            lstView.setDivider(null);
-                            lstView.setDividerHeight(0);
-                            mp.start();
-                            lstChat.add(new ChatModel("langsung saja",true));
-
-                        }
-                    }, 23000); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                            lstView.setAdapter(adapter);
-                            lstView.setDivider(null);
-                            lstView.setDividerHeight(0);
-                            mp.start();
-                            lstChat.add(new ChatModel("Siapa nama dibawah ini yang bukan teman anda?",true));
-
-                        }
-                    }, 25000); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            e1.setEnabled(true);
-                            e1.setHint("Jawab");
-                        }
-                    }, 25100); // Millisecond 1000 = 1 sec
-
-
-
-                    isi="6";
-
-                } else
-
-                if (Q3[i]=="5")
-                {
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1290,15 +1114,152 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
+                    }, 2500); // Millisecond 1000 = 1 sec
+
+                    isi="5";
+
+                }
+            }
+        });
+        AlertDialog builder = alder.create();
+        builder.show();
+    }
+
+
+    public void dialog5() {
+        final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
+        ListView lstView = (ListView)findViewById(R.id.listView);
+        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        lstView.setAdapter(adapter);
+        lstView.setDivider(null);
+        lstView.setDividerHeight(0);
+
+        final CharSequence[] Q3 = {
+                "Damian", "Egiw", "Tidak Keduanya"
+        };
+
+
+        AlertDialog.Builder alder = new AlertDialog.Builder(this,R.style.MyDialogTheme);
+        alder.setTitle("");
+        alder.setItems(Q3, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (Q3[i]=="Damian")
+                {
+
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    e1.setEnabled(false);
+                    e1.setHint("Tunggu");
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya memilih damian karena dia orang yang baik",false));
+                            lstChat.add(new ChatModel("Apakah itu benar?, saya sedikit terkejut, mungkin saya akan menyesali ini setelah berakhir",true));
+
+                        }
+                    }, 600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Tapi semuanya sudah terlanjur, meja sudah dibalik. Ah sebentar saya harus mengurus sesuatu, saya akan kembali dalam 15 detik",true));
+
+                        }
+                    }, 2600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("terimakasih, karena sudah menunggu, saya kira anda akan kabur, tapi itu percuma, karena saya selalu berada didekat anda",true));
+
+                        }
+                    }, 17600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("padahal waktu kita bersama itu menyenangkan ya?, tapi harus berakhir seperti ini, sudahlah.",true));
+
+                        }
+                    }, 19600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saatnya pertanyaan berikutnya",true));
+
+                        }
+                    }, 21600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Siapa nama dibawah ini yang bukan teman anda?, saya hanya ingin memastikan, karena saya mencurigai sesuatu",true));
+
+                        }
+                    }, 23600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            e1.setEnabled(true);
+                            e1.setHint("Jawab");
+                        }
+                    }, 23601); // Millisecond 1000 = 1 sec
 
                     isi="6";
 
                 } else
 
-                if (Q3[i]=="1")
+                if (Q3[i]=="Egiw")
                 {
-
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1307,6 +1268,47 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
+                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
+                                    startActivity(intent);
+                                    LevelOne.this.finish();
+                                }
+                            });
+                            AlertDialog aldiaer = aldia.create();
+                            aldiaer.show();
+
+
+                        }
+                    }, 500); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
+                            startActivity(intent);
+                            LevelOne.this.finish();
+                        }
+                    }, 2500); // Millisecond 1000 = 1 sec
+
+                    isi="6";
+
+                } else
+
+                if (Q3[i]=="Tidak Keduanya")
+                {
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+
+                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
+                            aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1330,7 +1332,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
+                    }, 2500); // Millisecond 1000 = 1 sec
 
 
                     isi="6";
@@ -1352,7 +1354,7 @@ public class LevelOne extends AppCompatActivity {
         lstView.setDividerHeight(0);
 
         final CharSequence[] Q3 = {
-                "Nina", "Frisman", "Gilar"
+                "Egiw", "Demian", "Dewi"
         };
 
 
@@ -1361,7 +1363,7 @@ public class LevelOne extends AppCompatActivity {
         alder.setItems(Q3, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if (Q3[i]=="Nina")
+                if (Q3[i]=="Egiw")
                 {
 
                     new Handler().postDelayed(new Runnable() {
@@ -1371,6 +1373,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1394,14 +1397,14 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
+                    }, 2500); // Millisecond 1000 = 1 sec
 
 
                     isi="7";
 
                 } else
 
-                if (Q3[i]=="Frisman")
+                if (Q3[i]=="Demian")
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
@@ -1422,11 +1425,11 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Frisman",false));
-                            lstChat.add(new ChatModel("Selamat, anda adalah orang pertama",true));
+                            lstChat.add(new ChatModel("Saya tidak mengenal orang yang bernama Demian",false));
+                            lstChat.add(new ChatModel("Sial, anda berhasil menjawab lagi, tapi tentu saja karena pertanyaan itu mudah",true));
 
                         }
-                    }, 2000); // Millisecond 1000 = 1 sec
+                    }, 600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1438,9 +1441,9 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("yang bisa sampai dititik ini",true));
+                            lstChat.add(new ChatModel("Saya hanya bermain dengan anda sebelum saya memberikan pertanyaan yang sesungguhnya",true));
                         }
-                    }, 4000); // Millisecond 1000 = 1 sec
+                    }, 2600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1452,10 +1455,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Baiklah pertanyaannya akan saya persulit",true));
+                            lstChat.add(new ChatModel("Kali ini saya akan beralih ke pertanyaan tentang sejarah",true));
 
                         }
-                    }, 6000); // Millisecond 1000 = 1 sec
+                    }, 4600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1467,10 +1470,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Alat apa yang saya gunakan untuk meledakan rumah anda?",true));
+                            lstChat.add(new ChatModel("Pasti anda tau kisah Romeo dan Juliet bukan?, oleh karena itu pertanyaan saya adalah siapa yang harusnya mati dalam kisah tersebut?",true));
 
                         }
-                    }, 8000); // Millisecond 1000 = 1 sec
+                    }, 6600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1478,13 +1481,13 @@ public class LevelOne extends AppCompatActivity {
                             e1.setEnabled(true);
                             e1.setHint("Jawab");
                         }
-                    }, 8100); // Millisecond 1000 = 1 sec
+                    }, 6601); // Millisecond 1000 = 1 sec
 
                     isi="7";
 
                 } else
 
-                if (Q3[i]=="Gilar")
+                if (Q3[i]=="Dewi")
                 {
 
                     new Handler().postDelayed(new Runnable() {
@@ -1494,6 +1497,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1517,7 +1521,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
+                    }, 2500); // Millisecond 1000 = 1 sec
 
 
                     isi="7";
@@ -1538,7 +1542,7 @@ public class LevelOne extends AppCompatActivity {
         lstView.setDividerHeight(0);
 
         final CharSequence[] Q3 = {
-                "C4", "GRANAT", "BOMB LPG"
+                "Romeo", "Juliet", "Keluarga"
         };
 
         AlertDialog.Builder alder = new AlertDialog.Builder(this,R.style.MyDialogTheme);
@@ -1546,7 +1550,7 @@ public class LevelOne extends AppCompatActivity {
         alder.setItems(Q3, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if (Q3[i]=="C4")
+                if (Q3[i]=="Romeo")
                 {
 
                     new Handler().postDelayed(new Runnable() {
@@ -1555,6 +1559,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1577,13 +1582,13 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
+                    }, 2500); // Millisecond 1000 = 1 sec
 
                     isi="8";
 
                 } else
 
-                if (Q3[i]=="GRANAT")
+                if (Q3[i]=="Keluarga")
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
@@ -1604,11 +1609,11 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("GRANAT",false));
-                            lstChat.add(new ChatModel("Wah tanpa clue anda bisa menebak dengan benar",true));
+                            lstChat.add(new ChatModel("Keluarga, saya yakin mereka mati karena tidak bisa bersatu akibat perbedaan status",false));
+                            lstChat.add(new ChatModel("Untuk wanita seperti anda, anda memiliki jawaban yang menarik",true));
 
                         }
-                    }, 2000); // Millisecond 1000 = 1 sec
+                    }, 600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1620,10 +1625,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Padahal bomb ditangan saya, sudah siap untuk saya lemparkan",true));
+                            lstChat.add(new ChatModel("Tapi bagi saya, kisah mereka tidak lebih dari kisah 2 orang bodoh yang putus asa",true));
 
                         }
-                    }, 4000); // Millisecond 1000 = 1 sec
+                    }, 2600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1635,10 +1640,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("pertanyaan selanjutnya",true));
+                            lstChat.add(new ChatModel("Kalau saya menjadi romeo, saya akan membunuh juliet agar tidak ada orang lain yang bisa memilikinya",true));
 
                         }
-                    }, 6000); // Millisecond 1000 = 1 sec
+                    }, 4600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1650,10 +1655,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Hingga saat ini berapa jumlah pertanyaan yang saya tanyakan?",true));
+                            lstChat.add(new ChatModel("Baiklah, pertanyaan selanjutnya cukup mudah, berapa pertanyaan yang telah saya lontarkan dari awal hingga sekarang?",true));
 
                         }
-                    }, 8000); // Millisecond 1000 = 1 sec
+                    }, 6600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1665,10 +1670,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("(Jangan Scroll Chat ini atau saya akan rusak histori percakapan dari awal)",true));
+                            lstChat.add(new ChatModel("(Jangan Scroll Chat ini atau saya akan rusak histori percakapan kita dari awal)",true));
 
                         }
-                    }, 10000); // Millisecond 1000 = 1 sec
+                    }, 8600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1676,13 +1681,13 @@ public class LevelOne extends AppCompatActivity {
                             e1.setEnabled(true);
                             e1.setHint("Jawab");
                         }
-                    }, 10100); // Millisecond 1000 = 1 sec
+                    }, 8601); // Millisecond 1000 = 1 sec
 
                     isi="8";
 
                 } else
 
-                if (Q3[i]=="BOMB LPG")
+                if (Q3[i]=="Juliet")
                 {
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1690,6 +1695,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1712,7 +1718,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
+                    }, 2500); // Millisecond 1000 = 1 sec
 
                     isi="8";
 
@@ -1732,7 +1738,7 @@ public class LevelOne extends AppCompatActivity {
         lstView.setDividerHeight(0);
 
         final CharSequence[] Q3 = {
-                "7", "6", "9"
+                "7", "12", "10"
         };
 
 
@@ -1754,6 +1760,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1777,14 +1784,13 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
-
+                    }, 2500); // Millisecond 1000 = 1 sec
 
                     isi="akhir";
 
                 } else
 
-                if (Q3[i]=="6")
+                if (Q3[i]=="12")
                 {
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1793,6 +1799,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setIcon(R.mipmap.ic_launcher_round);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1816,13 +1823,13 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2300); // Millisecond 1000 = 1 sec
+                    }, 2500); // Millisecond 1000 = 1 sec
 
                     isi="akhir";
 
                 } else
 
-                if (Q3[i]=="9")
+                if (Q3[i]=="10")
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
@@ -1843,11 +1850,11 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("9",false));
-                            lstChat.add(new ChatModel("Sial, Saya sudah tidak sabar ingin membunuh Anda",true));
+                            lstChat.add(new ChatModel("Saya mengigat ada 10 pertanyaan yang sudah anda tanyakan",false));
+                            lstChat.add(new ChatModel("Hebat!, seorang mahasiswi memang hebat, memikirkan hal ini mungkin lebih mudah daripada memikirkan perasaan orang lain betul?",true));
 
                         }
-                    }, 2000); // Millisecond 1000 = 1 sec
+                    }, 600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1859,10 +1866,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan sekarang adalah yang menentukan keselamatan anda",true));
+                            lstChat.add(new ChatModel("Sejujurnya saya sudah bosan dengan permainan ini, jadi saya akan memberikan pertanyaan terakhir",true));
 
                         }
-                    }, 4000); // Millisecond 1000 = 1 sec
+                    }, 2600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1874,10 +1881,10 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Siapa nama lengkap saya?",true));
+                            lstChat.add(new ChatModel("Pertanyaan ini yang menentukan keselamatan anda. Siapa sebenarnya saya?, jika anda benar saya akan menyerahkan diri saya ke polisi",true));
 
                         }
-                    }, 6000); // Millisecond 1000 = 1 sec
+                    }, 4600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1885,10 +1892,9 @@ public class LevelOne extends AppCompatActivity {
                             e1.setEnabled(true);
                             e1.setHint("Jawab");
                         }
-                    }, 6100); // Millisecond 1000 = 1 sec
+                    }, 4601); // Millisecond 1000 = 1 sec
 
                     isi="9";
-
                 }
             }
         });
@@ -1920,12 +1926,11 @@ public class LevelOne extends AppCompatActivity {
                     startActivity(intent);
                     LevelOne.this.finish();
                 } else {
-                    Toast.makeText(getApplicationContext(),"Misi Gagal Tersangka Melarikan diri",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Misi Gagal,Client anda terbunuh dan tersangka melarikan diri",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                     startActivity(intent);
                     LevelOne.this.finish();
                 }
-
             }
         });
 

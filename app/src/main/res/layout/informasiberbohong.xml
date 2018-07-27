@@ -62,7 +62,7 @@
                 android:id="@+id/b1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama : Helmi Medina Putri"
+                android:text="Nama : Neysa"
                 android:textColor="@color/textColor"
                 android:textAlignment="center"
                 android:layout_gravity="center"
@@ -73,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
-                android:text="Helmi adalah mahasiswa yang mendapatkan ancaman pembunuhan dari orang misterius yang menjalankan Acara Quiz Via SMS, 3 teman Helmi telah mati salah satunya adalah dewi, egiw dan damian yang jasadnya masih belum ditemukan, setiap dari mereka memiliki pesan yang sama didalam handphoneya yaitu : anda gagal menjawab"
+                android:text="Neysa adalah mahasiswi yang menerima ancaman pembunuhan dari orang misterius yang menjalankan acara quiz melalui pesan ponsel. Sebelumnya kejadian ini telah memakan 3 korban teman dekat Neysa, mereka adalah : Egiw, Dewi dan Damian  yang jasadnya masih belum ditemukan. Sebelum kejadian pembunuhan itu terjadi, Neysa berselisih dengan Dewi, selang satu hari Nesya juga bertengkar dengan Damian, namun siapa disangka sehari setelah itu mereka dinyatakan tewas, seminggu setelahnya Egiwpun tewas. Mereka semua mati dengan cara yang sama yaitu tergeletak sambil memegang handphone dengan pesan terakhir Anda gagal dari seseorang yang menjalankan acara The Quiz Melalui SMS"
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:textSize="15sp"/>
@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
-                android:text="Menyelamatkan Drendra"
+                android:text="Menyelamatkan Neysa dan Berpura-pura menjadi Neysa"
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:textSize="15sp"/>
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
-                android:text="Tidak Ada"
+                android:text="The Quiz"
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:textSize="15sp"/>
