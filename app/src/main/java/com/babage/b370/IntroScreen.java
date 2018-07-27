@@ -4,20 +4,27 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.transition.Fade;
 import android.transition.Slide;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class IntroScreen extends Activity {
 
-    private static int WELCOME_TIMEOUT = 19000;
+    private static int WELCOME_TIMEOUT = 18300;
+    Button btnSkip;
+    ConstraintLayout cd;
+    int test=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         //menghilangkan ActionBar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -25,6 +32,7 @@ public class IntroScreen extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_intro_screen);
+        cd = (ConstraintLayout)findViewById(R.id.cs);
 
         final TypeWriter tw = findViewById(R.id.typeWriter);
 
@@ -32,20 +40,35 @@ public class IntroScreen extends Activity {
         tw.setCharacterDelay(150);
         tw.animateText(getResources().getString(R.string.welcomeText));
 
-        new Handler().postDelayed(new Runnable() {
+
+
+
+
+           final Handler handler = new Handler();
+
+           handler.postDelayed(new Runnable() {
+               @Override
+               public void run() {
+                   Intent welcome = new Intent(IntroScreen.this, MainActivity.class);
+                   startActivity(welcome);
+                   finish();
+               }
+           }, WELCOME_TIMEOUT);
+
+        cd.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                Intent welcome = new Intent(IntroScreen.this, MainActivity.class);
-                startActivity(welcome);
+            public void onClick(View view) {
+                handler.removeCallbacksAndMessages(null);
+                Intent mainGo = new Intent(IntroScreen.this, MainActivity.class);
+                startActivity(mainGo);
+
                 finish();
             }
-        }, WELCOME_TIMEOUT); //19000 L = 19 detik
+        });
+
+
+
     }
 
-    public void ScreenTap(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        finish();
-    }
+
 }

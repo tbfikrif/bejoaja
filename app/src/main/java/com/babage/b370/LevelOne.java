@@ -427,6 +427,7 @@ public class LevelOne extends AppCompatActivity {
                     lstView.setDividerHeight(0);
 
                     e1.setEnabled(false);
+                    e1.setHint("Tunggu");
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -437,7 +438,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tolong jelaskan ada apa ini?, kamu siapa?",false));
+                            lstChat.add(new ChatModel("Tolong jelaskan ada apa ini?, saya tidak mengerti. Kamu siapa?",false));
                             lstChat.add(new ChatModel("Tidak ada apa-apa hanya saja malaikat maut tertarik kepada anda", true));
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -452,7 +453,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Mungkin karena anda sealu menyakiti perasaan orang lain", true));
+                            lstChat.add(new ChatModel("Mungkin karena anda selalu menyakiti perasaan orang lain", true));
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
 
@@ -551,7 +552,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -593,7 +594,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -703,7 +704,7 @@ public class LevelOne extends AppCompatActivity {
                             e1.setEnabled(true);
                             e1.setHint("Jawab");
                         }
-                    }, 8600); // Millisecond 1000 = 1 sec
+                    }, 6601); // Millisecond 1000 = 1 sec
 
                     isi="3";
                     alur="2c";
@@ -743,7 +744,7 @@ public class LevelOne extends AppCompatActivity {
 
                                 AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                                 aldia.setTitle("From : DeepSpeak Crop");
-                                aldia.setIcon(R.mipmap.ic_launcher_round);
+                                aldia.setIcon(R.drawable.logo_ds2);
                                 aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                                 aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
@@ -883,7 +884,7 @@ public class LevelOne extends AppCompatActivity {
 
                                 AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                                 aldia.setTitle("From : DeepSpeak Crop");
-                                aldia.setIcon(R.mipmap.ic_launcher_round);
+                                aldia.setIcon(R.drawable.logo_ds2);
                                 aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                                 aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
@@ -950,7 +951,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1090,7 +1091,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1268,7 +1269,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1308,7 +1309,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1373,7 +1374,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1497,7 +1498,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1559,7 +1560,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1695,7 +1696,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1799,7 +1800,7 @@ public class LevelOne extends AppCompatActivity {
 
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setIcon(R.drawable.logo_ds2);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override

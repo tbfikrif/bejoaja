@@ -60,7 +60,7 @@ public class QuestActivity extends Activity {
 
     public void berbohongOnClick(View v){
         final Dialog dialog = new Dialog(context);
-        dialog.setContentView(R.layout.informasiberbohong);;
+        dialog.setContentView(R.layout.informasiberbohong);
 
         //AlertDialog.Builder builder = new AlertDialog.Builder(QuestActivity.this);
         //View view = getLayoutInflater().inflate(R.layout.informasiberbohong, null);
