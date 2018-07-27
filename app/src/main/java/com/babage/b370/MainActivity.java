@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+    Button playButton;
+    Button exitButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +29,8 @@ public class MainActivity extends Activity {
 
         TextView gameTitle = findViewById(R.id.gameTitle);
         TextView gameDecription = findViewById(R.id.decription);
-        Button playButton = findViewById(R.id.playButton);
-        Button exitButton = findViewById(R.id.exitButton);
+        playButton = findViewById(R.id.playButton);
+        exitButton = findViewById(R.id.exitButton);
         gameTitle.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));
         gameDecription.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));
         playButton.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));

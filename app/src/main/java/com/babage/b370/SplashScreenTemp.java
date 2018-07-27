@@ -11,7 +11,7 @@ import android.view.WindowManager;
 
 public class SplashScreenTemp extends Activity {
 
-    private static int WELCOME_TIMEOUT = 4000;
+    private static int WELCOME_TIMEOUT = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,6 @@ public class SplashScreenTemp extends Activity {
                 startActivity(welcome);
                 finish();
             }
-        }, WELCOME_TIMEOUT); //4000 L = 4 detik
+        }, WELCOME_TIMEOUT); //2000 L = 2 detik
     }
 }

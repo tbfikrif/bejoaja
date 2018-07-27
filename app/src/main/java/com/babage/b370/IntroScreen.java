@@ -13,6 +13,8 @@ import android.widget.Button;
 
 public class IntroScreen extends Activity {
 
+    private static int WELCOME_TIMEOUT = 19000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,15 @@ public class IntroScreen extends Activity {
         tw.setText("");
         tw.setCharacterDelay(150);
         tw.animateText(getResources().getString(R.string.welcomeText));
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent welcome = new Intent(IntroScreen.this, MainActivity.class);
+                startActivity(welcome);
+                finish();
+            }
+        }, WELCOME_TIMEOUT); //19000 L = 19 detik
     }
 
     public void ScreenTap(View view) {

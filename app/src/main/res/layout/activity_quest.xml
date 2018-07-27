@@ -19,27 +19,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/textColor"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:background="@color/backgroundThin">
+                android:background="@color/background">
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/topeng2"/>
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/dead_message"/>
                 <Button
                     android:id="@+id/Q1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="80dp"
                     android:padding="16dp"
-                    android:background="@android:color/transparent"
+                    android:background="@drawable/quest_button_background"
+                    android:enabled="true"
                     android:onClick="berbohongOnClick"
                     android:text="Dead Chat"
                     android:textAlignment="center"
@@ -55,23 +59,36 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:background="@color/textColor">
+                android:background="@color/background">
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginLeft="6dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/topeng2"/>
-                <Button
-                    android:id="@+id/Q2"
+                    android:src="@drawable/who_iam"/>
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:text="WHO AM I"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/white"
-                    android:background="@android:color/transparent"
-                    android:fontFamily="@font/youmurdererbb_reg"
-                    android:textSize="50sp" />
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/Q2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="WHO AM I"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/quest_button_background"
+                        android:enabled="true"
+                        android:fontFamily="@font/youmurdererbb_reg"
+                        android:textSize="50sp" />
+                    <ImageView
+                        android:id="@+id/locked2"
+                        android:layout_width="55dp"
+                        android:layout_height="65dp"
+                        android:visibility="gone"
+                        android:src="@drawable/lock"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -81,10 +98,11 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:background="@color/backgroundThin">
+                android:background="@color/background">
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginLeft="6dp"
                     android:layout_gravity="center"
                     android:src="@drawable/topeng2"/>
                 <RelativeLayout
@@ -98,7 +116,8 @@
                         android:text=""
                         android:textAlignment="center"
                         android:textColor="@android:color/white"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/quest_button_background"
+                        android:enabled="false"
                         android:fontFamily="@font/youmurdererbb_reg"
                         android:textSize="50sp" />
                     <ImageView
@@ -119,10 +138,11 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:background="@color/textColor">
+                android:background="@color/background">
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginLeft="6dp"
                     android:layout_gravity="center"
                     android:src="@drawable/topeng2"/>
                 <RelativeLayout
@@ -136,7 +156,8 @@
                         android:text=""
                         android:textAlignment="center"
                         android:textColor="@android:color/white"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/quest_button_background"
+                        android:enabled="false"
                         android:fontFamily="@font/youmurdererbb_reg"
                         android:textSize="50sp" />
                     <ImageView
@@ -156,10 +177,11 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:background="@color/backgroundThin">
+                android:background="@color/background">
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginLeft="6dp"
                     android:layout_gravity="center"
                     android:src="@drawable/topeng2"/>
                 <RelativeLayout
@@ -173,7 +195,8 @@
                         android:text=""
                         android:textAlignment="center"
                         android:textColor="@android:color/white"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/quest_button_background"
+                        android:enabled="false"
                         android:fontFamily="@font/youmurdererbb_reg"
                         android:textSize="50sp" />
                     <ImageView
@@ -193,10 +216,11 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:background="@color/textColor">
+                android:background="@color/background">
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginLeft="6dp"
                     android:layout_gravity="center"
                     android:src="@drawable/topeng2"/>
                 <RelativeLayout
@@ -210,7 +234,8 @@
                         android:text=""
                         android:textAlignment="center"
                         android:textColor="@android:color/white"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/quest_button_background"
+                        android:enabled="false"
                         android:fontFamily="@font/youmurdererbb_reg"
                         android:textSize="50sp" />
                     <ImageView
@@ -230,10 +255,11 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:background="@color/backgroundThin">
+                android:background="@color/background">
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginLeft="6dp"
                     android:layout_gravity="center"
                     android:src="@drawable/topeng2"/>
                 <RelativeLayout
@@ -247,7 +273,8 @@
                         android:text=""
                         android:textAlignment="center"
                         android:textColor="@android:color/white"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/quest_button_background"
+                        android:enabled="false"
                         android:fontFamily="@font/youmurdererbb_reg"
                         android:textSize="50sp" />
                     <ImageView
@@ -267,10 +294,11 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:orientation="horizontal"
-                android:background="@color/textColor">
+                android:background="@color/background">
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_marginLeft="6dp"
                     android:layout_gravity="center"
                     android:src="@drawable/topeng2"/>
                 <RelativeLayout
@@ -284,7 +312,8 @@
                         android:text=""
                         android:textAlignment="center"
                         android:textColor="@android:color/white"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/quest_button_background"
+                        android:enabled="false"
                         android:fontFamily="@font/youmurdererbb_reg"
                         android:textSize="50sp" />
                     <ImageView
@@ -304,7 +333,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Mission List"
+        android:text="Mission"
         android:textStyle="bold"
         android:textColor="#E51F28"
         android:fontFamily="@font/youmurdererbb_reg"

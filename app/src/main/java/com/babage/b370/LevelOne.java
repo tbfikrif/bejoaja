@@ -42,7 +42,7 @@ public class LevelOne extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+        getSupportActionBar().setLogo(R.mipmap.ic_chatbar_round);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.activity_level_one);
 
