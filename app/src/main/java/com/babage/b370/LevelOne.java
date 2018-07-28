@@ -19,6 +19,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -549,10 +550,13 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -562,6 +566,7 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
@@ -576,7 +581,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
 
                     isi="3";
@@ -592,9 +597,13 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
 
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -604,6 +613,7 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
@@ -618,7 +628,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
 
                     isi="3";
@@ -742,9 +752,13 @@ public class LevelOne extends AppCompatActivity {
                             @Override
                             public void run() {
 
+                                ImageView image = new ImageView(LevelOne.this);
+                                image.setImageResource(R.drawable.victim);
                                 AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                                 aldia.setTitle("From : DeepSpeak Crop");
+                                aldia.setCancelable(true);
                                 aldia.setIcon(R.drawable.logo_ds2);
+                                aldia.setInverseBackgroundForced(true);
                                 aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                                 aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
@@ -754,6 +768,7 @@ public class LevelOne extends AppCompatActivity {
                                         LevelOne.this.finish();
                                     }
                                 });
+                                aldia.setView(image);
                                 AlertDialog aldiaer = aldia.create();
                                 aldiaer.show();
 
@@ -882,9 +897,13 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
 
+                                ImageView image = new ImageView(LevelOne.this);
+                                image.setImageResource(R.drawable.victim);
                                 AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                                 aldia.setTitle("From : DeepSpeak Crop");
+                                aldia.setCancelable(true);
                                 aldia.setIcon(R.drawable.logo_ds2);
+                                aldia.setInverseBackgroundForced(true);
                                 aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                                 aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
@@ -894,6 +913,7 @@ public class LevelOne extends AppCompatActivity {
                                         LevelOne.this.finish();
                                     }
                                 });
+                                aldia.setView(image);
                                 AlertDialog aldiaer = aldia.create();
                                 aldiaer.show();
 
@@ -908,7 +928,7 @@ public class LevelOne extends AppCompatActivity {
                                 startActivity(intent);
                                 LevelOne.this.finish();
                             }
-                        }, 2500); // Millisecond 1000 = 1 sec
+                        }, 3500); // Millisecond 1000 = 1 sec
 
 
                         isi="4";
@@ -948,10 +968,13 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
 
-
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -961,6 +984,7 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
@@ -974,7 +998,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
                     isi="5";
 
@@ -1089,9 +1113,13 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
 
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1101,6 +1129,7 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
@@ -1115,7 +1144,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
                     isi="5";
 
@@ -1266,10 +1295,13 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
 
-
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1279,6 +1311,7 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
@@ -1293,7 +1326,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
                     isi="6";
 
@@ -1306,10 +1339,13 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
 
-
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1319,8 +1355,9 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
-                            aldia.show();
+                            aldiaer.show();
 
 
                         }
@@ -1333,7 +1370,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
 
                     isi="6";
@@ -1371,10 +1408,13 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
 
-
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1384,9 +1424,9 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
-
 
                         }
                     }, 500); // Millisecond 1000 = 1 sec
@@ -1398,7 +1438,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
 
                     isi="7";
@@ -1495,10 +1535,13 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
 
-
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1508,6 +1551,7 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
@@ -1522,7 +1566,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
 
                     isi="7";
@@ -1558,9 +1602,13 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
 
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1570,6 +1618,7 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
@@ -1583,7 +1632,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
                     isi="8";
 
@@ -1694,9 +1743,13 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
 
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1706,8 +1759,9 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
-                            aldia.show();
+                            aldiaer.show();
 
                         }
                     }, 500); // Millisecond 1000 = 1 sec
@@ -1719,7 +1773,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
                     isi="8";
 
@@ -1754,14 +1808,13 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
-                            lstView.setAdapter(adapter);
-                            lstView.setDivider(null);
-                            lstView.setDividerHeight(0);
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setIcon(R.mipmap.ic_launcher_round);
+                            aldia.setCancelable(true);
+                            aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1771,6 +1824,7 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
@@ -1785,7 +1839,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
                     isi="akhir";
 
@@ -1797,10 +1851,13 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
 
-
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
                             aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
                             aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
                             aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
                             aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
@@ -1810,6 +1867,7 @@ public class LevelOne extends AppCompatActivity {
                                     LevelOne.this.finish();
                                 }
                             });
+                            aldia.setView(image);
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
@@ -1824,7 +1882,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 2500); // Millisecond 1000 = 1 sec
+                    }, 3500); // Millisecond 1000 = 1 sec
 
                     isi="akhir";
 
