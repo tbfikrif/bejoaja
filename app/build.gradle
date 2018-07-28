@@ -30,4 +30,6 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.github.lguipeng:BubbleView:1.0.1'
     implementation 'com.github.hani-momanii:Supernova-Emoji:1.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.github.bluejamesbond:textjustify-android:2.1.6'
 }

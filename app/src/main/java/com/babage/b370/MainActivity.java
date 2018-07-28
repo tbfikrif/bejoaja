@@ -3,6 +3,7 @@ package com.babage.b370;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
+
+    MediaPlayer background, click;
 
     Button playButton;
     Button exitButton;
@@ -27,6 +30,10 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
+        background = MediaPlayer.create(MainActivity.this, R.raw.background_mainmenu);
+        click = MediaPlayer.create(this, R.raw.click2);
+        //background.start();
+
         TextView gameTitle = findViewById(R.id.gameTitle);
         TextView gameDecription = findViewById(R.id.decription);
         playButton = findViewById(R.id.playButton);
@@ -37,12 +44,22 @@ public class MainActivity extends Activity {
         exitButton.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        background.start();
+    }
+
     public void playGame(View view){
         Intent intent = new Intent(this, QuestActivity.class);
+        click.start();
+        background.pause();
+        //background.stop();
         startActivity(intent);
     }
 
     public void exitGame(View view){
+        click.start();
         finish();
         System.exit(0);
     }

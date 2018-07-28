@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -18,6 +19,7 @@ public class QuestActivity extends Activity {
 
     final Context context = this;
     Button q1, q2, q3, q4, q5, q6, q7, q8;
+    MediaPlayer background, click, distortion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,10 @@ public class QuestActivity extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_quest);
+
+        background = MediaPlayer.create(QuestActivity.this, R.raw.background_quest);
+        click = MediaPlayer.create(QuestActivity.this, R.raw.click2);
+        distortion = MediaPlayer.create(QuestActivity.this, R.raw.hit_distortion);
 
         TextView textViewQuest = findViewById(R.id.textViewQuest);
         q1 = findViewById(R.id.Q1);
@@ -59,6 +65,18 @@ public class QuestActivity extends Activity {
         });
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        background.pause();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        background.start();
+    }
+
     public void InformasiBerbohong(){
         final Dialog dialog = new Dialog(context);
         dialog.setContentView(R.layout.informasiberbohong);
@@ -75,8 +93,10 @@ public class QuestActivity extends Activity {
             public void onClick(View v) {
                 dialog.dismiss();
                 Intent intent = new Intent(QuestActivity.this, LevelOne.class);
-                startActivity(intent);
+                background.stop();
+                distortion.start();
                 QuestActivity.this.finish();
+                startActivity(intent);
             }
         });
 
@@ -84,6 +104,7 @@ public class QuestActivity extends Activity {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+                click.start();
                 galeriBerbohongOnClick();
             }
         });
@@ -92,6 +113,7 @@ public class QuestActivity extends Activity {
     }
 
     public void berbohongOnClick(View v){
+        click.start();
         InformasiBerbohong();
     }
 
@@ -108,6 +130,7 @@ public class QuestActivity extends Activity {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+                click.start();
                 InformasiBerbohong();
             }
         });
