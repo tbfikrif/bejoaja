@@ -13,6 +13,19 @@
                       <PersistentState>
                         <option name="children">
                           <map>
+                            <entry key="actionbar">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="D:\Tukron\Documents\Kampus\Game Dev\Babage\B370\icon 1\user.png" />
+                                      <entry key="outputName" value="ic_action_chatbar1" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
                             <entry key="launcher">
                               <value>
                                 <PersistentState>
@@ -21,7 +34,8 @@
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="000000" />
                                       <entry key="backgroundImage" value="D:\Tukron\Documents\Kampus\Game Dev\Babage\B370\babage\pisah\chat 3.png" />
-                                      <entry key="foregroundImage" value="D:\Tukron\Documents\Kampus\Game Dev\Babage\B370\babage\pisah\topeng 2.png" />
+                                      <entry key="foregroundImage" value="D:\Tukron\Documents\Kampus\Game Dev\Babage\B370\icon 1\user.png" />
+                                      <entry key="outputName" value="ic_chatbar" />
                                     </map>
                                   </option>
                                 </PersistentState>

@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,7 +59,7 @@ public class QuestActivity extends Activity {
         });
     }
 
-    public void berbohongOnClick(View v){
+    public void InformasiBerbohong(){
         final Dialog dialog = new Dialog(context);
         dialog.setContentView(R.layout.informasiberbohong);
 
@@ -66,10 +67,10 @@ public class QuestActivity extends Activity {
         //View view = getLayoutInflater().inflate(R.layout.informasiberbohong, null);
         Button okButton = dialog.findViewById(R.id.btnOk);
         okButton.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));
+        ImageView galeri = dialog.findViewById(R.id.galeri);
         //final AlertDialog dialog = builder.create();
 
         okButton.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
@@ -79,6 +80,35 @@ public class QuestActivity extends Activity {
             }
         });
 
+        galeri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                galeriBerbohongOnClick();
+            }
+        });
+
+        dialog.show();
+    }
+
+    public void berbohongOnClick(View v){
+        InformasiBerbohong();
+    }
+
+    public void galeriBerbohongOnClick(){
+        final Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.galeriberbohong);
+
+        Button tutupButton = dialog.findViewById(R.id.btnTutup);
+        tutupButton.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));
+
+        tutupButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                InformasiBerbohong();
+            }
+        });
 
         dialog.show();
     }
