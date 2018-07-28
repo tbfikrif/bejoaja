@@ -100,7 +100,9 @@ public class QuestActivity extends Activity {
         dialog.setContentView(R.layout.galeriberbohong);
 
         Button tutupButton = dialog.findViewById(R.id.btnTutup);
+        TextView galeriTitle = dialog.findViewById(R.id.galeriTitle);
         tutupButton.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));
+        galeriTitle.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));
 
         tutupButton.setOnClickListener(new View.OnClickListener(){
             @Override
