@@ -1,6 +1,7 @@
 package com.babage.b370;
 
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -74,7 +76,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Selamat saudari Neysa, karena anda telah beruntung terpilih sebagai peserta the quiz berikutnya", true));
+                lstChat.add(new ChatModel("Selamat saudari Neysa, karena anda telah beruntung terpilih sebagai peserta the quiz berikutnya",null, true));
             }
         }, 2000); // Millisecond 1000 = 1 sec
 
@@ -87,7 +89,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Aturan quiz ini cukup sederhana, yaitu jika anda salah menjawab, anda akan mati.", true));
+                lstChat.add(new ChatModel("Aturan quiz ini cukup sederhana, yaitu jika anda salah menjawab, anda akan mati.", null, true));
             }
         }, 4000); // Millisecond 1000 = 1 sec
 
@@ -100,7 +102,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Jangan terlalu dipikirkan karena bagaimanapun cepat atau lambat kematian akan menjemput kita bukan?", true));
+                lstChat.add(new ChatModel("Jangan terlalu dipikirkan karena bagaimanapun cepat atau lambat kematian akan menjemput kita bukan?", null,true));
             }
         }, 6000); // Millisecond 1000 = 1 sec
 
@@ -113,7 +115,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Karena sebenarnya kematian selalu tersenyum kepada kita dan yang bisa kita lakukan hanya tersenyum balik", true));
+                lstChat.add(new ChatModel("Karena sebenarnya kematian selalu tersenyum kepada kita dan yang bisa kita lakukan hanya tersenyum balik", null,true));
             }
         }, 8000); // Millisecond 1000 = 1 sec
 
@@ -126,7 +128,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Baiklah, mungkin sekarang kita bisa menuju acara utama. Yang harus anda lakukan hanya menjawab semua pertanyaan yang saya berikan", true));
+                lstChat.add(new ChatModel("Baiklah, mungkin sekarang kita bisa menuju acara utama. Yang harus anda lakukan hanya menjawab semua pertanyaan yang saya berikan", null,true));
             }
         }, 10000); // Millisecond 1000 = 1 sec
 
@@ -139,7 +141,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Jadi tidak ada yang perlu dikhawatirkan, kalau begitu anda sudah siap?", true));
+                lstChat.add(new ChatModel("Jadi tidak ada yang perlu dikhawatirkan, kalau begitu anda sudah siap?",null, true));
             }
         }, 12000); // Millisecond 1000 = 1 sec
 
@@ -241,9 +243,11 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
+                            //Ubah background event
+                            //lstView.setBackground(getDrawable(R.mipmap.ic_chatbar));
                             mp.start();
-                            lstChat.add(new ChatModel("Saya tidak begitu mengerti situasi ini, tapi saya siap",false));
-                            lstChat.add(new ChatModel("Wow, saya tau anda orang yang sangat bersemangat, tapi saya tidak tau anda bisa seberani ini ", true));
+                            lstChat.add(new ChatModel("Saya tidak begitu mengerti situasi ini, tapi saya siap",null,false));
+                            lstChat.add(new ChatModel("Wow, saya tau anda orang yang sangat bersemangat, tapi saya tidak tau anda bisa seberani ini ", null,true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -259,7 +263,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya terharu mengetahuinya", true));
+                            lstChat.add(new ChatModel("Saya terharu mengetahuinya",null, true));
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
 
@@ -272,7 +276,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya punya firasat permainan ini akan menarik", true));
+                            lstChat.add(new ChatModel("Saya punya firasat permainan ini akan menarik",null, true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -288,7 +292,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Kalau begitu pertanyaan pertama adalah", true));
+                            lstChat.add(new ChatModel("Kalau begitu pertanyaan pertama adalah", null,true));
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
 
@@ -302,7 +306,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", true));
+                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", null,true));
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
 
@@ -342,8 +346,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tentu, saya sudah mengetahui sejak awal bahwa saya adalah korban berikutnya",false));
-                            lstChat.add(new ChatModel("Apa itu benar?, kalau begitu penilaian saya selama ini kepada anda salah", true));
+                            lstChat.add(new ChatModel("Tentu, saya sudah mengetahui sejak awal bahwa saya adalah korban berikutnya",null,false));
+                            lstChat.add(new ChatModel("Apa itu benar?, kalau begitu penilaian saya selama ini kepada anda salah",null, true));
                         }
                     }, 600); // Millisecond 1000 = 1 sec
 
@@ -357,7 +361,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya hanya menduga bahwa anda hanya perempuan yang suka bermain dengan setiap laki-laki", true));
+                            lstChat.add(new ChatModel("Saya hanya menduga bahwa anda hanya perempuan yang suka bermain dengan setiap laki-laki",null, true));
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
 
@@ -370,7 +374,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Baiklah mari kita mulai permainan mengasikkan ini", true));
+                            lstChat.add(new ChatModel("Baiklah mari kita mulai permainan mengasikkan ini",null, true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -386,7 +390,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan KE-1", true));
+                            lstChat.add(new ChatModel("Pertanyaan KE-1",null, true));
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
 
@@ -400,7 +404,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", true));
+                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?",null, true));
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
 
@@ -439,8 +443,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tolong jelaskan ada apa ini?, saya tidak mengerti. Kamu siapa?",false));
-                            lstChat.add(new ChatModel("Tidak ada apa-apa hanya saja malaikat maut tertarik kepada anda", true));
+                            lstChat.add(new ChatModel("Tolong jelaskan ada apa ini?, saya tidak mengerti. Kamu siapa?",null,false));
+                            lstChat.add(new ChatModel("Tidak ada apa-apa hanya saja malaikat maut tertarik kepada anda", null,true));
                         }
                     }, 600); // Millisecond 1000 = 1 sec
 
@@ -454,7 +458,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Mungkin karena anda selalu menyakiti perasaan orang lain", true));
+                            lstChat.add(new ChatModel("Mungkin karena anda selalu menyakiti perasaan orang lain", null,true));
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
 
@@ -468,7 +472,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("atau karena anda adalah orang egois?. Tapi bagi saya pribadi, saya lebih setuju dengan alasan pertama.", true));
+                            lstChat.add(new ChatModel("atau karena anda adalah orang egois?. Tapi bagi saya pribadi, saya lebih setuju dengan alasan pertama.",null, true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -484,7 +488,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tanpa berbasa-basi lebih lama, mari langsung saja ke pertanyaan pertama", true));
+                            lstChat.add(new ChatModel("Tanpa berbasa-basi lebih lama, mari langsung saja ke pertanyaan pertama", null,true));
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
 
@@ -498,7 +502,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", true));
+                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?",null, true));
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
 
@@ -544,7 +548,68 @@ public class LevelOne extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (Q2[i]=="Orang Terdekat Anda")
-                {
+                { ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
+
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
 
 
                     new Handler().postDelayed(new Runnable() {
@@ -572,7 +637,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -581,8 +646,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
-
+                    }, 28900); // Millisecond 1000 = 1 sec
 
                     isi="3";
                     alur="2a";
@@ -590,13 +654,73 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q2[i]=="Orang Lain")
                 {
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
 
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
 
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -619,7 +743,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -628,7 +752,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
 
 
                     isi="3";
@@ -657,8 +781,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya akan lebih memilih menyelamatkan diri saya sendiri",false));
-                            lstChat.add(new ChatModel("ding dong anda benar, ini baru neysa yang saya tau, seorang yang cantik dan egois",true));
+                            lstChat.add(new ChatModel("Saya akan lebih memilih menyelamatkan diri saya sendiri",null,false));
+                            lstChat.add(new ChatModel("ding dong anda benar, ini baru neysa yang saya tau, seorang yang cantik dan egois",null,true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -673,7 +797,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Padahal saya pikir anda akan berpura-pura peduli terhadap orang lain, sayang sekali",true));
+                            lstChat.add(new ChatModel("Padahal saya pikir anda akan berpura-pura peduli terhadap orang lain, sayang sekali",null,true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -688,7 +812,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("awal yang baik bagi anda, Mari menuju pertanyaan kedua ",true));
+                            lstChat.add(new ChatModel("awal yang baik bagi anda, Mari menuju pertanyaan kedua ",null,true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -703,7 +827,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Dari sekian banyak accessories, bagian mana yang paling anda suka?",true));
+                            lstChat.add(new ChatModel("Dari sekian banyak accessories, bagian mana yang paling anda suka?",null,true));
 
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
@@ -747,11 +871,73 @@ public class LevelOne extends AppCompatActivity {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     if (Q3[i]=="Tidak Suka")
                     {
+                        ListView lstView = (ListView)findViewById(R.id.listView);
+                        CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                        lstView.setAdapter(adapter);
+                        lstView.setDivider(null);
+                        lstView.setDividerHeight(0);
+
+                        final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                        final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
 
+                                ListView lstView = (ListView)findViewById(R.id.listView);
+                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                lstView.setAdapter(adapter);
+                                lstView.setDivider(null);
+                                lstView.setDividerHeight(0);
+                                mp.start();
+                                lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                                lstChat.add(new ChatModel("?",null,true));
+
+                            }
+                        }, 2000); // Millisecond 1000 = 1 sec
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                ListView lstView = (ListView)findViewById(R.id.listView);
+                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                lstView.setAdapter(adapter);
+                                lstView.setDivider(null);
+                                lstView.setDividerHeight(0);
+                                mp.start();
+                                lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                            }
+                        }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                pc.start();
+                                final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                                dialog.setContentView(R.layout.telponberbohong);
+                                dialog.show();
+
+                            }
+                        }, 7600); // Millisecond 1000 = 1 sec
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                wm.start();
+
+                            }
+                        }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
                                 ImageView image = new ImageView(LevelOne.this);
                                 image.setImageResource(R.drawable.victim);
                                 AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -774,7 +960,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                             }
-                        }, 600); // Millisecond 1000 = 1 sec
+                        }, 23900); // Millisecond 1000 = 1 sec
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -783,7 +969,7 @@ public class LevelOne extends AppCompatActivity {
                                 startActivity(intent);
                                 LevelOne.this.finish();
                             }
-                        }, 2600); // Millisecond 1000 = 1 sec
+                        }, 28900); // Millisecond 1000 = 1 sec
 
                         isi="4";
 
@@ -811,8 +997,8 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Saya meyukai kalung, karena saya pikir accessories itu adalah yang paling dekat dengan hati",false));
-                                lstChat.add(new ChatModel("Romantis sekali!, Tapi perkataan manis itu sudah saya dengar berkali-kali",true));
+                                lstChat.add(new ChatModel("Saya meyukai kalung, karena saya pikir accessories itu adalah yang paling dekat dengan hati",null,false));
+                                lstChat.add(new ChatModel("Romantis sekali!, Tapi perkataan manis itu sudah saya dengar berkali-kali",null,true));
 
                             }
                         }, 600); // Millisecond 1000 = 1 sec
@@ -827,7 +1013,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Sehingga saya bosan dan ingin muntah",true));
+                                lstChat.add(new ChatModel("Sehingga saya bosan dan ingin muntah",null,true));
 
                             }
                         }, 2600); // Millisecond 1000 = 1 sec
@@ -842,7 +1028,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("hmm, maaf jika saya sedikit tidak sopan, saya hanya terbawa emosi",true));
+                                lstChat.add(new ChatModel("hmm, maaf jika saya sedikit tidak sopan, saya hanya terbawa emosi",null,true));
 
                             }
                         }, 4600); // Millisecond 1000 = 1 sec
@@ -857,7 +1043,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Langsung saja kepertanyaan ke-3",true));
+                                lstChat.add(new ChatModel("Langsung saja kepertanyaan ke-3",null,true));
 
                             }
                         }, 6600); // Millisecond 1000 = 1 sec
@@ -872,7 +1058,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Apakah anda pernah bertengkar dengan teman dekat anda?",true));
+                                lstChat.add(new ChatModel("Apakah anda pernah bertengkar dengan teman dekat anda?",null,true));
 
                             }
                         }, 8600); // Millisecond 1000 = 1 sec
@@ -892,11 +1078,73 @@ public class LevelOne extends AppCompatActivity {
                     if (Q3[i]=="Mana Saja")
                     {
 
+                        ListView lstView = (ListView)findViewById(R.id.listView);
+                        CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                        lstView.setAdapter(adapter);
+                        lstView.setDivider(null);
+                        lstView.setDividerHeight(0);
+
+                        final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                        final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
 
+                                ListView lstView = (ListView)findViewById(R.id.listView);
+                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                lstView.setAdapter(adapter);
+                                lstView.setDivider(null);
+                                lstView.setDividerHeight(0);
+                                mp.start();
+                                lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                                lstChat.add(new ChatModel("?",null,true));
 
+                            }
+                        }, 2000); // Millisecond 1000 = 1 sec
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                ListView lstView = (ListView)findViewById(R.id.listView);
+                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                lstView.setAdapter(adapter);
+                                lstView.setDivider(null);
+                                lstView.setDividerHeight(0);
+                                mp.start();
+                                lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                            }
+                        }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                pc.start();
+                                final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                                dialog.setContentView(R.layout.telponberbohong);
+                                dialog.show();
+
+                            }
+                        }, 7600); // Millisecond 1000 = 1 sec
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                wm.start();
+
+                            }
+                        }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
                                 ImageView image = new ImageView(LevelOne.this);
                                 image.setImageResource(R.drawable.victim);
                                 AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -919,7 +1167,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                             }
-                        }, 500); // Millisecond 1000 = 1 sec
+                        }, 23900); // Millisecond 1000 = 1 sec
 
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -928,7 +1176,7 @@ public class LevelOne extends AppCompatActivity {
                                 startActivity(intent);
                                 LevelOne.this.finish();
                             }
-                        }, 3500); // Millisecond 1000 = 1 sec
+                        }, 28900); // Millisecond 1000 = 1 sec
 
 
                         isi="4";
@@ -936,6 +1184,7 @@ public class LevelOne extends AppCompatActivity {
                     }
                 }
             });
+
             AlertDialog builder = alder.create();
             builder.show();
         }
@@ -962,12 +1211,73 @@ public class LevelOne extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (Q3[i]=="Tidak Pernah")
                 {
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
 
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
+
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -988,8 +1298,9 @@ public class LevelOne extends AppCompatActivity {
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
+
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -998,7 +1309,8 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
+
 
                     isi="5";
 
@@ -1025,8 +1337,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Semua orang pasti pernah bertengkar dengan orang lain, apalagi dengan teman dekat",false));
-                            lstChat.add(new ChatModel("Aduh mungkin pertanyaan saya terlalu mudah untuk dijawab, apa mungkin teman dekat anda itu adalah yang saya bunuh sebelumnya?",true));
+                            lstChat.add(new ChatModel("Semua orang pasti pernah bertengkar dengan orang lain, apalagi dengan teman dekat",null,false));
+                            lstChat.add(new ChatModel("Aduh mungkin pertanyaan saya terlalu mudah untuk dijawab, apa mungkin teman dekat anda itu adalah yang saya bunuh sebelumnya?",null,true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -1041,7 +1353,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("haha maaf, saya hanya teringat raut wajah mereka saat mereka akan mati, begitu menggairahkan",true));
+                            lstChat.add(new ChatModel("haha maaf, saya hanya teringat raut wajah mereka saat mereka akan mati, begitu menggairahkan",null,true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -1056,7 +1368,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Jika anda ingin tersenyum, tidak masalah, karena mungkin hari ini adalah kesempatan terakhir anda untuk tersenyum",true));
+                            lstChat.add(new ChatModel("Jika anda ingin tersenyum, tidak masalah, karena mungkin hari ini adalah kesempatan terakhir anda untuk tersenyum",null,true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -1071,7 +1383,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Masih banyak pertanyaan yang menunggu, relax lah sejenak",true));
+                            lstChat.add(new ChatModel("Masih banyak pertanyaan yang menunggu, relax lah sejenak",null,true));
 
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
@@ -1086,7 +1398,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan kali ini sedikit menarik, Mana yang kamu pilih Damian Atau Egiw?",true));
+                            lstChat.add(new ChatModel("Pertanyaan kali ini sedikit menarik, Mana yang kamu pilih Damian Atau Egiw?",null,true));
 
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
@@ -1108,11 +1420,73 @@ public class LevelOne extends AppCompatActivity {
                 if (Q3[i]=="Tidak Mungkin")
                 {
 
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
 
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -1135,7 +1509,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1144,7 +1518,8 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
+
 
                     isi="5";
 
@@ -1195,8 +1570,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya memilih damian karena dia orang yang baik",false));
-                            lstChat.add(new ChatModel("Apakah itu benar?, saya sedikit terkejut, mungkin saya akan menyesali ini setelah berakhir",true));
+                            lstChat.add(new ChatModel("Saya memilih damian karena dia orang yang baik",null,false));
+                            lstChat.add(new ChatModel("Apakah itu benar?, saya sedikit terkejut, mungkin saya akan menyesali ini setelah berakhir",null,true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -1211,7 +1586,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tapi semuanya sudah terlanjur, meja sudah dibalik. Ah sebentar saya harus mengurus sesuatu, saya akan kembali dalam 15 detik",true));
+                            lstChat.add(new ChatModel("Tapi semuanya sudah terlanjur, meja sudah dibalik. Ah sebentar saya harus mengurus sesuatu, saya akan kembali dalam 15 detik",null,true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -1226,7 +1601,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("terimakasih, karena sudah menunggu, saya kira anda akan kabur, tapi itu percuma, karena saya selalu berada didekat anda",true));
+                            lstChat.add(new ChatModel("terimakasih, karena sudah menunggu, saya kira anda akan kabur, tapi itu percuma, karena saya selalu berada didekat anda",null,true));
 
                         }
                     }, 17600); // Millisecond 1000 = 1 sec
@@ -1241,7 +1616,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("padahal waktu kita bersama itu menyenangkan ya?, tapi harus berakhir seperti ini, sudahlah.",true));
+                            lstChat.add(new ChatModel("padahal waktu kita bersama itu menyenangkan ya?, tapi harus berakhir seperti ini, sudahlah.",null,true));
 
                         }
                     }, 19600); // Millisecond 1000 = 1 sec
@@ -1256,7 +1631,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saatnya pertanyaan berikutnya",true));
+                            lstChat.add(new ChatModel("Saatnya pertanyaan berikutnya",null,true));
 
                         }
                     }, 21600); // Millisecond 1000 = 1 sec
@@ -1271,7 +1646,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Siapa nama dibawah ini yang bukan teman anda?, saya hanya ingin memastikan, karena saya mencurigai sesuatu",true));
+                            lstChat.add(new ChatModel("Siapa nama dibawah ini yang bukan teman anda?, saya hanya ingin memastikan, karena saya mencurigai sesuatu",null,true));
 
                         }
                     }, 23600); // Millisecond 1000 = 1 sec
@@ -1291,10 +1666,73 @@ public class LevelOne extends AppCompatActivity {
                 if (Q3[i]=="Egiw")
                 {
 
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
+
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -1317,7 +1755,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1326,7 +1764,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
 
                     isi="6";
 
@@ -1335,10 +1773,73 @@ public class LevelOne extends AppCompatActivity {
                 if (Q3[i]=="Tidak Keduanya")
                 {
 
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
+
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -1361,7 +1862,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1370,7 +1871,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
 
 
                     isi="6";
@@ -1466,8 +1967,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya tidak mengenal orang yang bernama Demian",false));
-                            lstChat.add(new ChatModel("Sial, anda berhasil menjawab lagi, tapi tentu saja karena pertanyaan itu mudah",true));
+                            lstChat.add(new ChatModel("Saya tidak mengenal orang yang bernama Demian",null,false));
+                            lstChat.add(new ChatModel("Sial, anda berhasil menjawab lagi, tapi tentu saja karena pertanyaan itu mudah",null,true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -1482,7 +1983,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya hanya bermain dengan anda sebelum saya memberikan pertanyaan yang sesungguhnya",true));
+                            lstChat.add(new ChatModel("Saya hanya bermain dengan anda sebelum saya memberikan pertanyaan yang sesungguhnya",null,true));
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
 
@@ -1496,7 +1997,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Kali ini saya akan beralih ke pertanyaan tentang sejarah",true));
+                            lstChat.add(new ChatModel("Kali ini saya akan beralih ke pertanyaan tentang sejarah",null,true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -1511,7 +2012,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pasti anda tau kisah Romeo dan Juliet bukan?, oleh karena itu pertanyaan saya adalah siapa yang harusnya mati dalam kisah tersebut?",true));
+                            lstChat.add(new ChatModel("Pasti anda tau kisah Romeo dan Juliet bukan?, oleh karena itu pertanyaan saya adalah siapa yang harusnya mati dalam kisah tersebut?",null,true));
 
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
@@ -1531,10 +2032,73 @@ public class LevelOne extends AppCompatActivity {
                 if (Q3[i]=="Dewi")
                 {
 
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
+
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -1557,7 +2121,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1566,7 +2130,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
 
 
                     isi="7";
@@ -1598,10 +2162,73 @@ public class LevelOne extends AppCompatActivity {
                 if (Q3[i]=="Romeo")
                 {
 
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
+
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -1622,8 +2249,9 @@ public class LevelOne extends AppCompatActivity {
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
+
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1632,7 +2260,8 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
+
 
                     isi="8";
 
@@ -1659,8 +2288,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Keluarga, saya yakin mereka mati karena tidak bisa bersatu akibat perbedaan status",false));
-                            lstChat.add(new ChatModel("Untuk wanita seperti anda, anda memiliki jawaban yang menarik",true));
+                            lstChat.add(new ChatModel("Keluarga, saya yakin mereka mati karena tidak bisa bersatu akibat perbedaan status",null,false));
+                            lstChat.add(new ChatModel("Untuk wanita seperti anda, anda memiliki jawaban yang menarik",null,true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -1675,7 +2304,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tapi bagi saya, kisah mereka tidak lebih dari kisah 2 orang bodoh yang putus asa",true));
+                            lstChat.add(new ChatModel("Tapi bagi saya, kisah mereka tidak lebih dari kisah 2 orang bodoh yang putus asa",null,true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -1690,7 +2319,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Kalau saya menjadi romeo, saya akan membunuh juliet agar tidak ada orang lain yang bisa memilikinya",true));
+                            lstChat.add(new ChatModel("Kalau saya menjadi romeo, saya akan membunuh juliet agar tidak ada orang lain yang bisa memilikinya",null,true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -1705,7 +2334,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Baiklah, pertanyaan selanjutnya cukup mudah, berapa pertanyaan yang telah saya lontarkan dari awal hingga sekarang?",true));
+                            lstChat.add(new ChatModel("Baiklah, pertanyaan selanjutnya cukup mudah, berapa pertanyaan yang telah saya lontarkan dari awal hingga sekarang?",null,true));
 
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
@@ -1720,7 +2349,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("(Jangan Scroll Chat ini atau saya akan rusak histori percakapan kita dari awal)",true));
+                            lstChat.add(new ChatModel("(Jangan Scroll Chat ini atau saya akan rusak histori percakapan kita dari awal)",null,true));
 
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
@@ -1739,10 +2368,73 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q3[i]=="Juliet")
                 {
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
+
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -1763,8 +2455,9 @@ public class LevelOne extends AppCompatActivity {
                             AlertDialog aldiaer = aldia.create();
                             aldiaer.show();
 
+
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1773,7 +2466,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
 
                     isi="8";
 
@@ -1804,10 +2497,73 @@ public class LevelOne extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (Q3[i]=="7")
                 {
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
+
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -1830,7 +2586,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1839,7 +2595,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
 
                     isi="akhir";
 
@@ -1847,10 +2603,73 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q3[i]=="12")
                 {
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Saya tidak menyukai accesories apapun",null,false));
+                            lstChat.add(new ChatModel("?",null,true));
+
+                        }
+                    }, 2000); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            ListView lstView = (ListView)findViewById(R.id.listView);
+                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            lstView.setAdapter(adapter);
+                            lstView.setDivider(null);
+                            lstView.setDividerHeight(0);
+                            mp.start();
+                            lstChat.add(new ChatModel("Anda siapa?",null,true));
+
+                        }
+                    }, 4000); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 7600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 18600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             ImageView image = new ImageView(LevelOne.this);
                             image.setImageResource(R.drawable.victim);
                             AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
@@ -1873,7 +2692,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                         }
-                    }, 500); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -1882,7 +2701,7 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 3500); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
 
                     isi="akhir";
 
@@ -1909,8 +2728,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya mengigat ada 10 pertanyaan yang sudah anda tanyakan",false));
-                            lstChat.add(new ChatModel("Hebat!, seorang mahasiswi memang hebat, memikirkan hal ini mungkin lebih mudah daripada memikirkan perasaan orang lain betul?",true));
+                            lstChat.add(new ChatModel("Saya mengigat ada 10 pertanyaan yang sudah anda tanyakan",null,false));
+                            lstChat.add(new ChatModel("Hebat!, seorang mahasiswi memang hebat, memikirkan hal ini mungkin lebih mudah daripada memikirkan perasaan orang lain betul?",null,true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -1925,7 +2744,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Sejujurnya saya sudah bosan dengan permainan ini, jadi saya akan memberikan pertanyaan terakhir",true));
+                            lstChat.add(new ChatModel("Sejujurnya saya sudah bosan dengan permainan ini, jadi saya akan memberikan pertanyaan terakhir",null,true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -1940,7 +2759,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan ini yang menentukan keselamatan anda. Siapa sebenarnya saya?, jika anda benar saya akan menyerahkan diri saya ke polisi",true));
+                            lstChat.add(new ChatModel("Pertanyaan ini yang menentukan keselamatan anda. Siapa sebenarnya saya?, jika anda benar saya akan menyerahkan diri saya ke polisi",null,true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -1985,10 +2804,70 @@ public class LevelOne extends AppCompatActivity {
                     startActivity(intent);
                     LevelOne.this.finish();
                 } else {
-                    Toast.makeText(getApplicationContext(),"Misi Gagal,Client anda terbunuh dan tersangka melarikan diri",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                    startActivity(intent);
-                    LevelOne.this.finish();
+
+
+                    final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
+                    final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            pc.start();
+                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+                            dialog.setContentView(R.layout.telponberbohong);
+                            dialog.show();
+
+                        }
+                    }, 2600); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            wm.start();
+
+                        }
+                    }, 13600); // Millisecond 1000 = 1 sec
+
+
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            ImageView image = new ImageView(LevelOne.this);
+                            image.setImageResource(R.drawable.victim);
+                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
+                            aldia.setTitle("From : DeepSpeak Crop");
+                            aldia.setCancelable(true);
+                            aldia.setIcon(R.drawable.logo_ds2);
+                            aldia.setInverseBackgroundForced(true);
+                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
+                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
+                                    startActivity(intent);
+                                    LevelOne.this.finish();
+                                }
+                            });
+                            aldia.setView(image);
+                            AlertDialog aldiaer = aldia.create();
+                            aldiaer.show();
+
+
+                        }
+                    }, 18900); // Millisecond 1000 = 1 sec
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
+                            startActivity(intent);
+                            LevelOne.this.finish();
+                        }
+                    }, 23900); // Millisecond 1000 = 1 sec
+
                 }
             }
         });

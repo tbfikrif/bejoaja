@@ -16,7 +16,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:fontFamily=""
-        android:text="Nama"
+        android:text="THE"
         android:textSize="30sp"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
