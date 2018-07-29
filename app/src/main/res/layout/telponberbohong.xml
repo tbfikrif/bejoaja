@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/foto"
         android:layout_width="250dp"
         android:layout_height="250dp"
@@ -58,7 +58,7 @@
         android:layout_margin="40dp"
         android:layout_marginBottom="72dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
         android:src="@drawable/terima"
         app:civ_border_color="@android:color/white"
         app:civ_border_overlay="true"
@@ -75,7 +75,7 @@
         android:layout_margin="40dp"
         android:layout_marginBottom="72dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
         android:src="@drawable/tolak"
         app:civ_border_color="@android:color/white"
         app:civ_border_overlay="true"
