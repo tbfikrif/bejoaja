@@ -2844,6 +2844,7 @@ public class LevelOne extends AppCompatActivity {
     }
 
     public void dialog9() {
+
         AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
         aldia.setTitle("Jawaban:");
         final EditText input = new EditText(LevelOne.this);
