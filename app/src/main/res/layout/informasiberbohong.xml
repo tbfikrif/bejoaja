@@ -40,12 +40,28 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_gravity="center"
-                android:src="@drawable/informasi"/>
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/informasi"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_vertical"
+                    android:text="DEAD MESSAGE"
+                    android:textSize="20sp"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -100,15 +116,16 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:src="@drawable/kasus"/>
+
             <TextView
                 android:id="@+id/b3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/textColor"
+                android:layout_gravity="center"
                 android:text="Pembunuhan berantai bernama the quiz yang telah memakan beberapa korban, tubuh mereka ditemukan tidak bernyawa sembari memegang ponsel genggam dengan peringatan anda gagal di smsnya."
                 android:textAlignment="center"
-                android:layout_gravity="center"
-                android:textSize="15sp"/>
+                android:textColor="@color/textColor"
+                android:textSize="15sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -163,7 +180,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
-                android:text="The Quiz"
+                android:text="1. The Quiz"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/b6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:text="2. Penyuka Juliet"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/b7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:text="3. Selfish"
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:textSize="15sp"/>

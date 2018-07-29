@@ -2,6 +2,7 @@ package com.babage.b370;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
@@ -37,11 +38,9 @@ public class IntroScreen extends Activity {
         final TypeWriter tw = findViewById(R.id.typeWriter);
 
         tw.setText("");
+        tw.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));
         tw.setCharacterDelay(150);
         tw.animateText(getResources().getString(R.string.welcomeText));
-
-
-
 
 
            final Handler handler = new Handler();

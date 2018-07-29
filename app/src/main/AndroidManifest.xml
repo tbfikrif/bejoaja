@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".SplashScreenTemp"
+            android:name=".IntroScreen"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="portrait"
@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntroScreen" />
+        <activity android:name=".SplashScreenTemp" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainSmartphoneActivity" />
         <activity android:name=".QuestActivity" />
