@@ -28,7 +28,7 @@
         android:layout_height="wrap_content" />
     <Button
         android:textColor="@color/textColor"
-        android:text="chat"
+        android:text="Ambil Misi"
         android:layout_width="match_parent"
         android:id="@+id/btnC"
         android:layout_height="wrap_content" />

@@ -74,10 +74,9 @@ public class MainActivity extends Activity {
 
         final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(this);
 
-
         fancy.setTitle("Terimakasih");
         fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-        fancy.setMessage("Anda benar ingin keluar ?");
+        fancy.setMessage("Anda yakin ingin keluar ?");
         fancy.setNegativeBtnText("Tidak");
         fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
         fancy.setPositiveBtnText("Iya");

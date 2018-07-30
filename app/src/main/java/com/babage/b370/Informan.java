@@ -3,11 +3,14 @@ package com.babage.b370;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewParent;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -16,6 +19,10 @@ import android.widget.Toast;
 
 import com.mzelzoghbi.zgallery.ZGallery;
 import com.mzelzoghbi.zgallery.entities.ZColor;
+import com.shashank.sony.fancydialoglib.Animation;
+import com.shashank.sony.fancydialoglib.FancyAlertDialog;
+import com.shashank.sony.fancydialoglib.FancyAlertDialogListener;
+import com.shashank.sony.fancydialoglib.Icon;
 
 import java.util.ArrayList;
 
@@ -29,6 +36,10 @@ public class Informan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //menghilangkan ActionBar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_informan);
         btnv = (Button) findViewById(R.id.btnV);
         btng = (Button) findViewById(R.id.btnG);
@@ -119,9 +130,36 @@ public class Informan extends AppCompatActivity {
 
     public void goChat(){
 
-        Intent i = new Intent(this,LevelOne.class);
-        startActivity(i);
-        Informan.this.finish();
+        final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(this);
+
+        fancy.setTitle("Misi Menyelamatkan");
+        fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+        fancy.setMessage("Anda yakin ingin mengambil misi ini ?");
+        fancy.setNegativeBtnText("Tidak");
+        fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+        fancy.setPositiveBtnText("Iya");
+        fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+        fancy.setAnimation(Animation.SLIDE);
+        fancy.isCancellable(true);
+        fancy.setIcon(R.mipmap.ic_launcher_round, Icon.Visible);
+        fancy.OnPositiveClicked(new FancyAlertDialogListener() {
+            @Override
+            public void OnClick() {
+                Intent i = new Intent(getApplicationContext(),LevelOne.class);
+                startActivity(i);
+                Informan.this.finish();
+            }
+        })
+                .OnNegativeClicked(new FancyAlertDialogListener() {
+                    @Override
+                    public void OnClick() {
+
+                    }
+                })
+                .build();
+
+
+
 
     }
 
