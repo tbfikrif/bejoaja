@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,30 +8,78 @@
     android:background="@color/background"
     tools:context=".Informan">
 
-    <ImageButton android:id="@+id/imgv"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgv"
         android:src="@drawable/foto1"
-        android:layout_width="match_parent"
+        android:layout_width="200sp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_overlay="true"
+        app:civ_border_width="3dp"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/named"
+        />
+
+    <TextView android:id="@+id/named"
+        android:layout_above="@id/ss"
+        android:text="NEYSA RIANI"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:textColor="@color/textColor"
-        android:text="Gallery"
+    <LinearLayout android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:id="@+id/btnG"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:textColor="@color/textColor"
-        android:text="Video"
-        android:layout_width="match_parent"
-        android:id="@+id/btnV"
-        android:layout_height="wrap_content" />
-    <Button
-        android:textColor="@color/textColor"
-        android:text="Ambil Misi"
-        android:layout_width="match_parent"
-        android:id="@+id/btnC"
-        android:layout_height="wrap_content" />
+        android:layout_marginTop="50dp"
+        android:background="#fff"
+        android:id="@+id/ss"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
 
 
-</LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnG"
+            android:layout_weight="3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/galeri"
+            app:civ_border_color="@color/textColor"
+            app:civ_border_overlay="true"
+            app:civ_border_width="3dp"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnC"
+            android:layout_weight="3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/dead_message"
+            app:civ_border_color="@color/textColor"
+            app:civ_border_overlay="true"
+            app:civ_border_width="3dp"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnV"
+            android:layout_weight="3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/kasus"
+            app:civ_border_color="@color/textColor"
+            app:civ_border_overlay="true"
+            app:civ_border_width="3dp"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

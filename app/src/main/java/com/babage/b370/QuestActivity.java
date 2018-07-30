@@ -29,7 +29,10 @@ public class QuestActivity extends AppCompatActivity {
         //menghilangkan ActionBar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                WindowManager.LayoutParams.FLAG_FULLSCREEN); getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher_round);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
 
         setContentView(R.layout.activity_quest);
         dataSet = new ArrayList<>();
@@ -62,9 +65,9 @@ public class QuestActivity extends AppCompatActivity {
          */
         dataSet.add("Dead Quiz");
         dataSet.add("Who Am i?");
-        dataSet.add("?");
-        dataSet.add("?");
-        dataSet.add("?");
+        dataSet.add("Level Belum Tersedia");
+        dataSet.add("Level Belum Tersedia");
+        dataSet.add("Level Belum Tersedia");
 
 
 

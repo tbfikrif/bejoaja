@@ -26,11 +26,12 @@ import com.shashank.sony.fancydialoglib.Icon;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class Informan extends AppCompatActivity {
 
-    Button btnv,btng,btnc;
-    ImageButton imgv;
+    CircleImageView btnv,btng,btnc,imgv;
     ArrayList<String> imagesList = new ArrayList<String>();
 
     @Override
@@ -41,10 +42,13 @@ public class Informan extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_informan);
-        btnv = (Button) findViewById(R.id.btnV);
-        btng = (Button) findViewById(R.id.btnG);
-        btnc = (Button) findViewById(R.id.btnC);
-        imgv = (ImageButton) findViewById(R.id.imgv);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher_round);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        btnv = (CircleImageView) findViewById(R.id.btnV);
+        btng = (CircleImageView) findViewById(R.id.btnG);
+        btnc = (CircleImageView) findViewById(R.id.btnC);
+        imgv = (CircleImageView) findViewById(R.id.imgv);
 
         imagesList.add("http://static0.passel.co/wp-content/uploads/2016/08/05110349/20160731-igor-trepeshchenok-barnimages-08-768x509.jpg");
         imagesList.add("http://static0.passel.co/wp-content/uploads/2016/08/05095154/tumblr_oawfisUmZo1u7ns0go1_500.jpg");
