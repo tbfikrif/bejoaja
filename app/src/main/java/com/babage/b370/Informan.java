@@ -133,12 +133,12 @@ public class Informan extends AppCompatActivity {
         final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(this);
 
         fancy.setTitle("Misi Menyelamatkan");
-        fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+        fancy.setBackgroundColor(Color.parseColor("#ffffff")) ;
         fancy.setMessage("Anda yakin ingin mengambil misi ini ?");
         fancy.setNegativeBtnText("Tidak");
-        fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+        fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));
         fancy.setPositiveBtnText("Iya");
-        fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+        fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));
         fancy.setAnimation(Animation.SLIDE);
         fancy.isCancellable(true);
         fancy.setIcon(R.mipmap.ic_launcher_round, Icon.Visible);

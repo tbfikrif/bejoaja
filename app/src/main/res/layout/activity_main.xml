@@ -13,22 +13,7 @@
         android:background="#99000000"
         android:alpha="0.8">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="283dp"
-            android:layout_height="320dp"
-            android:alpha="1"
-            android:src="@drawable/blood2" />
 
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="283dp"
-            android:layout_height="320dp"
-            android:alpha="1"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="32dp"
-            android:src="@drawable/blood3" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -74,7 +59,7 @@
             android:layout_below="@id/mid"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/my_button_bg"
+            android:background="@drawable/main_button_background"
             android:onClick="playGame"
             android:text="Mulai"
             android:textAlignment="center"
@@ -89,7 +74,7 @@
             android:layout_below="@+id/playButton"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:background="@drawable/my_button_bg"
+            android:background="@drawable/main_button_background"
             android:onClick="exitGame"
             android:text="Keluar"
             android:textAlignment="center"
