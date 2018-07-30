@@ -14,9 +14,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Informasi"
+        android:text="CLIENT PROFILE"
         android:textAlignment="center"
-        android:textColor="@color/textColor"
+        android:textColor="#fff"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
                 android:textAlignment="center"
                 android:layout_marginTop="8dp"
                 android:text="Biodata"
-                android:textColor="@color/textColor"
+                android:textColor="#fff"
                 android:textStyle="bold"/>
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="80dp"
@@ -94,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
-                android:text="Neysa adalah mahasiswi yang menerima ancaman pembunuhan dari orang misterius yang menjalankan acara quiz melalui pesan ponsel. Sebelumnya kejadian ini telah memakan 3 korban teman dekat Neysa, mereka adalah : Egiw, Dewi dan Damian  yang jasadnya masih belum ditemukan. Sebelum kejadian pembunuhan itu terjadi, Neysa berselisih dengan Dewi, selang satu hari Nesya juga bertengkar dengan Damian, namun siapa disangka sehari setelah itu mereka dinyatakan tewas, seminggu setelahnya Egiwpun tewas. Mereka semua mati dengan cara yang sama yaitu tergeletak sambil memegang handphone dengan pesan terakhir Anda gagal dari seseorang yang menjalankan acara The Quiz Melalui SMS"
+                android:text="Neysa adalah mahasiswi yang menerima ancaman pembunuhan dari orang misterius yang menjalankan acara quiz melalui pesan ponsel. Sebelumnya kejadian ini telah memakan 3 korban teman dekat Neysa, mereka adalah : Egiw, Dewi dan Damian  yang jasadnya masih belum ditemukan. "
                 android:textAlignment="center"
                 android:textSize="15sp"/>
             <View
@@ -109,7 +109,7 @@
                 android:textAlignment="center"
                 android:layout_marginTop="8dp"
                 android:text="Kasus"
-                android:textColor="@color/textColor"
+                android:textColor="#fff"
                 android:textStyle="bold"/>
             <ImageView
                 android:layout_width="60dp"
@@ -139,7 +139,7 @@
                 android:textAlignment="center"
                 android:layout_marginTop="8dp"
                 android:text="Misi"
-                android:textColor="@color/textColor"
+                android:textColor="#fff"
                 android:textStyle="bold"/>
             <ImageView
                 android:layout_width="60dp"
@@ -168,7 +168,7 @@
                 android:textAlignment="center"
                 android:layout_marginTop="8dp"
                 android:text="Clue"
-                android:textColor="@color/textColor"
+                android:textColor="#fff"
                 android:textStyle="bold"/>
             <ImageView
                 android:layout_width="60dp"
@@ -222,18 +222,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/galeri"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/quest_button_background"
-        android:src="@drawable/galeri"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnOk" />
+
 
 </android.support.constraint.ConstraintLayout>

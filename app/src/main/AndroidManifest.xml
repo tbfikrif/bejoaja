@@ -27,11 +27,15 @@
         <activity android:name=".SplashScreenTemp" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainSmartphoneActivity" />
-        <activity android:name=".QuestActivity" />
-        <activity android:name=".LevelOne"
-            android:screenOrientation="portrait"
-            android:label="The Quiz"/>
-        <activity android:name=".LevelTwo"/>
+        <activity android:name=".QuestActivity"
+            android:label="MISI"/>
+        <activity
+            android:name=".LevelOne"
+            android:label="The Quiz"
+            android:screenOrientation="portrait" />
+        <activity android:name=".LevelTwo" />
+        <activity android:name=".Informan"
+                  android:label="Informasi Client"></activity>
     </application>
 
 </manifest>

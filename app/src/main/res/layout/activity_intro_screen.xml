@@ -16,7 +16,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="96dp"
         android:contentDescription="@string/logo"
-        android:src="@drawable/logo_ds2"
+        android:src="@drawable/logo_ds"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

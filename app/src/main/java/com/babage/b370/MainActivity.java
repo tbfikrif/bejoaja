@@ -2,6 +2,7 @@ package com.babage.b370;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,16 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.mzelzoghbi.zgallery.ZGallery;
+import com.mzelzoghbi.zgallery.entities.ZColor;
+import com.shashank.sony.fancydialoglib.Animation;
+import com.shashank.sony.fancydialoglib.FancyAlertDialog;
+import com.shashank.sony.fancydialoglib.FancyAlertDialogListener;
+import com.shashank.sony.fancydialoglib.Icon;
+
+import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
@@ -29,6 +40,7 @@ public class MainActivity extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
+
 
         background = MediaPlayer.create(MainActivity.this, R.raw.background_mainmenu);
         click = MediaPlayer.create(this, R.raw.click2);
@@ -59,8 +71,40 @@ public class MainActivity extends Activity {
     }
 
     public void exitGame(View view){
-        click.start();
-        finish();
-        System.exit(0);
+
+        final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(this);
+
+
+        fancy.setTitle("Terimakasih");
+        fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+        fancy.setMessage("Anda benar ingin keluar ?");
+        fancy.setNegativeBtnText("Tidak");
+        fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+        fancy.setPositiveBtnText("Iya");
+        fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+        fancy.setAnimation(Animation.POP);
+        fancy.isCancellable(true);
+        fancy.setIcon(R.mipmap.ic_launcher_round, Icon.Visible);
+        fancy.OnPositiveClicked(new FancyAlertDialogListener() {
+                    @Override
+                    public void OnClick() {
+                        click.start();
+                        finish();
+                        System.exit(0);
+                    }
+                })
+                .OnNegativeClicked(new FancyAlertDialogListener() {
+                    @Override
+                    public void OnClick() {
+
+                    }
+                })
+                .build();
+
+
+
+
+
     }
+
 }

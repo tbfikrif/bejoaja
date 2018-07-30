@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".Informan">
+
+    <ImageButton android:id="@+id/imgv"
+        android:src="@drawable/foto1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textColor="@color/textColor"
+        android:text="Gallery"
+        android:layout_width="match_parent"
+        android:id="@+id/btnG"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textColor="@color/textColor"
+        android:text="Video"
+        android:layout_width="match_parent"
+        android:id="@+id/btnV"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="@color/textColor"
+        android:text="chat"
+        android:layout_width="match_parent"
+        android:id="@+id/btnC"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
