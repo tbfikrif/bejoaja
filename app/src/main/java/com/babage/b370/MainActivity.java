@@ -100,10 +100,38 @@ public class MainActivity extends Activity {
                 })
                 .build();
 
+    }
 
+    @Override
+    public void onBackPressed() {
+        final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(this);
 
+        fancy.setTitle("Terimakasih");
+        fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+        fancy.setMessage("Anda yakin ingin keluar ?");
+        fancy.setNegativeBtnText("Tidak");
+        fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+        fancy.setPositiveBtnText("Iya");
+        fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+        fancy.setAnimation(Animation.POP);
+        fancy.isCancellable(true);
+        fancy.setIcon(R.mipmap.ic_launcher_round, Icon.Visible);
+        fancy.OnPositiveClicked(new FancyAlertDialogListener() {
+            @Override
+            public void OnClick() {
+                click.start();
+                finish();
+                System.exit(0);
 
+            }
+        })
+                .OnNegativeClicked(new FancyAlertDialogListener() {
+                    @Override
+                    public void OnClick() {
 
+                    }
+                })
+                .build();
     }
 
 }

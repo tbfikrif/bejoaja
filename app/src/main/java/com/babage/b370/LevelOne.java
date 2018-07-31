@@ -26,6 +26,11 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.shashank.sony.fancydialoglib.Animation;
+import com.shashank.sony.fancydialoglib.FancyAlertDialog;
+import com.shashank.sony.fancydialoglib.FancyAlertDialogListener;
+import com.shashank.sony.fancydialoglib.Icon;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -538,7 +543,7 @@ public class LevelOne extends AppCompatActivity {
         lstView.setDividerHeight(0);
 
         final CharSequence[] Q2 = {
-                "Orang Terdekat Anda", "Orang Lain", "Diri Anda Sendiri"
+                "Orang Terdekat Saya", "Orang Lain", "Diri Saya Sendiri"
         };
 
 
@@ -547,7 +552,7 @@ public class LevelOne extends AppCompatActivity {
         alder.setItems(Q2, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if (Q2[i]=="Orang Terdekat Anda") {
+                if (Q2[i]=="Orang Terdekat Saya") {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
@@ -585,7 +590,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("..., brengsek berani-beraninya kamu mempermainkan saya!",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -626,25 +631,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -685,8 +703,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Saya tidak punya orang dekat, jadi saya memilih menyelamatkan orang lain",null,false));
+                            lstChat.add(new ChatModel("Ini mencurigakan, neysa tidak mungkin mengatakan hal seperti itu",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -701,7 +719,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Sudah jelas anda bukan neysa?. Baiklah sudah cukup permainannya.",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -742,25 +760,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -780,7 +811,7 @@ public class LevelOne extends AppCompatActivity {
                     alur="2b";
                 } else
 
-                if (Q2[i]=="Diri Anda Sendiri")
+                if (Q2[i]=="Diri Saya Sendiri")
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
@@ -912,8 +943,8 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDividerHeight(0);
                                 mp.start();
                                 e1.setHint("Tunggu");
-                                lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                                lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                                lstChat.add(new ChatModel("Baik itu berlian ataupun emas saya tidak suka accesories",null,false));
+                                lstChat.add(new ChatModel("Benarkah?, kalau begitu berarti anda bukan neysa",null,true));
 
                             }
                         }, 2000); // Millisecond 1000 = 1 sec
@@ -928,7 +959,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                                lstChat.add(new ChatModel("Neysa adalah tipikal wanita yang sangat matre. Saya benci dengan pengganggu, jadi cukup sampai disini. ",null,true));
 
                             }
                         }, 4000); // Millisecond 1000 = 1 sec
@@ -969,25 +1000,38 @@ public class LevelOne extends AppCompatActivity {
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                ImageView image = new ImageView(LevelOne.this);
-                                image.setImageResource(R.drawable.victim);
-                                AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                                aldia.setTitle("From : DeepSpeak Crop");
-                                aldia.setCancelable(true);
-                                aldia.setIcon(R.drawable.logo_ds2);
-                                aldia.setInverseBackgroundForced(true);
-                                aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                                aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                                final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                                fancy.setTitle("From : DeepSpeak Corporation");
+                                fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                                fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                                fancy.setNegativeBtnText("OKE");
+                                fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                                fancy.setPositiveBtnText("KELUAR");
+                                fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                                fancy.setAnimation(Animation.SIDE);
+                                fancy.isCancellable(false);
+                                fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                                fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                     @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                    public void OnClick() {
+
                                         Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                         startActivity(intent);
                                         LevelOne.this.finish();
+
                                     }
-                                });
-                                aldia.setView(image);
-                                AlertDialog aldiaer = aldia.create();
-                                aldiaer.show();
+                                })
+                                        .OnNegativeClicked(new FancyAlertDialogListener() {
+                                            @Override
+                                            public void OnClick() {
+
+                                            }
+                                        })
+                                        .build();
+
+
 
 
                             }
@@ -1001,6 +1045,7 @@ public class LevelOne extends AppCompatActivity {
                                 LevelOne.this.finish();
                             }
                         }, 28900); // Millisecond 1000 = 1 sec
+
 
 
                         isi="4";
@@ -1130,8 +1175,8 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDividerHeight(0);
                                 mp.start();
                                 e1.setHint("Tunggu");
-                                lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                                lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                                lstChat.add(new ChatModel("Saya tidak terlalu mempedulikannya , jadi mana saja tidak masalah",null,false));
+                                lstChat.add(new ChatModel("Neysa?, Sebentar, ini siapa?, saya yakin ini bukan neysa",null,true));
 
                             }
                         }, 2000); // Millisecond 1000 = 1 sec
@@ -1146,7 +1191,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                                lstChat.add(new ChatModel("Kepar*t , ya sudah kalau begitu akan ku kuliti dia, :)",null,true));
 
                             }
                         }, 4000); // Millisecond 1000 = 1 sec
@@ -1187,25 +1232,38 @@ public class LevelOne extends AppCompatActivity {
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                ImageView image = new ImageView(LevelOne.this);
-                                image.setImageResource(R.drawable.victim);
-                                AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                                aldia.setTitle("From : DeepSpeak Crop");
-                                aldia.setCancelable(true);
-                                aldia.setIcon(R.drawable.logo_ds2);
-                                aldia.setInverseBackgroundForced(true);
-                                aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                                aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                                final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                                fancy.setTitle("From : DeepSpeak Corporation");
+                                fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                                fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                                fancy.setNegativeBtnText("OKE");
+                                fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                                fancy.setPositiveBtnText("KELUAR");
+                                fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                                fancy.setAnimation(Animation.SIDE);
+                                fancy.isCancellable(false);
+                                fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                                fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                     @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                    public void OnClick() {
+
                                         Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                         startActivity(intent);
                                         LevelOne.this.finish();
+
                                     }
-                                });
-                                aldia.setView(image);
-                                AlertDialog aldiaer = aldia.create();
-                                aldiaer.show();
+                                })
+                                        .OnNegativeClicked(new FancyAlertDialogListener() {
+                                            @Override
+                                            public void OnClick() {
+
+                                            }
+                                        })
+                                        .build();
+
+
 
 
                             }
@@ -1219,7 +1277,6 @@ public class LevelOne extends AppCompatActivity {
                                 LevelOne.this.finish();
                             }
                         }, 28900); // Millisecond 1000 = 1 sec
-
 
                         isi="4";
 
@@ -1273,8 +1330,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Hubungan harmonis adalah yang selalu jadikan dasar pertemanan, jadi saya tidak pernah bertengkar",null,false));
+                            lstChat.add(new ChatModel("Apa saat anda bertengkar dengan dewi dan demian itu bukan bertengkar?",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -1289,7 +1346,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Dasar munafik, selamat tinggal.",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -1330,25 +1387,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -1362,6 +1432,7 @@ public class LevelOne extends AppCompatActivity {
                             LevelOne.this.finish();
                         }
                     }, 28900); // Millisecond 1000 = 1 sec
+
 
                     isi="5";
 
@@ -1491,8 +1562,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Saya tidak Mungkin melakukan itu, menyakiti perasaan orang lain adalah hal yang paling saya benci",null,false));
+                            lstChat.add(new ChatModel("Ada pepatah setiap orang bisa berubah hanya dalam satu detik",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -1507,7 +1578,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Dari awal banyak hal yang saya curigakan dan sekarang saya yakin anda bukan neysa",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -1548,25 +1619,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -1745,8 +1829,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Egiw adalah pria yang baik dan selalu perhatian, jadi mungkin dia adalah tipe saya",null,false));
+                            lstChat.add(new ChatModel("Oh begitu, ternyata tindakan anda tetaplah tidak berubah",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -1761,7 +1845,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Dasar wanita murahan!",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -1802,25 +1886,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -1834,6 +1931,7 @@ public class LevelOne extends AppCompatActivity {
                             LevelOne.this.finish();
                         }
                     }, 28900); // Millisecond 1000 = 1 sec
+
 
                     isi="6";
 
@@ -1862,8 +1960,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Untuk sekarang ini tidak ada orang yang saya sukai, jadi saya rasa, saya tidak memilih keduanya",null,false));
+                            lstChat.add(new ChatModel("Seorang neysa yang tidak bisa hidup tanpa menyakiti seorang lelaki, mengatakan itu?. itu sangat tidak mungkin",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -1878,7 +1976,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Hanya satu kemungkinan saat ini, anda sedang berpura-pura menjadi neysa,:).",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -1919,25 +2017,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -1951,7 +2062,6 @@ public class LevelOne extends AppCompatActivity {
                             LevelOne.this.finish();
                         }
                     }, 28900); // Millisecond 1000 = 1 sec
-
 
                     isi="6";
 
@@ -1983,7 +2093,6 @@ public class LevelOne extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (Q3[i]=="Egiw")
                 {
-
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -2004,8 +2113,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Saya seperti mendengar nama egiw",null,false));
+                            lstChat.add(new ChatModel("Menjadi orang jahatpun memiliki batas",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2020,7 +2129,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Orang yang melupakan temannya tidak beda jauh dengan para penjahat, saya semakin yakin anda pantas dibunuh",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2061,25 +2170,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -2203,8 +2325,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Dewi?, namanya terdengar asing bagi saya",null,false));
+                            lstChat.add(new ChatModel("Setidaknya saat anda menyakiti perasaan orang lain, tolong ingat namanya",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2219,7 +2341,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Melihat balasan anda membuat tensi saya naik, sepertinya saya harus mengambil benda yang keras",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2260,25 +2382,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -2342,8 +2477,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Bagi saya Romeo, karena bagi seorang laki-laki dia tidak bisa meyakinkan keluarganya",null,false));
+                            lstChat.add(new ChatModel("Lalu hal itu juga yang anda lakukan kepada Damian",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2358,7 +2493,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Karena dia tidak kaya jadi kamu hanya mempermainkannya saja?, alasan yang bagus untuk membuat saya membunuh anda sekarang juga.",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2399,25 +2534,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -2431,7 +2579,6 @@ public class LevelOne extends AppCompatActivity {
                             LevelOne.this.finish();
                         }
                     }, 28900); // Millisecond 1000 = 1 sec
-
 
                     isi="8";
 
@@ -2558,8 +2705,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Bagi saya Juliet, tidak ada yang lebih bodoh dari seorang wanita yang mengejar-ngejar seorang laki-laki",null,false));
+                            lstChat.add(new ChatModel("Kenapa anda menghina juliet?, ini janggal. sebenarnya siapa anda?",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2574,7 +2721,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Ah, saya baru sadar, ternyata ada seorang pahlawan kesiangan disini, maaf siapapun anda, waktu anda telah habis",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2615,25 +2762,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -2647,7 +2807,6 @@ public class LevelOne extends AppCompatActivity {
                             LevelOne.this.finish();
                         }
                     }, 28900); // Millisecond 1000 = 1 sec
-
 
                     isi="8";
 
@@ -2698,8 +2857,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Saya menghitung ada 7 total pertanyaan",null,false));
+                            lstChat.add(new ChatModel("Boo, daya ingat anda payah sekali",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2714,7 +2873,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Tapi itu wajar karena anda adalah neysa, wanita yang suka mempermainkan perasaan lelaki, sudahlah. Saya akan kesana :)",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2755,25 +2914,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -2814,8 +2986,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Dari awal hingga sekarang 8 pertanyaan",null,false));
+                            lstChat.add(new ChatModel("Ternyata disamping wanita j*lang anda juga adalah yang bodoh",null,true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2830,7 +3002,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., sial berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("Akhirnya saya bisa beraksi juga, Mohon bersabar, saya sedang diperjalanan",null,true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2871,25 +3043,38 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
+
 
 
                         }
@@ -2995,6 +3180,7 @@ public class LevelOne extends AppCompatActivity {
         aldia.setPositiveButton("KIRIM", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+
                 String YouEditTextValue = input.getText().toString();
 
                 if (YouEditTextValue.equals("Damian"))
@@ -3007,21 +3193,26 @@ public class LevelOne extends AppCompatActivity {
                     LevelOne.this.finish();
                 } else {
 
+                    ListView lstView = (ListView)findViewById(R.id.listView);
+                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    lstView.setAdapter(adapter);
+                    lstView.setDivider(null);
+                    lstView.setDividerHeight(0);
 
+                    final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
                     final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
                     final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
-
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
-                            final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
                             dialog.setContentView(R.layout.telponberbohong);
+                            dialog.setCancelable(false);
                             dialog.show();
 
                         }
-                    }, 2600); // Millisecond 1000 = 1 sec
+                    }, 7600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -3030,36 +3221,56 @@ public class LevelOne extends AppCompatActivity {
                             wm.start();
 
                         }
-                    }, 13600); // Millisecond 1000 = 1 sec
+                    }, 18600); // Millisecond 1000 = 1 sec
 
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            dialog.dismiss();
+
+                        }
+                    }, 22900); // Millisecond 1000 = 1 sec
 
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            ImageView image = new ImageView(LevelOne.this);
-                            image.setImageResource(R.drawable.victim);
-                            AlertDialog.Builder aldia= new AlertDialog.Builder(LevelOne.this,R.style.MyDialogTheme);
-                            aldia.setTitle("From : DeepSpeak Crop");
-                            aldia.setCancelable(true);
-                            aldia.setIcon(R.drawable.logo_ds2);
-                            aldia.setInverseBackgroundForced(true);
-                            aldia.setMessage(Html.fromHtml("<font color='#EAE9E9'>Kami ingin memberitahukan bahwa client anda telah terbunuh</font>"));
-                            aldia.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+
+                            fancy.setTitle("From : DeepSpeak Corporation");
+                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                            fancy.setNegativeBtnText("OKE");
+                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                            fancy.setPositiveBtnText("KELUAR");
+                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                            fancy.setAnimation(Animation.SIDE);
+                            fancy.isCancellable(false);
+                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
+                                public void OnClick() {
+
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
+
                                 }
-                            });
-                            aldia.setView(image);
-                            AlertDialog aldiaer = aldia.create();
-                            aldiaer.show();
+                            })
+                                    .OnNegativeClicked(new FancyAlertDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+
+                                        }
+                                    })
+                                    .build();
+
 
 
                         }
-                    }, 18900); // Millisecond 1000 = 1 sec
+                    }, 23900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -3068,7 +3279,8 @@ public class LevelOne extends AppCompatActivity {
                             startActivity(intent);
                             LevelOne.this.finish();
                         }
-                    }, 23900); // Millisecond 1000 = 1 sec
+                    }, 28900); // Millisecond 1000 = 1 sec
+
 
                 }
             }

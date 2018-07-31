@@ -14,7 +14,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="CLIENT PROFILE"
+        android:text="DETAIL"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="24sp"
