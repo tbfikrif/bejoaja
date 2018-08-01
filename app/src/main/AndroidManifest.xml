@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.babage.b370">
 
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -29,16 +30,19 @@
         <activity android:name=".SplashScreenTemp" />
         <activity android:name=".MainActivity" />
         <activity android:name=".MainSmartphoneActivity" />
-        <activity android:name=".QuestActivity"
-            android:label="MISI"/>
+        <activity
+            android:name=".QuestActivity"
+            android:label="MISI" />
         <activity
             android:name=".LevelOne"
             android:label="The Quiz"
             android:screenOrientation="portrait" />
         <activity android:name=".LevelTwo" />
-        <activity android:name=".Informan"
-                  android:label="Informasi Client"></activity>
-
+        <activity
+            android:name=".Informan"
+            android:label="Informasi Client" />
+        <activity android:name=".vdplay"
+            android:label="Galeri Video"></activity>
     </application>
 
 </manifest>

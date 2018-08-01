@@ -175,7 +175,8 @@ public class Informan extends AppCompatActivity {
 
 
     public void goVideo(){
-
+        Intent i = new Intent(Informan.this, vdplay.class);
+        startActivity(i);
         Toast.makeText(getApplicationContext(),"In Progress...",Toast.LENGTH_SHORT).show();
 
     }
