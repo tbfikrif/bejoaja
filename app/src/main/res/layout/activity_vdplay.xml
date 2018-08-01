@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@color/backgroundThin"
+    android:background="@color/background"
     android:layout_height="match_parent"
     tools:context=".vdplay">
 
 
-
     <com.jaedongchicken.ytplayer.YoutubePlayerView
         android:id="@+id/youtubePlayerView"
+        android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <com.jaedongchicken.ytplayer.YoutubePlayerView
         android:id="@+id/youtubePlayerView2"
         android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content" />
 
 

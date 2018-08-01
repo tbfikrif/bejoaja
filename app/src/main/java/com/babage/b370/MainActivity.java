@@ -1,10 +1,12 @@
 package com.babage.b370;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.droidbyme.dialoglib.DroidDialog;
 import com.mzelzoghbi.zgallery.ZGallery;
 import com.mzelzoghbi.zgallery.entities.ZColor;
 import com.shashank.sony.fancydialoglib.Animation;
@@ -26,7 +29,7 @@ import java.util.ArrayList;
 public class MainActivity extends Activity {
 
     MediaPlayer background, click;
-
+    private FloatingActionButton fab;
     Button playButton;
     Button exitButton;
 
@@ -42,6 +45,25 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new DroidDialog.Builder(MainActivity.this)
+                        .icon(R.mipmap.ic_launcher_round)
+                        .title("Cara Bermain")
+                        .color(R.color.background,R.id.background,R.color.textColor)
+                        .content("1. Pahami Informasi melalui : \n- Gallery\n- Video\n- Atau mengklik icon profile client.\n\n2. Lalu jawab setiap pertanyaan menggunakan : \n- Tap pilihan ganda\n- atau isian masukkan. ")
+                        .cancelable(true, true)
+                        .positiveButton("OK", new DroidDialog.onPositiveListener() {
+                            @Override
+                            public void onPositive(Dialog droidDialog) {
+                                droidDialog.dismiss();
+                            }
+                        }).show();
+            }
+        });
         background = MediaPlayer.create(MainActivity.this, R.raw.background_mainmenu);
         click = MediaPlayer.create(this, R.raw.click2);
         //background.start();
