@@ -100,14 +100,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                 if (position==0){
 
-
                     click.start();
                     distortion.start();
                     Intent intent = new Intent(view.getContext(),Informan.class);
                     view.getContext().startActivity(intent);
-                    ((Activity) view.getContext()).finish();
-
-
+                    ((Activity)view.getContext()).finish();
 
                 } else if (position==1){
                     background.stop();
@@ -120,18 +117,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         //intent.putExtras(mBundle);
                         view.getContext().startActivity(intent);
                         ((Activity) view.getContext()).finish();
-                        Toasty.success(view.getContext(), "Success!", Toast.LENGTH_SHORT, true).show();
+                        Toasty.success(view.getContext(), "Terbuka", Toast.LENGTH_SHORT, true).show();
                     } else {
-                        Toasty.error(view.getContext(), "Success!", Toast.LENGTH_SHORT, true).show();
+                        Toasty.error(view.getContext(), "Level Dikunci", Toast.LENGTH_SHORT, true).show();
                     }
 
 
                 }
             }
         });
-
-
-
 
     }
 

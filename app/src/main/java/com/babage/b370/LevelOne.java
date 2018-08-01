@@ -2,12 +2,14 @@ package com.babage.b370;
 
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +35,8 @@ import com.shashank.sony.fancydialoglib.Icon;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import es.dmoral.toasty.Toasty;
 
 public class LevelOne extends AppCompatActivity {
 
@@ -553,7 +557,7 @@ public class LevelOne extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (Q2[i]=="Orang Terdekat Saya") {
-
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -601,7 +605,10 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -612,7 +619,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -683,6 +690,7 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q2[i]=="Orang Lain")
                 {
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -725,12 +733,14 @@ public class LevelOne extends AppCompatActivity {
                     }, 4000); // Millisecond 1000 = 1 sec
 
 
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -741,7 +751,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -923,6 +933,7 @@ public class LevelOne extends AppCompatActivity {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     if (Q3[i]=="Tidak Suka")
                     {
+                        final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                         ListView lstView = (ListView)findViewById(R.id.listView);
                         CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                         lstView.setAdapter(adapter);
@@ -965,12 +976,14 @@ public class LevelOne extends AppCompatActivity {
                         }, 4000); // Millisecond 1000 = 1 sec
 
 
-
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 pc.start();
-
+                                // Get instance of Vibrator from current Context
+                                long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                                // Vibrate for 400 milliseconds
+                                v.vibrate(pattern,-1);
                                 dialog.setContentView(R.layout.telponberbohong);
                                 dialog.setCancelable(false);
                                 dialog.show();
@@ -981,7 +994,7 @@ public class LevelOne extends AppCompatActivity {
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-
+                                v.cancel();
                                 wm.start();
 
                             }
@@ -1154,7 +1167,7 @@ public class LevelOne extends AppCompatActivity {
 
                     if (Q3[i]=="Mana Saja")
                     {
-
+                        final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                         ListView lstView = (ListView)findViewById(R.id.listView);
                         CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                         lstView.setAdapter(adapter);
@@ -1202,7 +1215,10 @@ public class LevelOne extends AppCompatActivity {
                             @Override
                             public void run() {
                                 pc.start();
-
+                                // Get instance of Vibrator from current Context
+                                long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                                // Vibrate for 400 milliseconds
+                                v.vibrate(pattern,-1);
                                 dialog.setContentView(R.layout.telponberbohong);
                                 dialog.setCancelable(false);
                                 dialog.show();
@@ -1213,7 +1229,7 @@ public class LevelOne extends AppCompatActivity {
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-
+                                v.cancel();
                                 wm.start();
 
                             }
@@ -1278,6 +1294,7 @@ public class LevelOne extends AppCompatActivity {
                             }
                         }, 28900); // Millisecond 1000 = 1 sec
 
+
                         isi="4";
 
                     }
@@ -1310,6 +1327,7 @@ public class LevelOne extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (Q3[i]=="Tidak Pernah")
                 {
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -1352,12 +1370,14 @@ public class LevelOne extends AppCompatActivity {
                     }, 4000); // Millisecond 1000 = 1 sec
 
 
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -1368,7 +1388,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -1541,7 +1561,7 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q3[i]=="Tidak Mungkin")
                 {
-
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -1584,12 +1604,14 @@ public class LevelOne extends AppCompatActivity {
                     }, 4000); // Millisecond 1000 = 1 sec
 
 
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -1600,7 +1622,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -1809,6 +1831,7 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q3[i]=="Egiw")
                 {
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -1851,12 +1874,14 @@ public class LevelOne extends AppCompatActivity {
                     }, 4000); // Millisecond 1000 = 1 sec
 
 
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -1867,7 +1892,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -1939,7 +1964,7 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q3[i]=="Tidak Keduanya")
                 {
-
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -1982,12 +2007,14 @@ public class LevelOne extends AppCompatActivity {
                     }, 4000); // Millisecond 1000 = 1 sec
 
 
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -1998,7 +2025,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -2093,6 +2120,7 @@ public class LevelOne extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (Q3[i]=="Egiw")
                 {
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -2140,7 +2168,10 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -2151,7 +2182,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -2305,6 +2336,7 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q3[i]=="Dewi")
                 {
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -2347,12 +2379,14 @@ public class LevelOne extends AppCompatActivity {
                     }, 4000); // Millisecond 1000 = 1 sec
 
 
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -2363,7 +2397,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -2428,6 +2462,7 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 28900); // Millisecond 1000 = 1 sec
 
+
                     isi="7";
 
                 }
@@ -2456,7 +2491,7 @@ public class LevelOne extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (Q3[i]=="Romeo")
                 {
-
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -2504,7 +2539,10 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -2515,7 +2553,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -2685,6 +2723,7 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q3[i]=="Juliet")
                 {
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -2727,12 +2766,14 @@ public class LevelOne extends AppCompatActivity {
                     }, 4000); // Millisecond 1000 = 1 sec
 
 
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -2743,7 +2784,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -2837,6 +2878,7 @@ public class LevelOne extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (Q3[i]=="7")
                 {
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -2884,7 +2926,10 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -2895,7 +2940,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -2966,6 +3011,7 @@ public class LevelOne extends AppCompatActivity {
 
                 if (Q3[i]=="8")
                 {
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
@@ -3008,12 +3054,14 @@ public class LevelOne extends AppCompatActivity {
                     }, 4000); // Millisecond 1000 = 1 sec
 
 
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
-
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -3024,7 +3072,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -3187,7 +3235,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final DatabaseHelper dbHelper = new DatabaseHelper(LevelOne.this);
                     dbHelper.addUser(new User("l1"));
-                    Toast.makeText(LevelOne.this, "Level Done", Toast.LENGTH_SHORT).show();
+                    Toasty.success(LevelOne.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                     startActivity(intent);
                     LevelOne.this.finish();
@@ -3198,15 +3246,18 @@ public class LevelOne extends AppCompatActivity {
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
-
+                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
                     final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
                     final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
-
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             pc.start();
+                            // Get instance of Vibrator from current Context
+                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                            // Vibrate for 400 milliseconds
+                            v.vibrate(pattern,-1);
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
@@ -3217,7 +3268,7 @@ public class LevelOne extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-
+                            v.cancel();
                             wm.start();
 
                         }
@@ -3266,6 +3317,7 @@ public class LevelOne extends AppCompatActivity {
                                         }
                                     })
                                     .build();
+
 
 
 
