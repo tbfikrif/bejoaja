@@ -28,6 +28,7 @@ import com.shashank.sony.fancydialoglib.Icon;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import es.dmoral.toasty.Toasty;
 
 
 public class Informan extends AppCompatActivity {
@@ -177,7 +178,7 @@ public class Informan extends AppCompatActivity {
     public void goVideo(){
         Intent i = new Intent(Informan.this, vdplay.class);
         startActivity(i);
-        Toast.makeText(getApplicationContext(),"In Progress...",Toast.LENGTH_SHORT).show();
+        Toasty.warning(this, "Koneksi Internet Diperlukan", Toast.LENGTH_LONG, true).show();
 
     }
 
