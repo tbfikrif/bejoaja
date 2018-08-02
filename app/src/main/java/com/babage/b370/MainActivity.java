@@ -50,18 +50,33 @@ public class MainActivity extends Activity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new DroidDialog.Builder(MainActivity.this)
-                        .icon(R.mipmap.ic_launcher_round)
-                        .title("Cara Bermain")
-                        .color(R.color.background,R.id.background,R.color.textColor)
-                        .content("1. Pahami Informasi melalui : \n- Gallery\n- Video\n- Atau mengklik icon profile client.\n\n2. Lalu jawab setiap pertanyaan menggunakan : \n- Tap pilihan ganda\n- atau isian masukkan. ")
-                        .cancelable(true, true)
-                        .positiveButton("OK", new DroidDialog.onPositiveListener() {
-                            @Override
-                            public void onPositive(Dialog droidDialog) {
-                                droidDialog.dismiss();
-                            }
-                        }).show();
+//                new DroidDialog.Builder(MainActivity.this)
+//                        .icon(R.mipmap.ic_launcher_round)
+//                        .title("Cara Bermain")
+//                        .color(R.color.background,R.id.background,R.color.textColor)
+//                        .content("1. Pahami Informasi melalui : \n- Gallery\n- Video\n- Atau mengklik icon profile client.\n\n2. Lalu jawab setiap pertanyaan menggunakan : \n- Tap pilihan ganda\n- atau isian masukkan. ")
+//                        .cancelable(true, true)
+//                        .positiveButton("OK", new DroidDialog.onPositiveListener() {
+//                            @Override
+//                            public void onPositive(Dialog droidDialog) {
+//                                droidDialog.dismiss();
+//                            }
+//                        }).show();
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.setContentView(R.layout.panduanpermainan);
+
+                    //AlertDialog.Builder builder = new AlertDialog.Builder(QuestActivity.this);
+                    //View view = getLayoutInflater().inflate(R.layout.informasiberbohong, null);
+                    Button okButton = dialog.findViewById(R.id.btnOk);
+                    //final AlertDialog dialog = builder.create();
+                    okButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.dismiss();
+                        }
+                    });
+
+                    dialog.show();
             }
         });
         background = MediaPlayer.create(MainActivity.this, R.raw.background_mainmenu);
