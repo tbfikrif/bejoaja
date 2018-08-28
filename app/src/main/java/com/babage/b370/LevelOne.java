@@ -44,6 +44,7 @@ public class LevelOne extends AppCompatActivity {
     EditText e1;
     String isi;
     String alur;
+    int life=3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -563,10 +564,11 @@ public class LevelOne extends AppCompatActivity {
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
+                    lstView.setBackground(getResources().getDrawable(R.drawable.topeng2));
                     final Dialog dialog= new Dialog(LevelOne.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
                     final MediaPlayer pc = MediaPlayer.create(LevelOne.this, R.raw.phonecell);
                     final MediaPlayer wm = MediaPlayer.create(LevelOne.this, R.raw.woman_scream);
-
+                    e1.setEnabled(false);
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -3231,7 +3233,7 @@ public class LevelOne extends AppCompatActivity {
 
                 String YouEditTextValue = input.getText().toString();
 
-                if (YouEditTextValue.equals("Damian"))
+                if (YouEditTextValue.equalsIgnoreCase("Damian"))
                 {
                     final DatabaseHelper dbHelper = new DatabaseHelper(LevelOne.this);
                     dbHelper.addUser(new User("l1"));
@@ -3240,6 +3242,13 @@ public class LevelOne extends AppCompatActivity {
                     startActivity(intent);
                     LevelOne.this.finish();
                 } else {
+
+                    life--;
+                    Toasty.error(LevelOne.this,"Kesempatan Anda : "+life+"x Lagi!", Toast.LENGTH_SHORT,true).show();
+                }
+
+
+                if (life==0) {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
