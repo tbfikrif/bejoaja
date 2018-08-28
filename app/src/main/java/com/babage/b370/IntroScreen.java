@@ -1,8 +1,12 @@
 package com.babage.b370;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.AudioAttributes;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.Handler;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
@@ -17,15 +21,13 @@ import android.widget.Toast;
 public class IntroScreen extends Activity {
 
     private static int WELCOME_TIMEOUT = 18300;
-    Button btnSkip;
     ConstraintLayout cd;
-    int test=0;
+    MediaPlayer keystroke;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         //menghilangkan ActionBar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -33,15 +35,17 @@ public class IntroScreen extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_intro_screen);
-        cd = (ConstraintLayout)findViewById(R.id.cs);
+        cd = findViewById(R.id.cs);
 
         final TypeWriter tw = findViewById(R.id.typeWriter);
 
         tw.setText("");
         tw.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/youmurdererbb_reg.otf"));
-        tw.setCharacterDelay(150);
+        tw.setCharacterDelay(192);
         tw.animateText(getResources().getString(R.string.welcomeText));
 
+        Effects.getInstance().init(getApplicationContext());
+        Effects.getInstance().playSound();
 
            final Handler handler = new Handler();
 
@@ -49,6 +53,7 @@ public class IntroScreen extends Activity {
                @Override
                public void run() {
                    Intent welcome = new Intent(IntroScreen.this, MainActivity.class);
+                   Effects.getInstance().stopSound();
                    startActivity(welcome);
                    finish();
                }
@@ -59,15 +64,10 @@ public class IntroScreen extends Activity {
             public void onClick(View view) {
                 handler.removeCallbacksAndMessages(null);
                 Intent mainGo = new Intent(IntroScreen.this, MainActivity.class);
+                Effects.getInstance().stopSound();
                 startActivity(mainGo);
-
                 finish();
             }
         });
-
-
-
     }
-
-
 }

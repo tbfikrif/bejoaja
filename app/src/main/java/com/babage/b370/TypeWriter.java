@@ -2,6 +2,9 @@ package com.babage.b370;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Handler;
 import android.util.AttributeSet;
 
@@ -32,8 +35,6 @@ public class TypeWriter extends android.support.v7.widget.AppCompatTextView {
                 mHandler.postDelayed(characterAdder, mDelay);
             } else {
                 typeDone = true;
-
-
             }
         }
     };
@@ -41,7 +42,6 @@ public class TypeWriter extends android.support.v7.widget.AppCompatTextView {
     public void animateText(CharSequence txt) {
         mText = txt;
         mIndex = 0;
-
         setText("");
         mHandler.removeCallbacks(characterAdder);
         mHandler.postDelayed(characterAdder, mDelay);
