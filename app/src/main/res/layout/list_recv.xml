@@ -24,8 +24,9 @@
         app:bubbleColor="@color/textColor"
         app:arrowCenter="true"
 
-
         />
+
+
 
 
 </RelativeLayout>
