@@ -3263,7 +3263,7 @@ public class LevelOne extends AppCompatActivity {
                             dialog.show();
 
                         }
-                    }, 7600); // Millisecond 1000 = 1 sec
+                    }, 4600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -3272,7 +3272,7 @@ public class LevelOne extends AppCompatActivity {
                             wm.start();
 
                         }
-                    }, 18600); // Millisecond 1000 = 1 sec
+                    }, 14600); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -3281,7 +3281,7 @@ public class LevelOne extends AppCompatActivity {
                             dialog.dismiss();
 
                         }
-                    }, 22900); // Millisecond 1000 = 1 sec
+                    }, 18900); // Millisecond 1000 = 1 sec
 
 
                     new Handler().postDelayed(new Runnable() {
@@ -3322,7 +3322,7 @@ public class LevelOne extends AppCompatActivity {
 
 
                         }
-                    }, 23900); // Millisecond 1000 = 1 sec
+                    }, 19900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override

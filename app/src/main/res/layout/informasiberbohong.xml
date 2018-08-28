@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
-                android:text="Neysa adalah mahasiswi yang menerima ancaman pembunuhan dari orang misterius yang menjalankan acara quiz melalui pesan ponsel. Sebelumnya kejadian ini telah memakan 3 korban teman dekat Neysa, mereka adalah : Egiw, Dewi dan Damian  yang jasadnya masih belum ditemukan. "
+                android:text="Neysa adalah mahasiswi dan seorang youtuber yang menerima ancaman pembunuhan dari orang misterius yang menjalankan acara quiz melalui pesan ponsel. Sebelumnya kejadian ini telah memakan 3 korban teman dekat Neysa, mereka adalah : Egiw, Dewi dan Damian  yang jasadnya masih belum ditemukan. "
                 android:textAlignment="center"
                 android:textSize="15sp"/>
             <View

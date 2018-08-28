@@ -32,8 +32,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     MediaPlayer click, distortion,background;
 
 
-
-
     public RecyclerViewAdapter(ArrayList<String> inputData) {
         rvData = inputData;
     }
@@ -44,7 +42,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public TextView tvTitle;
         public TextView tvSubtitle;
         public ImageView tvIcon;
-
         public ViewHolder(View v) {
             super(v);
             background = MediaPlayer.create(v.getContext(), R.raw.background_quest);
@@ -104,6 +101,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     distortion.start();
                     Intent intent = new Intent(view.getContext(),Informan.class);
                     view.getContext().startActivity(intent);
+                    Toasty.warning(view.getContext(), "Klik Foto Untuk Detail Kasus.", Toast.LENGTH_LONG, true).show();
                     ((Activity)view.getContext()).finish();
 
                 } else if (position==1){
