@@ -64,7 +64,7 @@ public class LevelOne extends AppCompatActivity {
 
 
         ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,this);
         lstView.setAdapter(adapter);
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
@@ -81,7 +81,7 @@ public class LevelOne extends AppCompatActivity {
             @Override
             public void run() {
                 ListView lstView = (ListView)findViewById(R.id.listView);
-                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                 lstView.setAdapter(adapter);
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
@@ -94,7 +94,7 @@ public class LevelOne extends AppCompatActivity {
             @Override
             public void run() {
                 ListView lstView = (ListView)findViewById(R.id.listView);
-                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                 lstView.setAdapter(adapter);
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
@@ -107,7 +107,7 @@ public class LevelOne extends AppCompatActivity {
             @Override
             public void run() {
                 ListView lstView = (ListView)findViewById(R.id.listView);
-                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                 lstView.setAdapter(adapter);
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
@@ -120,7 +120,7 @@ public class LevelOne extends AppCompatActivity {
             @Override
             public void run() {
                 ListView lstView = (ListView)findViewById(R.id.listView);
-                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                 lstView.setAdapter(adapter);
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
@@ -133,7 +133,7 @@ public class LevelOne extends AppCompatActivity {
             @Override
             public void run() {
                 ListView lstView = (ListView)findViewById(R.id.listView);
-                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                 lstView.setAdapter(adapter);
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
@@ -146,7 +146,7 @@ public class LevelOne extends AppCompatActivity {
             @Override
             public void run() {
                 ListView lstView = (ListView)findViewById(R.id.listView);
-                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                 lstView.setAdapter(adapter);
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
@@ -219,7 +219,7 @@ public class LevelOne extends AppCompatActivity {
 
         final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
         ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,this);
         lstView.setAdapter(adapter);
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
@@ -240,7 +240,7 @@ public class LevelOne extends AppCompatActivity {
                     e1.setHint("Tunggu");
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -249,7 +249,7 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -268,7 +268,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -281,7 +281,7 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -297,7 +297,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -311,7 +311,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -338,7 +338,7 @@ public class LevelOne extends AppCompatActivity {
                 if (Q1[i]=="Hmm Tentu")
                 {
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -351,7 +351,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -366,7 +366,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -379,7 +379,7 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -395,7 +395,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -409,7 +409,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -436,7 +436,7 @@ public class LevelOne extends AppCompatActivity {
                 if (Q1[i]=="Saya tidak mengerti")
                 {
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -448,7 +448,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -463,7 +463,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -477,7 +477,7 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -493,7 +493,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -507,7 +507,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -542,7 +542,7 @@ public class LevelOne extends AppCompatActivity {
 
         final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
         ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,this);
         lstView.setAdapter(adapter);
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
@@ -560,7 +560,7 @@ public class LevelOne extends AppCompatActivity {
                 if (Q2[i]=="Orang Terdekat Saya") {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -574,7 +574,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -591,7 +591,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -694,7 +694,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -707,7 +707,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -724,7 +724,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -827,7 +827,7 @@ public class LevelOne extends AppCompatActivity {
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -840,7 +840,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -856,7 +856,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -871,7 +871,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -886,7 +886,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -918,7 +918,7 @@ public class LevelOne extends AppCompatActivity {
     public void dialog3() {
         final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
         ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,this);
         lstView.setAdapter(adapter);
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
@@ -937,7 +937,7 @@ public class LevelOne extends AppCompatActivity {
                     {
                         final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                         ListView lstView = (ListView)findViewById(R.id.listView);
-                        CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                         lstView.setAdapter(adapter);
                         lstView.setDivider(null);
                         lstView.setDividerHeight(0);
@@ -950,7 +950,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
                                 ListView lstView = (ListView)findViewById(R.id.listView);
-                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                                 lstView.setAdapter(adapter);
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
@@ -967,7 +967,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
                                 ListView lstView = (ListView)findViewById(R.id.listView);
-                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                                 lstView.setAdapter(adapter);
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
@@ -1071,7 +1071,7 @@ public class LevelOne extends AppCompatActivity {
                     {
 
                         ListView lstView = (ListView)findViewById(R.id.listView);
-                        CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                         lstView.setAdapter(adapter);
                         lstView.setDivider(null);
                         lstView.setDividerHeight(0);
@@ -1084,7 +1084,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
                                 ListView lstView = (ListView)findViewById(R.id.listView);
-                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                                 lstView.setAdapter(adapter);
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
@@ -1100,7 +1100,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
                                 ListView lstView = (ListView)findViewById(R.id.listView);
-                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                                 lstView.setAdapter(adapter);
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
@@ -1115,7 +1115,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
                                 ListView lstView = (ListView)findViewById(R.id.listView);
-                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                                 lstView.setAdapter(adapter);
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
@@ -1130,7 +1130,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
                                 ListView lstView = (ListView)findViewById(R.id.listView);
-                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                                 lstView.setAdapter(adapter);
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
@@ -1145,7 +1145,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
                                 ListView lstView = (ListView)findViewById(R.id.listView);
-                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                                 lstView.setAdapter(adapter);
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
@@ -1171,7 +1171,7 @@ public class LevelOne extends AppCompatActivity {
                     {
                         final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                         ListView lstView = (ListView)findViewById(R.id.listView);
-                        CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                         lstView.setAdapter(adapter);
                         lstView.setDivider(null);
                         lstView.setDividerHeight(0);
@@ -1184,7 +1184,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
                                 ListView lstView = (ListView)findViewById(R.id.listView);
-                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                                 lstView.setAdapter(adapter);
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
@@ -1201,7 +1201,7 @@ public class LevelOne extends AppCompatActivity {
                             public void run() {
 
                                 ListView lstView = (ListView)findViewById(R.id.listView);
-                                CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                                CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                                 lstView.setAdapter(adapter);
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
@@ -1311,7 +1311,7 @@ public class LevelOne extends AppCompatActivity {
     public void dialog4() {
         final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
         ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,this);
         lstView.setAdapter(adapter);
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
@@ -1331,7 +1331,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -1344,7 +1344,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1361,7 +1361,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1464,7 +1464,7 @@ public class LevelOne extends AppCompatActivity {
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -1476,7 +1476,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1492,7 +1492,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1507,7 +1507,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1522,7 +1522,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1537,7 +1537,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1565,7 +1565,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -1578,7 +1578,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1595,7 +1595,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1702,7 +1702,7 @@ public class LevelOne extends AppCompatActivity {
     public void dialog5() {
         final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
         ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,this);
         lstView.setAdapter(adapter);
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
@@ -1721,7 +1721,7 @@ public class LevelOne extends AppCompatActivity {
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -1733,7 +1733,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1749,7 +1749,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1764,7 +1764,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1779,7 +1779,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1794,7 +1794,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1809,7 +1809,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1835,7 +1835,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -1848,7 +1848,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1865,7 +1865,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1968,7 +1968,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -1981,7 +1981,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -1998,7 +1998,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2105,7 +2105,7 @@ public class LevelOne extends AppCompatActivity {
     public void dialog6() {
         final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
         ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,this);
         lstView.setAdapter(adapter);
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
@@ -2124,7 +2124,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -2137,7 +2137,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2154,7 +2154,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2257,7 +2257,7 @@ public class LevelOne extends AppCompatActivity {
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -2269,7 +2269,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2285,7 +2285,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2299,7 +2299,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2314,7 +2314,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2340,7 +2340,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -2353,7 +2353,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2370,7 +2370,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2477,7 +2477,7 @@ public class LevelOne extends AppCompatActivity {
     public void dialog7() {
         final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
         ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,this);
         lstView.setAdapter(adapter);
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
@@ -2495,7 +2495,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -2508,7 +2508,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2525,7 +2525,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2628,7 +2628,7 @@ public class LevelOne extends AppCompatActivity {
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -2640,7 +2640,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2656,7 +2656,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2671,7 +2671,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2686,7 +2686,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2701,7 +2701,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2727,7 +2727,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -2740,7 +2740,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2757,7 +2757,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2863,7 +2863,7 @@ public class LevelOne extends AppCompatActivity {
     public void dialog8() {
         final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
         ListView lstView = (ListView)findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(lstChat,this);
+        CustomAdapterImg adapter = new CustomAdapterImg(lstChat,this);
         lstView.setAdapter(adapter);
         lstView.setDivider(null);
         lstView.setDividerHeight(0);
@@ -2882,7 +2882,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -2895,7 +2895,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -2912,7 +2912,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -3015,7 +3015,7 @@ public class LevelOne extends AppCompatActivity {
                 {
                     final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -3028,7 +3028,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -3045,7 +3045,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -3147,7 +3147,7 @@ public class LevelOne extends AppCompatActivity {
                 {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);
@@ -3159,7 +3159,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -3175,7 +3175,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -3190,7 +3190,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
 
                             ListView lstView = (ListView)findViewById(R.id.listView);
-                            CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                            CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                             lstView.setAdapter(adapter);
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
@@ -3251,7 +3251,7 @@ public class LevelOne extends AppCompatActivity {
                 if (life==0) {
 
                     ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);
+                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelOne.this);
                     lstView.setAdapter(adapter);
                     lstView.setDivider(null);
                     lstView.setDividerHeight(0);

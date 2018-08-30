@@ -130,6 +130,7 @@ public class LevelTwo extends AppCompatActivity {
 
                 }
 
+                //jika berhasil menjawab menjawab
                 if (answer==0){
                     final DatabaseHelper dbHelper = new DatabaseHelper(LevelTwo.this);
                     dbHelper.addUser(new User("l2"));
@@ -139,6 +140,7 @@ public class LevelTwo extends AppCompatActivity {
                     finish();
                 }
 
+                //jika salah menjawab selama 3x
                 if (life==0){
                     Toasty.error(LevelTwo.this,"Anda Gagal", Toast.LENGTH_SHORT,true).show();
                     Intent i = new Intent(LevelTwo.this,QuestActivity.class);
