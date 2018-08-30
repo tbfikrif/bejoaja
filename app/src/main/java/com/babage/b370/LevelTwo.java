@@ -47,6 +47,8 @@ public class LevelTwo extends AppCompatActivity {
     String isi;
     String alur;
     int life=3;
+    int answer=5;
+    boolean wasItClicked=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,11 +85,66 @@ public class LevelTwo extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int selectedItem = lstView.getPositionForView(view);
-                if (selectedItem==0){
-                    Toasty.error(LevelTwo.this,"Sasa", Toast.LENGTH_SHORT,true).show();
+                if (selectedItem==5){
 
-                } else {
-                    Toasty.error(LevelTwo.this,"Sisi", Toast.LENGTH_SHORT,true).show();
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+                    answer--;
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                } else if(position==16){
+
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+
+                    answer--;
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                }else if(position==28){
+
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+
+                    answer--;
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                }else if(position==7){
+
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+
+                    answer--;
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                }else if(position==10){
+
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+
+                    answer--;
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                }else{
+                    life--;
+                    Toasty.error(LevelTwo.this,"Kesempatanmu : "+life+"x Lagi!", Toast.LENGTH_SHORT,true).show();
+
+                }
+
+                if (answer==0){
+                    final DatabaseHelper dbHelper = new DatabaseHelper(LevelTwo.this);
+                    dbHelper.addUser(new User("l2"));
+                    Toasty.success(LevelTwo.this,"Anda Berhasil", Toast.LENGTH_SHORT,true).show();
+                    Intent i = new Intent(LevelTwo.this,QuestActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+
+                if (life==0){
+                    Toasty.error(LevelTwo.this,"Anda Gagal", Toast.LENGTH_SHORT,true).show();
+                    Intent i = new Intent(LevelTwo.this,QuestActivity.class);
+                    startActivity(i);
+                    finish();
+
                 }
             }
         });

@@ -121,6 +121,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     }
 
 
+                } else if (position==2){
+                    background.stop();
+                    final DatabaseHelper dbHelper = new DatabaseHelper(view.getContext());
+                    User user = dbHelper.queryUser("l2");
+                    if (user != null) {
+                        //Bundle mBundle = new Bundle();
+                        //mBundle.putString("user", user.getValue());
+                        //intent.putExtras(mBundle);
+                        Toasty.success(view.getContext(), "Masih dikembangkan", Toast.LENGTH_SHORT, true).show();
+                    } else {
+                        Toasty.error(view.getContext(), "Level Dikunci", Toast.LENGTH_SHORT, true).show();
+                    }
+
+
                 }
             }
         });
