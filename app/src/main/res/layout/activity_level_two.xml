@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="@color/backgroundThin"
     android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="@color/background"
     tools:context=".LevelTwo">
 
-    <TextView android:text="MASIH DALAM PENGERJAAN"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@color/textColor"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
-</LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/e1"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="false"
+        ></ListView>
+
+
+
+    <EditText android:id="@+id/e1"
+
+        android:hint="Jawab"
+        android:textColorHint="@android:color/white"
+        android:backgroundTint="@color/textColor"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        />
+
+
+
+
+</RelativeLayout>

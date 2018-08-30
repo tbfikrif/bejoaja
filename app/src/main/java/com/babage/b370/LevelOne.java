@@ -86,7 +86,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Selamat saudari Neysa, karena anda telah beruntung terpilih sebagai peserta the quiz berikutnya",null, true));
+                lstChat.add(new ChatModel("Selamat saudari Neysa, karena anda telah beruntung terpilih sebagai peserta the quiz berikutnya", true));
             }
         }, 2000); // Millisecond 1000 = 1 sec
 
@@ -99,7 +99,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Aturan quiz ini cukup sederhana, yaitu jika anda salah menjawab, anda akan mati.", null, true));
+                lstChat.add(new ChatModel("Aturan quiz ini cukup sederhana, yaitu jika anda salah menjawab, anda akan mati.", true));
             }
         }, 4000); // Millisecond 1000 = 1 sec
 
@@ -112,7 +112,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Jangan terlalu dipikirkan karena bagaimanapun cepat atau lambat kematian akan menjemput kita bukan?", null,true));
+                lstChat.add(new ChatModel("Jangan terlalu dipikirkan karena bagaimanapun cepat atau lambat kematian akan menjemput kita bukan?",true));
             }
         }, 6000); // Millisecond 1000 = 1 sec
 
@@ -125,7 +125,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Karena sebenarnya kematian selalu tersenyum kepada kita dan yang bisa kita lakukan hanya tersenyum balik", null,true));
+                lstChat.add(new ChatModel("Karena sebenarnya kematian selalu tersenyum kepada kita dan yang bisa kita lakukan hanya tersenyum balik",true));
             }
         }, 8000); // Millisecond 1000 = 1 sec
 
@@ -138,7 +138,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Baiklah, mungkin sekarang kita bisa menuju acara utama. Yang harus anda lakukan hanya menjawab semua pertanyaan yang saya berikan", null,true));
+                lstChat.add(new ChatModel("Baiklah, mungkin sekarang kita bisa menuju acara utama. Yang harus anda lakukan hanya menjawab semua pertanyaan yang saya berikan",true));
             }
         }, 10000); // Millisecond 1000 = 1 sec
 
@@ -151,7 +151,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Jadi tidak ada yang perlu dikhawatirkan, kalau begitu anda sudah siap?",null, true));
+                lstChat.add(new ChatModel("Jadi tidak ada yang perlu dikhawatirkan, kalau begitu anda sudah siap?", true));
             }
         }, 12000); // Millisecond 1000 = 1 sec
 
@@ -256,8 +256,8 @@ public class LevelOne extends AppCompatActivity {
                             //Ubah background event
                             //lstView.setBackground(getDrawable(R.mipmap.ic_chatbar));
                             mp.start();
-                            lstChat.add(new ChatModel("Saya tidak begitu mengerti situasi ini, tapi saya siap",null,false));
-                            lstChat.add(new ChatModel("Wow, saya tau anda orang yang sangat bersemangat, tapi saya tidak tau anda bisa seberani ini ", null,true));
+                            lstChat.add(new ChatModel("Saya tidak begitu mengerti situasi ini, tapi saya siap",false));
+                            lstChat.add(new ChatModel("Wow, saya tau anda orang yang sangat bersemangat, tapi saya tidak tau anda bisa seberani ini ",true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -273,7 +273,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya terharu mengetahuinya",null, true));
+                            lstChat.add(new ChatModel("Saya terharu mengetahuinya", true));
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
 
@@ -286,7 +286,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya punya firasat permainan ini akan menarik",null, true));
+                            lstChat.add(new ChatModel("Saya punya firasat permainan ini akan menarik", true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -302,7 +302,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Kalau begitu pertanyaan pertama adalah", null,true));
+                            lstChat.add(new ChatModel("Kalau begitu pertanyaan pertama adalah",true));
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
 
@@ -316,7 +316,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", null,true));
+                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?",true));
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
 
@@ -356,8 +356,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Hmm Tentu, saya sudah mengetahui sejak awal bahwa saya adalah korban berikutnya",null,false));
-                            lstChat.add(new ChatModel("Apa itu benar?, kalau begitu penilaian saya selama ini kepada anda salah",null, true));
+                            lstChat.add(new ChatModel("Hmm Tentu, saya sudah mengetahui sejak awal bahwa saya adalah korban berikutnya",false));
+                            lstChat.add(new ChatModel("Apa itu benar?, kalau begitu penilaian saya selama ini kepada anda salah", true));
                         }
                     }, 600); // Millisecond 1000 = 1 sec
 
@@ -371,7 +371,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya hanya menduga bahwa anda hanya perempuan yang suka bermain dengan setiap laki-laki",null, true));
+                            lstChat.add(new ChatModel("Saya hanya menduga bahwa anda hanya perempuan yang suka bermain dengan setiap laki-laki", true));
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
 
@@ -384,7 +384,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Baiklah mari kita mulai permainan mengasikkan ini",null, true));
+                            lstChat.add(new ChatModel("Baiklah mari kita mulai permainan mengasikkan ini", true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -400,7 +400,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan KE-1",null, true));
+                            lstChat.add(new ChatModel("Pertanyaan KE-1", true));
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
 
@@ -414,7 +414,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?",null, true));
+                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", true));
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
 
@@ -453,8 +453,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tolong jelaskan ada apa ini?, saya tidak mengerti. Kamu siapa?",null,false));
-                            lstChat.add(new ChatModel("Tidak ada apa-apa hanya saja malaikat maut tertarik kepada anda", null,true));
+                            lstChat.add(new ChatModel("Tolong jelaskan ada apa ini?, saya tidak mengerti. Kamu siapa?",false));
+                            lstChat.add(new ChatModel("Tidak ada apa-apa hanya saja malaikat maut tertarik kepada anda",true));
                         }
                     }, 600); // Millisecond 1000 = 1 sec
 
@@ -468,7 +468,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Mungkin karena anda selalu menyakiti perasaan orang lain", null,true));
+                            lstChat.add(new ChatModel("Mungkin karena anda selalu menyakiti perasaan orang lain",true));
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
 
@@ -482,7 +482,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("atau karena anda adalah orang egois?. Tapi bagi saya pribadi, saya lebih setuju dengan alasan pertama.",null, true));
+                            lstChat.add(new ChatModel("atau karena anda adalah orang egois?. Tapi bagi saya pribadi, saya lebih setuju dengan alasan pertama.", true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -498,7 +498,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tanpa berbasa-basi lebih lama, mari langsung saja ke pertanyaan pertama", null,true));
+                            lstChat.add(new ChatModel("Tanpa berbasa-basi lebih lama, mari langsung saja ke pertanyaan pertama",true));
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
 
@@ -512,7 +512,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?",null, true));
+                            lstChat.add(new ChatModel("Jika dunia ini berakhir besok, siapa yang akan anda selamatkan?", true));
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
 
@@ -580,8 +580,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",null,false));
-                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",null,true));
+                            lstChat.add(new ChatModel("Saya lebih memilih menolong orang terdekat",false));
+                            lstChat.add(new ChatModel("Sebentar, apa kamu benar Neysa",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -596,7 +596,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("..., brengsek berani-beraninya kamu mempermainkan saya!",null,true));
+                            lstChat.add(new ChatModel("..., brengsek berani-beraninya kamu mempermainkan saya!",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -713,8 +713,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya tidak punya orang dekat, jadi saya memilih menyelamatkan orang lain",null,false));
-                            lstChat.add(new ChatModel("Ini mencurigakan, neysa tidak mungkin mengatakan hal seperti itu",null,true));
+                            lstChat.add(new ChatModel("Saya tidak punya orang dekat, jadi saya memilih menyelamatkan orang lain",false));
+                            lstChat.add(new ChatModel("Ini mencurigakan, neysa tidak mungkin mengatakan hal seperti itu",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -729,7 +729,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Sudah jelas anda bukan neysa?. Baiklah sudah cukup permainannya.",null,true));
+                            lstChat.add(new ChatModel("Sudah jelas anda bukan neysa?. Baiklah sudah cukup permainannya.",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -845,8 +845,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya akan lebih memilih menyelamatkan diri saya sendiri",null,false));
-                            lstChat.add(new ChatModel("ding dong anda benar, ini baru neysa yang saya tau, seorang yang cantik dan egois",null,true));
+                            lstChat.add(new ChatModel("Saya akan lebih memilih menyelamatkan diri saya sendiri",false));
+                            lstChat.add(new ChatModel("ding dong anda benar, ini baru neysa yang saya tau, seorang yang cantik dan egois",true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -861,7 +861,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Padahal saya pikir anda akan berpura-pura peduli terhadap orang lain, sayang sekali",null,true));
+                            lstChat.add(new ChatModel("Padahal saya pikir anda akan berpura-pura peduli terhadap orang lain, sayang sekali",true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -876,7 +876,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("awal yang baik bagi anda, Mari menuju pertanyaan kedua ",null,true));
+                            lstChat.add(new ChatModel("awal yang baik bagi anda, Mari menuju pertanyaan kedua ",true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -891,7 +891,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Dari sekian banyak accessories, bagian mana yang paling anda suka?",null,true));
+                            lstChat.add(new ChatModel("Dari sekian banyak accessories, bagian mana yang paling anda suka?",true));
 
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
@@ -956,8 +956,8 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDividerHeight(0);
                                 mp.start();
                                 e1.setHint("Tunggu");
-                                lstChat.add(new ChatModel("Baik itu berlian ataupun emas saya tidak suka accesories",null,false));
-                                lstChat.add(new ChatModel("Benarkah?, kalau begitu berarti anda bukan neysa",null,true));
+                                lstChat.add(new ChatModel("Baik itu berlian ataupun emas saya tidak suka accesories",false));
+                                lstChat.add(new ChatModel("Benarkah?, kalau begitu berarti anda bukan neysa",true));
 
                             }
                         }, 2000); // Millisecond 1000 = 1 sec
@@ -972,7 +972,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Neysa adalah tipikal wanita yang sangat matre. Saya benci dengan pengganggu, jadi cukup sampai disini. ",null,true));
+                                lstChat.add(new ChatModel("Neysa adalah tipikal wanita yang sangat matre. Saya benci dengan pengganggu, jadi cukup sampai disini. ",true));
 
                             }
                         }, 4000); // Millisecond 1000 = 1 sec
@@ -1089,8 +1089,8 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Saya meyukai kalung, karena saya pikir accessories itu adalah yang paling dekat dengan hati",null,false));
-                                lstChat.add(new ChatModel("Romantis sekali!, Tapi perkataan manis itu sudah saya dengar berkali-kali",null,true));
+                                lstChat.add(new ChatModel("Saya meyukai kalung, karena saya pikir accessories itu adalah yang paling dekat dengan hati",false));
+                                lstChat.add(new ChatModel("Romantis sekali!, Tapi perkataan manis itu sudah saya dengar berkali-kali",true));
 
                             }
                         }, 600); // Millisecond 1000 = 1 sec
@@ -1105,7 +1105,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Sehingga saya bosan dan ingin muntah",null,true));
+                                lstChat.add(new ChatModel("Sehingga saya bosan dan ingin muntah",true));
 
                             }
                         }, 2600); // Millisecond 1000 = 1 sec
@@ -1120,7 +1120,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("hmm, maaf jika saya sedikit tidak sopan, saya hanya terbawa emosi",null,true));
+                                lstChat.add(new ChatModel("hmm, maaf jika saya sedikit tidak sopan, saya hanya terbawa emosi",true));
 
                             }
                         }, 4600); // Millisecond 1000 = 1 sec
@@ -1135,7 +1135,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Langsung saja kepertanyaan ke-3",null,true));
+                                lstChat.add(new ChatModel("Langsung saja kepertanyaan ke-3",true));
 
                             }
                         }, 6600); // Millisecond 1000 = 1 sec
@@ -1150,7 +1150,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Apakah anda pernah bertengkar dengan teman dekat anda?",null,true));
+                                lstChat.add(new ChatModel("Apakah anda pernah bertengkar dengan teman dekat anda?",true));
 
                             }
                         }, 8600); // Millisecond 1000 = 1 sec
@@ -1190,8 +1190,8 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDividerHeight(0);
                                 mp.start();
                                 e1.setHint("Tunggu");
-                                lstChat.add(new ChatModel("Saya tidak terlalu mempedulikannya , jadi mana saja tidak masalah",null,false));
-                                lstChat.add(new ChatModel("Neysa?, Sebentar, ini siapa?, saya yakin ini bukan neysa",null,true));
+                                lstChat.add(new ChatModel("Saya tidak terlalu mempedulikannya , jadi mana saja tidak masalah",false));
+                                lstChat.add(new ChatModel("Neysa?, Sebentar, ini siapa?, saya yakin ini bukan neysa",true));
 
                             }
                         }, 2000); // Millisecond 1000 = 1 sec
@@ -1206,7 +1206,7 @@ public class LevelOne extends AppCompatActivity {
                                 lstView.setDivider(null);
                                 lstView.setDividerHeight(0);
                                 mp.start();
-                                lstChat.add(new ChatModel("Kepar*t , ya sudah kalau begitu akan ku kuliti dia, :)",null,true));
+                                lstChat.add(new ChatModel("Kepar*t , ya sudah kalau begitu akan ku kuliti dia, :)",true));
 
                             }
                         }, 4000); // Millisecond 1000 = 1 sec
@@ -1350,8 +1350,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Hubungan harmonis adalah yang selalu jadikan dasar pertemanan, jadi saya tidak pernah bertengkar",null,false));
-                            lstChat.add(new ChatModel("Apa saat anda bertengkar dengan dewi dan demian itu bukan bertengkar?",null,true));
+                            lstChat.add(new ChatModel("Hubungan harmonis adalah yang selalu jadikan dasar pertemanan, jadi saya tidak pernah bertengkar",false));
+                            lstChat.add(new ChatModel("Apa saat anda bertengkar dengan dewi dan demian itu bukan bertengkar?",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -1366,7 +1366,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Dasar munafik, selamat tinggal.",null,true));
+                            lstChat.add(new ChatModel("Dasar munafik, selamat tinggal.",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -1481,8 +1481,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Semua orang pasti pernah bertengkar dengan orang lain, apalagi dengan teman dekat",null,false));
-                            lstChat.add(new ChatModel("Aduh mungkin pertanyaan saya terlalu mudah untuk dijawab, apa mungkin teman dekat anda itu adalah yang saya bunuh sebelumnya?",null,true));
+                            lstChat.add(new ChatModel("Semua orang pasti pernah bertengkar dengan orang lain, apalagi dengan teman dekat",false));
+                            lstChat.add(new ChatModel("Aduh mungkin pertanyaan saya terlalu mudah untuk dijawab, apa mungkin teman dekat anda itu adalah yang saya bunuh sebelumnya?",true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -1497,7 +1497,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("haha maaf, saya hanya teringat raut wajah mereka saat mereka akan mati, begitu menggairahkan",null,true));
+                            lstChat.add(new ChatModel("haha maaf, saya hanya teringat raut wajah mereka saat mereka akan mati, begitu menggairahkan",true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -1512,7 +1512,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Jika anda ingin tersenyum, tidak masalah, karena mungkin hari ini adalah kesempatan terakhir anda untuk tersenyum",null,true));
+                            lstChat.add(new ChatModel("Jika anda ingin tersenyum, tidak masalah, karena mungkin hari ini adalah kesempatan terakhir anda untuk tersenyum",true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -1527,7 +1527,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Masih banyak pertanyaan yang menunggu, relax lah sejenak",null,true));
+                            lstChat.add(new ChatModel("Masih banyak pertanyaan yang menunggu, relax lah sejenak",true));
 
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
@@ -1542,7 +1542,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan kali ini sedikit menarik, Mana yang kamu pilih Damian Atau Egiw?",null,true));
+                            lstChat.add(new ChatModel("Pertanyaan kali ini sedikit menarik, Mana yang kamu pilih Damian Atau Egiw?",true));
 
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
@@ -1584,8 +1584,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya tidak Mungkin melakukan itu, menyakiti perasaan orang lain adalah hal yang paling saya benci",null,false));
-                            lstChat.add(new ChatModel("Ada pepatah setiap orang bisa berubah hanya dalam satu detik",null,true));
+                            lstChat.add(new ChatModel("Saya tidak Mungkin melakukan itu, menyakiti perasaan orang lain adalah hal yang paling saya benci",false));
+                            lstChat.add(new ChatModel("Ada pepatah setiap orang bisa berubah hanya dalam satu detik",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -1600,7 +1600,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Dari awal banyak hal yang saya curigakan dan sekarang saya yakin anda bukan neysa",null,true));
+                            lstChat.add(new ChatModel("Dari awal banyak hal yang saya curigakan dan sekarang saya yakin anda bukan neysa",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -1738,8 +1738,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya memilih damian karena dia orang yang baik",null,false));
-                            lstChat.add(new ChatModel("Apakah itu benar?, saya sedikit terkejut, mungkin saya akan menyesali ini setelah berakhir",null,true));
+                            lstChat.add(new ChatModel("Saya memilih damian karena dia orang yang baik",false));
+                            lstChat.add(new ChatModel("Apakah itu benar?, saya sedikit terkejut, mungkin saya akan menyesali ini setelah berakhir",true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -1754,7 +1754,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tapi semuanya sudah terlanjur, meja sudah dibalik. Ah sebentar saya harus mengurus sesuatu, saya akan kembali dalam 15 detik",null,true));
+                            lstChat.add(new ChatModel("Tapi semuanya sudah terlanjur, meja sudah dibalik. Ah sebentar saya harus mengurus sesuatu, saya akan kembali dalam 15 detik",true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -1769,7 +1769,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("terimakasih, karena sudah menunggu, saya kira anda akan kabur, tapi itu percuma, karena saya selalu berada didekat anda",null,true));
+                            lstChat.add(new ChatModel("terimakasih, karena sudah menunggu, saya kira anda akan kabur, tapi itu percuma, karena saya selalu berada didekat anda",true));
 
                         }
                     }, 17600); // Millisecond 1000 = 1 sec
@@ -1784,7 +1784,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("padahal waktu kita bersama itu menyenangkan ya?, tapi harus berakhir seperti ini, sudahlah.",null,true));
+                            lstChat.add(new ChatModel("padahal waktu kita bersama itu menyenangkan ya?, tapi harus berakhir seperti ini, sudahlah.",true));
 
                         }
                     }, 19600); // Millisecond 1000 = 1 sec
@@ -1799,7 +1799,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saatnya pertanyaan berikutnya",null,true));
+                            lstChat.add(new ChatModel("Saatnya pertanyaan berikutnya",true));
 
                         }
                     }, 21600); // Millisecond 1000 = 1 sec
@@ -1814,7 +1814,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Siapa nama dibawah ini yang bukan teman anda?, saya hanya ingin memastikan, karena saya mencurigai sesuatu",null,true));
+                            lstChat.add(new ChatModel("Siapa nama dibawah ini yang bukan teman anda?, saya hanya ingin memastikan, karena saya mencurigai sesuatu",true));
 
                         }
                     }, 23600); // Millisecond 1000 = 1 sec
@@ -1854,8 +1854,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Egiw adalah pria yang baik dan selalu perhatian, jadi mungkin dia adalah tipe saya",null,false));
-                            lstChat.add(new ChatModel("Oh begitu, ternyata tindakan anda tetaplah tidak berubah",null,true));
+                            lstChat.add(new ChatModel("Egiw adalah pria yang baik dan selalu perhatian, jadi mungkin dia adalah tipe saya",false));
+                            lstChat.add(new ChatModel("Oh begitu, ternyata tindakan anda tetaplah tidak berubah",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -1870,7 +1870,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Dasar wanita murahan!",null,true));
+                            lstChat.add(new ChatModel("Dasar wanita murahan!",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -1987,8 +1987,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Untuk sekarang ini tidak ada orang yang saya sukai, jadi saya rasa, saya tidak memilih keduanya",null,false));
-                            lstChat.add(new ChatModel("Seorang neysa yang tidak bisa hidup tanpa menyakiti seorang lelaki, mengatakan itu?. itu sangat tidak mungkin",null,true));
+                            lstChat.add(new ChatModel("Untuk sekarang ini tidak ada orang yang saya sukai, jadi saya rasa, saya tidak memilih keduanya",false));
+                            lstChat.add(new ChatModel("Seorang neysa yang tidak bisa hidup tanpa menyakiti seorang lelaki, mengatakan itu?. itu sangat tidak mungkin",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2003,7 +2003,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Hanya satu kemungkinan saat ini, anda sedang berpura-pura menjadi neysa,:).",null,true));
+                            lstChat.add(new ChatModel("Hanya satu kemungkinan saat ini, anda sedang berpura-pura menjadi neysa,:).",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2143,8 +2143,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya seperti mendengar nama egiw",null,false));
-                            lstChat.add(new ChatModel("Menjadi orang jahatpun memiliki batas",null,true));
+                            lstChat.add(new ChatModel("Saya seperti mendengar nama egiw",false));
+                            lstChat.add(new ChatModel("Menjadi orang jahatpun memiliki batas",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2159,7 +2159,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Orang yang melupakan temannya tidak beda jauh dengan para penjahat, saya semakin yakin anda pantas dibunuh",null,true));
+                            lstChat.add(new ChatModel("Orang yang melupakan temannya tidak beda jauh dengan para penjahat, saya semakin yakin anda pantas dibunuh",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2274,8 +2274,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya tidak mengenal orang yang bernama Demian",null,false));
-                            lstChat.add(new ChatModel("Sial, anda berhasil menjawab lagi, tapi tentu saja karena pertanyaan itu mudah",null,true));
+                            lstChat.add(new ChatModel("Saya tidak mengenal orang yang bernama Demian",false));
+                            lstChat.add(new ChatModel("Sial, anda berhasil menjawab lagi, tapi tentu saja karena pertanyaan itu mudah",true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -2290,7 +2290,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya hanya bermain dengan anda sebelum saya memberikan pertanyaan yang sesungguhnya",null,true));
+                            lstChat.add(new ChatModel("Saya hanya bermain dengan anda sebelum saya memberikan pertanyaan yang sesungguhnya",true));
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
 
@@ -2304,7 +2304,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Kali ini saya akan beralih ke pertanyaan tentang sejarah",null,true));
+                            lstChat.add(new ChatModel("Kali ini saya akan beralih ke pertanyaan tentang sejarah",true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -2319,7 +2319,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pasti anda tau kisah Romeo dan Juliet bukan?, oleh karena itu pertanyaan saya adalah siapa yang harusnya mati dalam kisah tersebut?",null,true));
+                            lstChat.add(new ChatModel("Pasti anda tau kisah Romeo dan Juliet bukan?, oleh karena itu pertanyaan saya adalah siapa yang harusnya mati dalam kisah tersebut?",true));
 
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
@@ -2359,8 +2359,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Dewi?, namanya terdengar asing bagi saya",null,false));
-                            lstChat.add(new ChatModel("Setidaknya saat anda menyakiti perasaan orang lain, tolong ingat namanya",null,true));
+                            lstChat.add(new ChatModel("Dewi?, namanya terdengar asing bagi saya",false));
+                            lstChat.add(new ChatModel("Setidaknya saat anda menyakiti perasaan orang lain, tolong ingat namanya",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2375,7 +2375,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Melihat balasan anda membuat tensi saya naik, sepertinya saya harus mengambil benda yang keras",null,true));
+                            lstChat.add(new ChatModel("Melihat balasan anda membuat tensi saya naik, sepertinya saya harus mengambil benda yang keras",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2514,8 +2514,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Bagi saya Romeo, karena bagi seorang laki-laki dia tidak bisa meyakinkan keluarganya",null,false));
-                            lstChat.add(new ChatModel("Lalu hal itu juga yang anda lakukan kepada Damian",null,true));
+                            lstChat.add(new ChatModel("Bagi saya Romeo, karena bagi seorang laki-laki dia tidak bisa meyakinkan keluarganya",false));
+                            lstChat.add(new ChatModel("Lalu hal itu juga yang anda lakukan kepada Damian",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2530,7 +2530,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Karena dia tidak kaya jadi kamu hanya mempermainkannya saja?, alasan yang bagus untuk membuat saya membunuh anda sekarang juga.",null,true));
+                            lstChat.add(new ChatModel("Karena dia tidak kaya jadi kamu hanya mempermainkannya saja?, alasan yang bagus untuk membuat saya membunuh anda sekarang juga.",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2645,8 +2645,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Keluarga, saya yakin mereka mati karena tidak bisa bersatu akibat keluarga mereka bermusuhan",null,false));
-                            lstChat.add(new ChatModel("Untuk wanita seperti anda, anda memiliki jawaban yang menarik",null,true));
+                            lstChat.add(new ChatModel("Keluarga, saya yakin mereka mati karena tidak bisa bersatu akibat keluarga mereka bermusuhan",false));
+                            lstChat.add(new ChatModel("Untuk wanita seperti anda, anda memiliki jawaban yang menarik",true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -2661,7 +2661,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tapi bagi saya, kisah mereka tidak lebih dari kisah 2 orang bodoh yang putus asa",null,true));
+                            lstChat.add(new ChatModel("Tapi bagi saya, kisah mereka tidak lebih dari kisah 2 orang bodoh yang putus asa",true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -2676,7 +2676,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Kalau saya menjadi romeo, saya akan membunuh juliet agar tidak ada orang lain yang bisa memilikinya",null,true));
+                            lstChat.add(new ChatModel("Kalau saya menjadi romeo, saya akan membunuh juliet agar tidak ada orang lain yang bisa memilikinya",true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
@@ -2691,7 +2691,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Baiklah, pertanyaan selanjutnya cukup mudah, berapa pertanyaan yang telah saya lontarkan dari awal hingga sekarang?",null,true));
+                            lstChat.add(new ChatModel("Baiklah, pertanyaan selanjutnya cukup mudah, berapa pertanyaan yang telah saya lontarkan dari awal hingga sekarang?",true));
 
                         }
                     }, 6600); // Millisecond 1000 = 1 sec
@@ -2706,7 +2706,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("(Jangan Scroll Chat ini atau saya akan rusak histori percakapan kita dari awal)",null,true));
+                            lstChat.add(new ChatModel("(Jangan Scroll Chat ini atau saya akan rusak histori percakapan kita dari awal)",true));
 
                         }
                     }, 8600); // Millisecond 1000 = 1 sec
@@ -2746,8 +2746,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Bagi saya Juliet, tidak ada yang lebih bodoh dari seorang wanita yang mengejar-ngejar seorang laki-laki",null,false));
-                            lstChat.add(new ChatModel("Kenapa anda menghina juliet?, ini janggal. sebenarnya siapa anda?",null,true));
+                            lstChat.add(new ChatModel("Bagi saya Juliet, tidak ada yang lebih bodoh dari seorang wanita yang mengejar-ngejar seorang laki-laki",false));
+                            lstChat.add(new ChatModel("Kenapa anda menghina juliet?, ini janggal. sebenarnya siapa anda?",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2762,7 +2762,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Ah, saya baru sadar, ternyata ada seorang pahlawan kesiangan disini, maaf siapapun anda, waktu anda telah habis",null,true));
+                            lstChat.add(new ChatModel("Ah, saya baru sadar, ternyata ada seorang pahlawan kesiangan disini, maaf siapapun anda, waktu anda telah habis",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -2901,8 +2901,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Saya menghitung ada 7 total pertanyaan",null,false));
-                            lstChat.add(new ChatModel("Boo, daya ingat anda payah sekali",null,true));
+                            lstChat.add(new ChatModel("Saya menghitung ada 7 total pertanyaan",false));
+                            lstChat.add(new ChatModel("Boo, daya ingat anda payah sekali",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -2917,7 +2917,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Tapi itu wajar karena anda adalah neysa, wanita yang suka mempermainkan perasaan lelaki, sudahlah. Saya akan kesana :)",null,true));
+                            lstChat.add(new ChatModel("Tapi itu wajar karena anda adalah neysa, wanita yang suka mempermainkan perasaan lelaki, sudahlah. Saya akan kesana :)",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -3034,8 +3034,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDividerHeight(0);
                             mp.start();
                             e1.setHint("Tunggu");
-                            lstChat.add(new ChatModel("Dari awal hingga sekarang 8 pertanyaan",null,false));
-                            lstChat.add(new ChatModel("Ternyata disamping wanita j*lang anda juga adalah yang bodoh",null,true));
+                            lstChat.add(new ChatModel("Dari awal hingga sekarang 8 pertanyaan",false));
+                            lstChat.add(new ChatModel("Ternyata disamping wanita j*lang anda juga adalah yang bodoh",true));
 
                         }
                     }, 2000); // Millisecond 1000 = 1 sec
@@ -3050,7 +3050,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Akhirnya saya bisa beraksi juga, Mohon bersabar, saya sedang diperjalanan",null,true));
+                            lstChat.add(new ChatModel("Akhirnya saya bisa beraksi juga, Mohon bersabar, saya sedang diperjalanan",true));
 
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
@@ -3164,8 +3164,8 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Saya mengigat ada 10+ pertanyaan yang sudah anda tanyakan",null,false));
-                            lstChat.add(new ChatModel("Hebat!, seorang mahasiswi memang hebat, memikirkan hal ini mungkin lebih mudah daripada memikirkan perasaan orang lain betul?",null,true));
+                            lstChat.add(new ChatModel("Saya mengigat ada 10+ pertanyaan yang sudah anda tanyakan",false));
+                            lstChat.add(new ChatModel("Hebat!, seorang mahasiswi memang hebat, memikirkan hal ini mungkin lebih mudah daripada memikirkan perasaan orang lain betul?",true));
 
                         }
                     }, 600); // Millisecond 1000 = 1 sec
@@ -3180,7 +3180,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Sejujurnya saya sudah bosan dengan permainan ini, jadi saya akan memberikan pertanyaan terakhir",null,true));
+                            lstChat.add(new ChatModel("Sejujurnya saya sudah bosan dengan permainan ini, jadi saya akan memberikan pertanyaan terakhir",true));
 
                         }
                     }, 2600); // Millisecond 1000 = 1 sec
@@ -3195,7 +3195,7 @@ public class LevelOne extends AppCompatActivity {
                             lstView.setDivider(null);
                             lstView.setDividerHeight(0);
                             mp.start();
-                            lstChat.add(new ChatModel("Pertanyaan ini yang menentukan keselamatan anda. Siapa sebenarnya saya?, jika anda benar saya akan menyerahkan diri saya ke polisi",null,true));
+                            lstChat.add(new ChatModel("Pertanyaan ini yang menentukan keselamatan anda. Siapa sebenarnya saya?, jika anda benar saya akan menyerahkan diri saya ke polisi",true));
 
                         }
                     }, 4600); // Millisecond 1000 = 1 sec

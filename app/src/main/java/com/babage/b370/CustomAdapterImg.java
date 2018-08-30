@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.github.library.bubbleview.BubbleImageView;
 import com.github.library.bubbleview.BubbleTextView;
@@ -20,6 +22,18 @@ public class CustomAdapterImg extends BaseAdapter{
         this.lstChat=lstChat;
         this.context=context;
         inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
+
+    @Override
+    public int getViewTypeCount() {
+
+        return 2;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+
+        return IGNORE_ITEM_VIEW_TYPE;
     }
 
     @Override
@@ -39,34 +53,41 @@ public class CustomAdapterImg extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
-        View vi = convertView;
+        View vi;
+
         if (convertView==null){
             if (lstChat.get(position).isSend())
                 vi=inflater.inflate(R.layout.list_send, null);
             else
                 vi=inflater.inflate(R.layout.list_recv,null);
 
-        }
 
+        } else {
+
+             vi = convertView;
+
+        }
 
         BubbleTextView bubbleTextView = (BubbleTextView)vi.findViewById(R.id.bubbleChat);
         BubbleImageView bubbleImageView = (BubbleImageView)vi.findViewById(R.id.bubbleImage);
         bubbleTextView.setText(lstChat.get(position).chatMessage);
 
-        if (position==0){
+        if (position==18){
             bubbleImageView.setImageResource(R.drawable.client);
             bubbleImageView.getLayoutParams().width=420;
             bubbleImageView.getLayoutParams().height=230;
             bubbleImageView.requestLayout();
-        } else {
+        }else {
 
             bubbleImageView.getLayoutParams().width=0;
             bubbleImageView.getLayoutParams().height=0;
             bubbleImageView.requestLayout();
         }
 
-
         return vi;
 
     }
+
+
 }
+
