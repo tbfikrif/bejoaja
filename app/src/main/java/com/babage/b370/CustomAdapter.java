@@ -27,6 +27,18 @@ public class CustomAdapter extends BaseAdapter{
     }
 
     @Override
+    public int getViewTypeCount() {
+
+        return 2;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+
+        return IGNORE_ITEM_VIEW_TYPE;
+    }
+
+    @Override
     public int getCount() {
         return lstChat.size();
     }
@@ -57,6 +69,17 @@ public class CustomAdapter extends BaseAdapter{
         BubbleImageView bubbleImageView = (BubbleImageView)vi.findViewById(R.id.bubbleImage);
         bubbleTextView.setText(lstChat.get(position).chatMessage);
 
+        if (position==1){
+            bubbleImageView.setImageResource(R.drawable.client);
+            bubbleImageView.getLayoutParams().width=420;
+            bubbleImageView.getLayoutParams().height=230;
+            bubbleImageView.requestLayout();
+        }else {
+
+            bubbleImageView.getLayoutParams().width=0;
+            bubbleImageView.getLayoutParams().height=0;
+            bubbleImageView.requestLayout();
+        }
 
         return vi;
 

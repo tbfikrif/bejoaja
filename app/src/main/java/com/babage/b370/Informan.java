@@ -54,6 +54,7 @@ public class Informan extends AppCompatActivity {
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar);
+
         btnv = (CircleImageView) findViewById(R.id.btnV);
         btng = (CircleImageView) findViewById(R.id.btnG);
         btnc = (CircleImageView) findViewById(R.id.btnC);

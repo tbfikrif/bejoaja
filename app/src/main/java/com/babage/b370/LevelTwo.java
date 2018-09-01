@@ -94,11 +94,6 @@ public class LevelTwo extends AppCompatActivity {
                     view.setOnClickListener(null);
                     answer--;
 
-                    // -- Play Video --
-//                    Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
-//                    intent.putExtra(EXTRA_VIDEO_URI, "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
-//                    startActivity(intent);
-                    // ----
 
                     // -- Open Image --
                     ImageViewDialog(R.drawable.topeng2);
@@ -116,6 +111,7 @@ public class LevelTwo extends AppCompatActivity {
 
                 }else if(position==28){
 
+
                     view.setEnabled(false);
                     view.setOnClickListener(null);
 
@@ -124,8 +120,15 @@ public class LevelTwo extends AppCompatActivity {
 
                 }else if(position==7){
 
+
                     view.setEnabled(false);
                     view.setOnClickListener(null);
+
+                    // -- Play Video --
+                    Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
+                    intent.putExtra(EXTRA_VIDEO_URI, "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
+                    startActivity(intent);
+
 
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
@@ -134,6 +137,9 @@ public class LevelTwo extends AppCompatActivity {
 
                     view.setEnabled(false);
                     view.setOnClickListener(null);
+
+                    final MediaPlayer mpChat = MediaPlayer.create(LevelTwo.this, R.raw.woman_scream);
+                    mpChat.start();
 
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
@@ -166,91 +172,101 @@ public class LevelTwo extends AppCompatActivity {
         });
 
 
-        lstChat.add(new ChatModel("Eh ngomong-ngomong malam minggu ke A* yuk?", false));//false
+        lstChat.add(new ChatModel("Eh ngomong-ngomong malam minggu ke A* yuk?", false));//0
 
-        lstChat.add(new ChatModel("A* itu apaan?, gue gak ada waktu , nanti kalau bisa gue kabarin.", true));
+        lstChat.add(new ChatModel("A* itu apaan?, gue gak ada waktu , nanti kalau bisa gue kabarin.", true));//1
 
-        lstChat.add(new ChatModel("Gak asik dah, ada acara lu?",false));
+        lstChat.add(new ChatModel("Gak asik dah, ada acara lu?",false));//2
 
-        lstChat.add(new ChatModel("padahal Reunian kali-kali",false));
+        lstChat.add(new ChatModel("padahal Reunian kali-kali",false));//3
 
-        lstChat.add(new ChatModel("Kerjaan kantor biasa, kerjaan akhir bulan selalu numpuk",true));
+        lstChat.add(new ChatModel("Kerjaan kantor biasa, kerjaan akhir bulan selalu numpuk",true));//4
 
-        lstChat.add(new ChatModel("Lah, gue kira udah keluar dari perusahaan gak jelas itu", false));
+        lstChat.add(new ChatModel("Lah, gue kira udah keluar dari perusahaan gak jelas itu", false));//5//clue
 
-        lstChat.add(new ChatModel("Hush ngawur, biarpun perusahaannya gak jelas, gue bisa makan selama ini dari sono", true));
+        lstChat.add(new ChatModel("Hush ngawur, biarpun perusahaannya gak jelas, gue bisa makan selama ini dari sono", true));//6
 
-        lstChat.add(new ChatModel("Emang gak ada pikiran cari kerja lain aja gitu?", false));
+        lstChat.add(new ChatModel("Emang gak ada pikiran cari kerja lain aja gitu?", false));//7//clue
 
-        lstChat.add(new ChatModel("Heh lu pikir nyari kerja itu kaya ngupil ya?, kalau gampang gue udah pindah dari dulu",true));
+        lstChat.add(new ChatModel("Heh lu pikir nyari kerja itu kaya ngupil ya?, kalau gampang gue udah pindah dari dulu",true));//8
 
-        lstChat.add(new ChatModel("Lagian gue udah lama disini, kesel kerja itu wajar lah",true));
+        lstChat.add(new ChatModel("Lagian gue udah lama disini, kesel kerja itu wajar lah",true));//9
 
-        lstChat.add(new ChatModel("Gue tau, tapi gue saranin mending pindah deh, cari yang lebih ngejamin, gue khawatir aja ama lu",false));
+        lstChat.add(new ChatModel("Gue tau, tapi gue saranin mending pindah deh, cari yang lebih ngejamin, gue khawatir aja ama lu",false));//10
 
-        lstChat.add(new ChatModel("Ya udah , gue hargain karena lu peduli ama gue, tapi bener untuk sekarang gue masih bisa bertahan", true));
+        lstChat.add(new ChatModel("Ya udah , gue hargain karena lu peduli ama gue, tapi bener untuk sekarang gue masih bisa bertahan", true));//11
 
-        lstChat.add(new ChatModel("Terus gue denger-denger lu udah mau nikah ya?", true));
+        lstChat.add(new ChatModel("Terus gue denger-denger lu udah mau nikah ya?", true));//12
 
-        lstChat.add(new ChatModel("Ini anak bisa aja kalau ngalihin topik", false));
+        lstChat.add(new ChatModel("Ini anak bisa aja kalau ngalihin topik", false));//13
 
-        lstChat.add(new ChatModel("alhamdullilah doain aja semoga lancar, tapi ada beberapa kendala kecil sih", false));
+        lstChat.add(new ChatModel("alhamdullilah doain aja semoga lancar, tapi ada beberapa kendala kecil sih", false));//14
 
-        lstChat.add(new ChatModel("kendala apa?, gedung?, pasangan?", true));
+        lstChat.add(new ChatModel("kendala apa?, gedung?, pasangan?", true));//15
 
-        lstChat.add(new ChatModel("Gedung", false));
+        lstChat.add(new ChatModel("Gedung", false));//16
 
-        lstChat.add(new ChatModel("Mana coba gue liat fotonya?", true));
+        lstChat.add(new ChatModel("Mana coba gue liat fotonya?", true));//17
 
-        lstChat.add(new ChatModel("Nih", false));//foto
+        lstChat.add(new ChatModel("Nih", false));//18
 
-        lstChat.add(new ChatModel("Gila, lu jual ginjal ya?", true));
+        lstChat.add(new ChatModel("Gila, lu jual ginjal ya?", true));//19
 
-        lstChat.add(new ChatModel("Kurang ajar, gue nabung 2 tahun ", false));
+        lstChat.add(new ChatModel("Kurang ajar, gue nabung 2 tahun ", false));//20
 
-        lstChat.add(new ChatModel("niat!", true));
+        lstChat.add(new ChatModel("niat!", true));//21
 
-        lstChat.add(new ChatModel("Ya iyalah harus niat, nikah kalau gak niat mending gak usah sekalian", false));
+        lstChat.add(new ChatModel("Ya iyalah harus niat, nikah kalau gak niat mending gak usah sekalian", false));//21
 
-        lstChat.add(new ChatModel("Kalau bisa lu bantuin gue cari gedung lain deh, yang lebih murah XD", false));
+        lstChat.add(new ChatModel("Kalau bisa lu bantuin gue cari gedung lain deh, yang lebih murah XD", false));//22
 
-        lstChat.add(new ChatModel("Iya pasti gue bantu, cuman gue beresin kerjaan dulu, tanggal berapa lu butuh emang?", true));
+        lstChat.add(new ChatModel("Iya pasti gue bantu, cuman gue beresin kerjaan dulu, tanggal berapa lu butuh emang?", true));//23
 
-        lstChat.add(new ChatModel("10 oktober", false));
+        lstChat.add(new ChatModel("10 oktober", false));//24
 
-        lstChat.add(new ChatModel("2 minggu lagi!", true));
+        lstChat.add(new ChatModel("2 minggu lagi!", true));//25
 
-        lstChat.add(new ChatModel("gue dari sekarang sampe tanggal 4 pasti lembur terus", true));
+        lstChat.add(new ChatModel("gue dari sekarang sampe tanggal 4 pasti lembur terus", true));//26
 
-        lstChat.add(new ChatModel("wah bener nih lu mau bantu?", false));
+        lstChat.add(new ChatModel("wah bener nih lu mau bantu?", false));//26
 
-        lstChat.add(new ChatModel("iyalah udah kagak ketemu 2 tahun terus bawa kabar baik, masa gue kagak seneng juga", true));
+        lstChat.add(new ChatModel("iyalah udah kagak ketemu 2 tahun terus bawa kabar baik, masa gue kagak seneng juga", true));//27
 
-        lstChat.add(new ChatModel("asik, gue cariin cewek deh nanti", false));
+        lstChat.add(new ChatModel("asik, gue cariin cewek deh nanti", false));//28
 
-        lstChat.add(new ChatModel("Gue udah punya cewe, lu nyuruh gue selingkuh?", true));
+        lstChat.add(new ChatModel("Gue udah punya cewe, lu nyuruh gue selingkuh?", true));//29
 
-        lstChat.add(new ChatModel("Demi tuhan, akhirnya lu punya pacar juga", false));
+        lstChat.add(new ChatModel("Demi tuhan, akhirnya lu punya pacar juga", false));//30
 
-        lstChat.add(new ChatModel("Sialan, ya udah lu cari aja sendiri gedungnya kalau gitu", true));
+        lstChat.add(new ChatModel("Sialan, ya udah lu cari aja sendiri gedungnya kalau gitu", true));//31
 
-        lstChat.add(new ChatModel("eh santai bro, lu kaya emak-emak aja, cepet marah", false));
+        lstChat.add(new ChatModel("eh santai bro, lu kaya emak-emak aja, cepet marah", false));//32
 
-        lstChat.add(new ChatModel("wkwk, maksud gue, gue gak nyangka aja lu bisa pacaran", false));
+        lstChat.add(new ChatModel("wkwk, maksud gue, gue gak nyangka aja lu bisa pacaran", false));//33
 
-        lstChat.add(new ChatModel("padahal dari dulu kerjaan lu cuman liatin langit kadang-kadang makan lumpur", false));
+        lstChat.add(new ChatModel("padahal dari dulu kerjaan lu cuman liatin langit kadang-kadang makan lumpur", false));//34
 
-        lstChat.add(new ChatModel("Yaiyalah orang gue masih bocah", true));
+        lstChat.add(new ChatModel("Yaiyalah orang gue masih bocah", true));//35
 
-        lstChat.add(new ChatModel("Lu juga sama aja, hobi lu liatin pantat bu marnikan guru PPKN?", true));
+        lstChat.add(new ChatModel("Lu juga sama aja, hobi lu liatin pantat bu marnikan guru PPKN?", true));//36
 
-        lstChat.add(new ChatModel("Sial, lu tau dari mana?,wkwk", false));
+        lstChat.add(new ChatModel("Wew, lu tau dari mana?,wkwk", false));//37
 
-        lstChat.add(new ChatModel("Gue tau lah, orang gue juga suka ngeliatin, wkwkwk", true));
+        lstChat.add(new ChatModel("Gue tau lah, orang gue juga suka ngeliatin, wkwkwk", true));//38
 
-        lstChat.add(new ChatModel("Jadi selama ini, gue sama lu pecinta pantat ibu-ibu umur 30an gitu?, najis!", false));
+        lstChat.add(new ChatModel("Jadi selama ini, gue sama lu pecinta pantat ibu-ibu umur 30an gitu?, najis!", false));//39
 
-        lstChat.add(new ChatModel("Yaelah namanya juga bocah XD", true));
+        lstChat.add(new ChatModel("Yaelah namanya juga bocah XD", true));//40
+
+        lstChat.add(new ChatModel("Throwback masa lalu itu emang bikin pengen bunuh diri ya?", false));//41
+
+        lstChat.add(new ChatModel("Gak apa2 lah setiap orang punya masa lalu dan bisa berubah", true));//42
+
+        lstChat.add(new ChatModel("Woy berhenti sejak kapa kita suka ngomong serius kaya gini?", true));//43
+
+        lstChat.add(new ChatModel("Lah elu yang mulai duluan", false));//44
+
+        lstChat.add(new ChatModel("Ah iya juga si", true));//40
 
 
     }

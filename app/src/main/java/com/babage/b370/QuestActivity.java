@@ -19,6 +19,7 @@ import java.util.ArrayList;
 /**
  * Created by Herdi_WORK on 15.09.16.
  */
+
 public class QuestActivity extends AppCompatActivity {
     public static final String PREFS_NAME = "B370PrefsFile";
 
@@ -36,9 +37,11 @@ public class QuestActivity extends AppCompatActivity {
         //menghilangkan ActionBar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN); getSupportActionBar().setDisplayShowHomeEnabled(true);
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher_foreground);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
+
 
         setContentView(R.layout.activity_quest);
         dataSet = new ArrayList<>();
@@ -61,6 +64,7 @@ public class QuestActivity extends AppCompatActivity {
          * yang hanya berisi daftar item
          * disusun dari atas ke bawah
          */
+
         layoutManager = new LinearLayoutManager(this);
         rvView.setLayoutManager(layoutManager);
 
