@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.support.v7.app.AlertDialog;
@@ -30,6 +31,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.shashank.sony.fancydialoglib.Animation;
 import com.shashank.sony.fancydialoglib.FancyAlertDialog;
 import com.shashank.sony.fancydialoglib.FancyAlertDialogListener;
@@ -41,6 +43,7 @@ import java.util.List;
 import es.dmoral.toasty.Toasty;
 
 public class LevelTwo extends AppCompatActivity {
+    public static final String EXTRA_VIDEO_URI = "com.babage.b370.VIDEO_URI";
 
     List<ChatModel> lstChat = new ArrayList<>();
     EditText e1;
@@ -90,6 +93,17 @@ public class LevelTwo extends AppCompatActivity {
                     view.setEnabled(false);
                     view.setOnClickListener(null);
                     answer--;
+
+                    // -- Play Video --
+//                    Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
+//                    intent.putExtra(EXTRA_VIDEO_URI, "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
+//                    startActivity(intent);
+                    // ----
+
+                    // -- Open Image --
+                    ImageViewDialog(R.drawable.topeng2);
+                    // ----
+
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
                 } else if(position==16){
@@ -381,6 +395,24 @@ public class LevelTwo extends AppCompatActivity {
         super.onBackPressed();
     }
 
+    private void ImageViewDialog(int resourceId) {
+        View view = getLayoutInflater().inflate(R.layout.layout_image_view, null);
+        Dialog dialog = new Dialog(this, android.R.style.Theme_DeviceDefault_NoActionBar_Fullscreen);
+        dialog.setContentView(view);
 
+        String imageUrl = getURLForResource(resourceId);
+
+        ImageView imageView = dialog.findViewById(R.id.imageViewHolder);
+        imageView.setMaxHeight(200);
+        Glide.with(this)
+                .load(imageUrl)
+                .into(imageView);
+
+        dialog.show();
+    }
+
+    public String getURLForResource (int resourceId) {
+        return Uri.parse("android.resource://"+R.class.getPackage().getName()+"/" +resourceId).toString();
+    }
 }
 

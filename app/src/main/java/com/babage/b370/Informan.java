@@ -3,6 +3,7 @@ package com.babage.b370;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
@@ -30,11 +31,15 @@ import java.util.ArrayList;
 import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
 
+import static com.babage.b370.QuestActivity.PREFS_NAME;
+
 
 public class Informan extends AppCompatActivity {
 
     CircleImageView btnv,btng,btnc,imgv;
     ArrayList<String> imagesList = new ArrayList<String>();
+
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +71,8 @@ public class Informan extends AppCompatActivity {
         imagesList.add("https://image.ibb.co/eWnpLe/1533014333293.jpg");
         imagesList.add("https://preview.ibb.co/kgRARK/1533014368948.jpg");
         imagesList.add("https://image.ibb.co/iUgwYz/1533014389572.jpg");
+
+        prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
         btnv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,9 +142,14 @@ public class Informan extends AppCompatActivity {
         fancy.OnPositiveClicked(new FancyAlertDialogListener() {
             @Override
             public void OnClick() {
-                Intent i = new Intent(getApplicationContext(),LevelOne.class);
-                startActivity(i);
-                Informan.this.finish();
+                int oldLife = prefs.getInt("changeAnswer", 5);
+                if (oldLife > 0) {
+                    Intent i = new Intent(getApplicationContext(),LevelOne.class);
+                    startActivity(i);
+                    Informan.this.finish();
+                } else {
+                    Toasty.error(getApplicationContext(), "Kesempatan Jawab sudah habis", Toast.LENGTH_SHORT, true).show();
+                }
             }
         })
                 .OnNegativeClicked(new FancyAlertDialogListener() {

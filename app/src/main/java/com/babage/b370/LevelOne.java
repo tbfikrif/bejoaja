@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
@@ -38,6 +39,8 @@ import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 
+import static com.babage.b370.QuestActivity.PREFS_NAME;
+
 public class LevelOne extends AppCompatActivity {
 
     List<ChatModel> lstChat = new ArrayList<>();
@@ -45,6 +48,8 @@ public class LevelOne extends AppCompatActivity {
     String isi;
     String alur;
     int life=3;
+
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,7 @@ public class LevelOne extends AppCompatActivity {
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.activity_level_one);
 
+        prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
         e1=(EditText) findViewById(R.id.e1);
 
@@ -3354,6 +3360,17 @@ public class LevelOne extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
+    }
+
+    private void WrongAnswer() {
+        int oldLife = prefs.getInt("changeAnswer", 5);
+        if (oldLife > 0) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("changeAnswer", oldLife - 1);
+            editor.apply();
+        } else {
+            Toasty.error(getApplicationContext(), "Kesempatan Jawab sudah habis", Toast.LENGTH_SHORT, true).show();
+        }
     }
 
 

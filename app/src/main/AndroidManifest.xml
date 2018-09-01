@@ -42,8 +42,11 @@
         <activity
             android:name=".Informan"
             android:label="Informasi Client" />
-        <activity android:name=".vdplay"
-            android:label="Galeri Video"></activity>
+        <activity
+            android:name=".vdplay"
+            android:label="Galeri Video" />
+        <activity android:name=".VideoPlayer"
+            android:label="Video Player" />
     </application>
 
 </manifest>

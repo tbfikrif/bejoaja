@@ -1,5 +1,8 @@
 package com.babage.b370;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,11 +20,14 @@ import java.util.ArrayList;
  * Created by Herdi_WORK on 15.09.16.
  */
 public class QuestActivity extends AppCompatActivity {
+    public static final String PREFS_NAME = "B370PrefsFile";
 
     private RecyclerView rvView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<String> dataSet;
+
+    private TextView tvLife;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,9 +40,16 @@ public class QuestActivity extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_launcher_foreground);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
-
         setContentView(R.layout.activity_quest);
         dataSet = new ArrayList<>();
+
+        tvLife = findViewById(R.id.tvLife);
+        // Shared Preferences
+        SharedPreferences prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+//        Editor editor = prefs.edit();
+//        editor.putInt("changeAnswer", 5);
+//        editor.apply();
+        tvLife.setText("Tersisa " + String.valueOf(prefs.getInt("changeAnswer", 5)) + " Kesempatan Menjawab");
 
         initDataset();
 
