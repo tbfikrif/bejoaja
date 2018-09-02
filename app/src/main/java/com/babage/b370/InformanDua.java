@@ -1,22 +1,20 @@
 package com.babage.b370;
 
-import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.support.design.widget.Snackbar;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.mzelzoghbi.zgallery.ZGallery;
@@ -34,7 +32,7 @@ import es.dmoral.toasty.Toasty;
 import static com.babage.b370.QuestActivity.PREFS_NAME;
 
 
-public class Informan extends AppCompatActivity {
+public class InformanDua extends AppCompatActivity {
 
     CircleImageView btnv,btng,btnc,imgv;
     ArrayList<String> imagesList = new ArrayList<String>();
@@ -48,7 +46,7 @@ public class Informan extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_informan);
+        setContentView(R.layout.activity_informan_dua);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher_foreground);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
@@ -143,14 +141,9 @@ public class Informan extends AppCompatActivity {
         fancy.OnPositiveClicked(new FancyAlertDialogListener() {
             @Override
             public void OnClick() {
-                int oldLife = prefs.getInt("changeAnswer", 5);
-                if (oldLife > 0) {
-                    Intent i = new Intent(getApplicationContext(),LevelOne.class);
-                    startActivity(i);
-                    Informan.this.finish();
-                } else {
-                    Toasty.error(getApplicationContext(), "Kesempatan Jawab sudah habis", Toast.LENGTH_SHORT, true).show();
-                }
+
+                    showLoginDialog();
+
             }
         })
                 .OnNegativeClicked(new FancyAlertDialogListener() {
@@ -187,9 +180,58 @@ public class Informan extends AppCompatActivity {
 
 
     public void goVideo(){
-        Intent i = new Intent(Informan.this, vdplay.class);
+        Intent i = new Intent(InformanDua.this, vdplay.class);
         startActivity(i);
         Toasty.warning(this, "Koneksi Internet Diperlukan", Toast.LENGTH_LONG, true).show();
+
+    }
+
+    private void showLoginDialog()
+    {
+        LayoutInflater li = LayoutInflater.from(this);
+        View prompt = li.inflate(R.layout.login_dialog, null);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this,R.style.MyDialogTheme);
+        alertDialogBuilder.setView(prompt);
+        alertDialogBuilder.setTitle("Hack Account");
+
+        final EditText userName = (EditText) prompt.findViewById(R.id.login_name);
+        final EditText passWord = (EditText) prompt.findViewById(R.id.login_password);
+        final String usersGet=(String) userName.getText().toString();
+        final String passwordGet=(String) passWord.getText().toString();
+
+
+        alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                if ((userName.getText().toString().equals("bejo")) && (passWord.getText().toString().equals("123"))) {
+
+                    Intent i = new Intent(InformanDua.this,LevelTwo.class);
+                    startActivity(i);
+                    finish();
+
+                } else {
+                    Toasty.error(getApplicationContext(), "Username/Password Tidak Cocok", Toast.LENGTH_SHORT, true).show();
+                    int oldLife = prefs.getInt("changeAnswer", 5);
+                    if (oldLife > 0) {
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putInt("changeAnswer", oldLife - 1);
+                        editor.apply();
+                    } else {
+                        Toasty.error(getApplicationContext(), "Kesempatan Jawab sudah habis", Toast.LENGTH_SHORT, true).show();
+                    }
+
+                }
+
+            }
+        }).setNegativeButton("BACK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        }).show();
+
+
 
     }
 

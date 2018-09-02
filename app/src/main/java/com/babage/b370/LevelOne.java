@@ -92,7 +92,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Selamat saudari Neysa, karena anda telah beruntung terpilih sebagai peserta the quiz berikutnya", true));
+                lstChat.add(new ChatModel("Selamat saudari Neysa, Apakah ini anda?", true));
             }
         }, 2000); // Millisecond 1000 = 1 sec
 
@@ -105,7 +105,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Aturan quiz ini cukup sederhana, yaitu jika anda salah menjawab, anda akan mati.", true));
+                lstChat.add(new ChatModel("Jika benar selamat, karena anda terpilih mengukti quiz ini. Aturan quiz ini cukup sederhana, yaitu jika anda salah menjawab, anda akan mati.", true));
             }
         }, 4000); // Millisecond 1000 = 1 sec
 
@@ -3253,10 +3253,10 @@ public class LevelOne extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
 
                 String YouEditTextValue = input.getText().toString();
-
+                int oldLife = prefs.getInt("changeAnswer", 5);
                 if (YouEditTextValue.equalsIgnoreCase("Damian"))
                 {
-                    int oldLife = prefs.getInt("changeAnswer", 5);
+
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putInt("changeAnswer", oldLife + 5);
                     editor.apply();
@@ -3268,12 +3268,17 @@ public class LevelOne extends AppCompatActivity {
                     LevelOne.this.finish();
                 } else {
 
-                    life--;
-                    Toasty.error(LevelOne.this,"Kesempatan Anda : "+life+"x Lagi!", Toast.LENGTH_SHORT,true).show();
+
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putInt("changeAnswer", oldLife - 1);
+                    editor.apply();
+                    oldLife--;
+                    Toasty.error(LevelOne.this,"Kesempatan Anda : "+oldLife+"x Lagi!", Toast.LENGTH_SHORT,true).show();
+
                 }
 
 
-                if (life==0) {
+                if (oldLife==0) {
                     e1.setEnabled(false);
                     ListView lstView = (ListView)findViewById(R.id.listView);
                     CustomAdapter adapter = new CustomAdapter(lstChat,LevelOne.this);

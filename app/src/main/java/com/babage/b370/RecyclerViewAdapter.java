@@ -111,7 +111,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     if (user != null) {
                         //Bundle mBundle = new Bundle();
                         //mBundle.putString("user", user.getValue());
-                        Intent intent = new Intent(view.getContext(), LevelTwo.class);
+                        Intent intent = new Intent(view.getContext(), InformanDua.class);
                         //intent.putExtras(mBundle);
                         view.getContext().startActivity(intent);
                         ((Activity) view.getContext()).finish();

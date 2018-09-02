@@ -69,7 +69,7 @@ public class CustomAdapter extends BaseAdapter{
         BubbleImageView bubbleImageView = (BubbleImageView)vi.findViewById(R.id.bubbleImage);
         bubbleTextView.setText(lstChat.get(position).chatMessage);
 
-        if (position==1){
+        if (position==0){
             bubbleImageView.setImageResource(R.drawable.client);
             bubbleImageView.getLayoutParams().width=420;
             bubbleImageView.getLayoutParams().height=230;

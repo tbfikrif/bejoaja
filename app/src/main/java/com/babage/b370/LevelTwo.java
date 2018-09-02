@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
@@ -42,6 +43,8 @@ import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 
+import static com.babage.b370.QuestActivity.PREFS_NAME;
+
 public class LevelTwo extends AppCompatActivity {
     public static final String EXTRA_VIDEO_URI = "com.babage.b370.VIDEO_URI";
 
@@ -50,8 +53,9 @@ public class LevelTwo extends AppCompatActivity {
     String isi;
     String alur;
     int life=3;
-    int answer=5;
+    int answer=9;
     boolean wasItClicked=true;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +69,7 @@ public class LevelTwo extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_chatbar_round);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.activity_level_two);
+        prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
         e1=(EditText) findViewById(R.id.e1);
 
@@ -95,30 +100,36 @@ public class LevelTwo extends AppCompatActivity {
                     answer--;
 
 
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                } else if(position==18){
+
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+
                     // -- Open Image --
                     ImageViewDialog(R.drawable.topeng2);
                     // ----
 
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
-
-                } else if(position==16){
-
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
 
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                }else if(position==28){
+                }else if(position==77){
+
 
 
                     view.setEnabled(false);
                     view.setOnClickListener(null);
 
+                    // -- Open Image --
+                    ImageViewDialog(R.drawable.topeng2);
+                    // ----
+
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                }else if(position==7){
+                }else if(position==78){
 
 
                     view.setEnabled(false);
@@ -129,11 +140,10 @@ public class LevelTwo extends AppCompatActivity {
                     intent.putExtra(EXTRA_VIDEO_URI, "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
                     startActivity(intent);
 
-
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                }else if(position==10){
+                }else if(position==74){
 
                     view.setEnabled(false);
                     view.setOnClickListener(null);
@@ -144,9 +154,60 @@ public class LevelTwo extends AppCompatActivity {
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
+                }else if(position==56){
+
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+
+                    answer--;
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                }else if(position==58){
+
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+
+                    // -- Open Image --
+                    ImageViewDialog(R.drawable.topeng2);
+                    // ----
+
+
+                    answer--;
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                }else if(position==62){
+
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+
+
+                    answer--;
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                }else if(position==74){
+
+                    view.setEnabled(false);
+                    view.setOnClickListener(null);
+
+                    answer--;
+                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
                 }else{
-                    life--;
-                    Toasty.error(LevelTwo.this,"Kesempatanmu : "+life+"x Lagi!", Toast.LENGTH_SHORT,true).show();
+
+                    int oldLife = prefs.getInt("changeAnswer", 5);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putInt("changeAnswer", oldLife - 1);
+                    editor.apply();
+
+                    Toasty.error(LevelTwo.this,oldLife-1+" kesempatan tersisa!.", Toast.LENGTH_SHORT,true).show();
+
+
+                    if (oldLife<0){
+                    Toasty.error(LevelTwo.this,"Kesempatanmu : Sudah Habis", Toast.LENGTH_SHORT,true).show();
+                    Intent i = new Intent(LevelTwo.this,QuestActivity.class);
+                    startActivity(i);
+                    finish();
+                    }
 
                 }
 
@@ -186,7 +247,7 @@ public class LevelTwo extends AppCompatActivity {
 
         lstChat.add(new ChatModel("Hush ngawur, biarpun perusahaannya gak jelas, gue bisa makan selama ini dari sono", true));//6
 
-        lstChat.add(new ChatModel("Emang gak ada pikiran cari kerja lain aja gitu?", false));//7//clue
+        lstChat.add(new ChatModel("Emang gak ada pikiran cari kerja lain aja gitu?", false));//7
 
         lstChat.add(new ChatModel("Heh lu pikir nyari kerja itu kaya ngupil ya?, kalau gampang gue udah pindah dari dulu",true));//8
 
@@ -208,7 +269,7 @@ public class LevelTwo extends AppCompatActivity {
 
         lstChat.add(new ChatModel("Mana coba gue liat fotonya?", true));//17
 
-        lstChat.add(new ChatModel("Nih", false));//18
+        lstChat.add(new ChatModel("Nih", false));//18//foto
 
         lstChat.add(new ChatModel("Gila, lu jual ginjal ya?", true));//19
 
@@ -216,57 +277,119 @@ public class LevelTwo extends AppCompatActivity {
 
         lstChat.add(new ChatModel("niat!", true));//21
 
-        lstChat.add(new ChatModel("Ya iyalah harus niat, nikah kalau gak niat mending gak usah sekalian", false));//21
+        lstChat.add(new ChatModel("Ya iyalah harus niat, nikah kalau gak niat mending gak usah sekalian", false));//22
 
-        lstChat.add(new ChatModel("Kalau bisa lu bantuin gue cari gedung lain deh, yang lebih murah XD", false));//22
+        lstChat.add(new ChatModel("Kalau bisa lu bantuin gue cari gedung lain deh, yang lebih murah XD", false));//23
 
-        lstChat.add(new ChatModel("Iya pasti gue bantu, cuman gue beresin kerjaan dulu, tanggal berapa lu butuh emang?", true));//23
+        lstChat.add(new ChatModel("Iya pasti gue bantu, cuman gue beresin kerjaan dulu, tanggal berapa lu butuh emang?", true));//24
 
-        lstChat.add(new ChatModel("10 oktober", false));//24
+        lstChat.add(new ChatModel("10 oktober", false));//25
 
-        lstChat.add(new ChatModel("2 minggu lagi!", true));//25
+        lstChat.add(new ChatModel("2 minggu lagi!", true));//26
 
-        lstChat.add(new ChatModel("gue dari sekarang sampe tanggal 4 pasti lembur terus", true));//26
+        lstChat.add(new ChatModel("gue dari sekarang sampe tanggal 4 pasti lembur terus", true));//27
 
-        lstChat.add(new ChatModel("wah bener nih lu mau bantu?", false));//26
+        lstChat.add(new ChatModel("wah bener nih lu mau bantu?", false));//28
 
-        lstChat.add(new ChatModel("iyalah udah kagak ketemu 2 tahun terus bawa kabar baik, masa gue kagak seneng juga", true));//27
+        lstChat.add(new ChatModel("iyalah udah kagak ketemu 2 tahun terus bawa kabar baik, masa gue kagak seneng juga", true));//29
 
-        lstChat.add(new ChatModel("asik, gue cariin cewek deh nanti", false));//28
+        lstChat.add(new ChatModel("asik, gue cariin cewek deh nanti", false));//30
 
-        lstChat.add(new ChatModel("Gue udah punya cewe, lu nyuruh gue selingkuh?", true));//29
+        lstChat.add(new ChatModel("Gue udah punya cewe, lu nyuruh gue selingkuh?", true));//31
 
-        lstChat.add(new ChatModel("Demi tuhan, akhirnya lu punya pacar juga", false));//30
+        lstChat.add(new ChatModel("Demi tuhan, akhirnya lu punya pacar juga", false));//32
 
-        lstChat.add(new ChatModel("Sialan, ya udah lu cari aja sendiri gedungnya kalau gitu", true));//31
+        lstChat.add(new ChatModel("Sialan, ya udah lu cari aja sendiri gedungnya kalau gitu", true));//33
 
-        lstChat.add(new ChatModel("eh santai bro, lu kaya emak-emak aja, cepet marah", false));//32
+        lstChat.add(new ChatModel("eh santai bro, lu kaya emak-emak aja, cepet marah", false));//34
 
-        lstChat.add(new ChatModel("wkwk, maksud gue, gue gak nyangka aja lu bisa pacaran", false));//33
+        lstChat.add(new ChatModel("wkwk, maksud gue, gue gak nyangka aja lu bisa pacaran", false));//35
 
-        lstChat.add(new ChatModel("padahal dari dulu kerjaan lu cuman liatin langit kadang-kadang makan lumpur", false));//34
+        lstChat.add(new ChatModel("padahal dari dulu kerjaan lu cuman liatin langit kadang-kadang makan lumpur", false));//36
 
-        lstChat.add(new ChatModel("Yaiyalah orang gue masih bocah", true));//35
+        lstChat.add(new ChatModel("Yaiyalah orang gue masih bocah", true));//37
 
-        lstChat.add(new ChatModel("Lu juga sama aja, hobi lu liatin pantat bu marnikan guru PPKN?", true));//36
+        lstChat.add(new ChatModel("Lu juga sama aja, hobi lu liatin pantat bu marnikan guru PPKN?", true));//38
 
-        lstChat.add(new ChatModel("Wew, lu tau dari mana?,wkwk", false));//37
+        lstChat.add(new ChatModel("Wew, lu tau dari mana?,wkwk", false));//39
 
-        lstChat.add(new ChatModel("Gue tau lah, orang gue juga suka ngeliatin, wkwkwk", true));//38
+        lstChat.add(new ChatModel("Gue tau lah, orang gue juga suka ngeliatin, wkwkwk", true));//40
 
-        lstChat.add(new ChatModel("Jadi selama ini, gue sama lu pecinta pantat ibu-ibu umur 30an gitu?, najis!", false));//39
+        lstChat.add(new ChatModel("Jadi selama ini, gue sama lu pecinta pantat ibu-ibu umur 30an gitu?, najis!", false));//41
 
-        lstChat.add(new ChatModel("Yaelah namanya juga bocah XD", true));//40
+        lstChat.add(new ChatModel("Yaelah namanya juga bocah XD", true));//42
 
-        lstChat.add(new ChatModel("Throwback masa lalu itu emang bikin pengen bunuh diri ya?", false));//41
+        lstChat.add(new ChatModel("Throwback masa lalu itu emang bikin pengen bunuh diri ya?", false));//43
 
-        lstChat.add(new ChatModel("Gak apa2 lah setiap orang punya masa lalu dan bisa berubah", true));//42
+        lstChat.add(new ChatModel("Gak apa2 lah setiap orang punya masa lalu dan bisa berubah", true));//44
 
-        lstChat.add(new ChatModel("Woy berhenti sejak kapa kita suka ngomong serius kaya gini?", true));//43
+        lstChat.add(new ChatModel("Woy stop, sejak kapan kita suka ngomong serius kaya gini?", false));//45
 
-        lstChat.add(new ChatModel("Lah elu yang mulai duluan", false));//44
+        lstChat.add(new ChatModel("Lah elu yang mulai duluan", false));//46
 
-        lstChat.add(new ChatModel("Ah iya juga si", true));//40
+        lstChat.add(new ChatModel("Ah iya juga si", true));//47
+
+        lstChat.add(new ChatModel("BTW, gue mimpi aneh semalem", false));//48//clue
+
+        lstChat.add(new ChatModel("Mimpi apaan?", true));//49
+
+        lstChat.add(new ChatModel("Masa gue mimpi didorong sama orang dari tempat kerja gue?", false));//50
+
+        lstChat.add(new ChatModel("Horor juga, tapi mimpikan?, gak usah banyak dipikirin", true));//51
+
+        lstChat.add(new ChatModel("Masalahnya udah 3 hari mimpi aneh terus", false));//52
+
+        lstChat.add(new ChatModel("berdoa makannya sebelum tidur", true));//53
+
+        lstChat.add(new ChatModel("Diganggu setankan jadinya", true));//54
+
+        lstChat.add(new ChatModel("Iyalah malah gue cuci kaki sekalian.", false));//55
+
+        lstChat.add(new ChatModel("Oh ya lu mau ikut kagak?", false));//56
+
+        lstChat.add(new ChatModel("Ikut apa?", true));//57
+
+        lstChat.add(new ChatModel("nih", false));//58//foto brosur//biat brosur print
+
+        lstChat.add(new ChatModel("Apaan itu?", true));//59
+
+        lstChat.add(new ChatModel("Party deket kantor gue", false));//60
+
+        lstChat.add(new ChatModel("Lu diundang siapa?", true));//61
+
+        lstChat.add(new ChatModel("Ada temen kantor gue, baru kenal si cuman baik ke gue", false));//62//clue
+
+        lstChat.add(new ChatModel("awas ada maunya tuh", true));//63
+
+        lstChat.add(new ChatModel("Cowo?, Cewe?", true));//64
+
+        lstChat.add(new ChatModel("Cewe, kenapa emang?", false));//65
+
+        lstChat.add(new ChatModel("Lu kagak niat selingkuhkan?", true));//66
+
+        lstChat.add(new ChatModel("enak aja, kagak mungkinlah", false));//67
+
+        lstChat.add(new ChatModel("Ya gue mah simple ada yang baik ke gue, yang gue bls baikin lagi", false));//68
+
+        lstChat.add(new ChatModel("Dari dulu lu emang gak pernah berubah", true));//69
+
+        lstChat.add(new ChatModel("Ngapain harus berubah kalau gak ada yang perlu dirubah XD", false));//70
+
+        lstChat.add(new ChatModel("Bisa aja lu", true));//71
+
+        lstChat.add(new ChatModel("ben thasfhgfa", false));//72
+
+        lstChat.add(new ChatModel("Gila, kenapa lu", true));//73
+
+        lstChat.add(new ChatModel("Hai,^^", false));//74//pesan suara
+
+        lstChat.add(new ChatModel("Ben!, Lu kenapa Ben", true));//75
+
+        lstChat.add(new ChatModel("Woy ben!!", true));//76
+
+        lstChat.add(new ChatModel("Jika kamu mau selamat, jangan pernah ikut campur, atau kamu akan berarkhir sepert ini", false));//77//foto
+
+        lstChat.add(new ChatModel("Diam dan semua akan baik-baik saja", false));//78//Video
 
 
     }
