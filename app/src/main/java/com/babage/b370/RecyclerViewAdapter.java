@@ -113,9 +113,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         //mBundle.putString("user", user.getValue());
                         Intent intent = new Intent(view.getContext(), InformanDua.class);
                         //intent.putExtras(mBundle);
+                        Toasty.warning(view.getContext(), "Klik Foto Untuk Detail Kasus.", Toast.LENGTH_LONG, true).show();
                         view.getContext().startActivity(intent);
                         ((Activity) view.getContext()).finish();
-                        Toasty.success(view.getContext(), "Terbuka", Toast.LENGTH_SHORT, true).show();
                     } else {
                         Toasty.error(view.getContext(), "Level Dikunci", Toast.LENGTH_SHORT, true).show();
                     }

@@ -105,7 +105,7 @@ public class LevelOne extends AppCompatActivity {
                 lstView.setDivider(null);
                 lstView.setDividerHeight(0);
                 mp.start();
-                lstChat.add(new ChatModel("Jika benar selamat, karena anda terpilih mengukti quiz ini. Aturan quiz ini cukup sederhana, yaitu jika anda salah menjawab, anda akan mati.", true));
+                lstChat.add(new ChatModel("Jika benar selamat, karena anda terpilih mengikuti quiz ini. Aturan quiz ini cukup sederhana, yaitu jika anda salah menjawab, anda akan mati.", true));
             }
         }, 4000); // Millisecond 1000 = 1 sec
 

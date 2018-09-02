@@ -72,7 +72,7 @@ public class InformanDua extends AppCompatActivity {
         imagesList.add("https://image.ibb.co/iUgwYz/1533014389572.jpg");
 
         prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-
+        btnv.setEnabled(false);
         btnv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -128,7 +128,7 @@ public class InformanDua extends AppCompatActivity {
 
         final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(this);
 
-        fancy.setTitle("Misi Menyelamatkan");
+        fancy.setTitle("Misi Identifikasi");
         fancy.setBackgroundColor(Color.parseColor("#ffffff")) ;
         fancy.setMessage("Anda yakin ingin mengambil misi ini ?");
         fancy.setNegativeBtnText("Tidak");
@@ -142,8 +142,15 @@ public class InformanDua extends AppCompatActivity {
             @Override
             public void OnClick() {
 
+                int oldLife = prefs.getInt("changeAnswer", 5);
+                if (oldLife==0){
+                    Toasty.error(getApplicationContext(), "Kesempatan Jawab Anda Habis!", Toast.LENGTH_SHORT, true).show();
+
+                }else {
+
                     showLoginDialog();
 
+                }
             }
         })
                 .OnNegativeClicked(new FancyAlertDialogListener() {
@@ -161,7 +168,7 @@ public class InformanDua extends AppCompatActivity {
 
 
                     final Dialog dialog = new Dialog(this);
-                    dialog.setContentView(R.layout.informasiberbohong);
+                    dialog.setContentView(R.layout.informasileveldua);
 
                     //AlertDialog.Builder builder = new AlertDialog.Builder(QuestActivity.this);
                     //View view = getLayoutInflater().inflate(R.layout.informasiberbohong, null);
@@ -192,13 +199,10 @@ public class InformanDua extends AppCompatActivity {
         View prompt = li.inflate(R.layout.login_dialog, null);
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this,R.style.MyDialogTheme);
         alertDialogBuilder.setView(prompt);
-        alertDialogBuilder.setTitle("Hack Account");
+        alertDialogBuilder.setTitle("Please Log On");
 
         final EditText userName = (EditText) prompt.findViewById(R.id.login_name);
         final EditText passWord = (EditText) prompt.findViewById(R.id.login_password);
-        final String usersGet=(String) userName.getText().toString();
-        final String passwordGet=(String) passWord.getText().toString();
-
 
         alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override

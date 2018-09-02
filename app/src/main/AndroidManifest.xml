@@ -38,7 +38,10 @@
             android:name=".LevelOne"
             android:label="The Quiz"
             android:screenOrientation="portrait" />
-        <activity android:name=".LevelTwo" />
+        <activity android:name=".LevelTwo"
+            android:label="Bima"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Informan"
             android:label="Informasi Client" />
@@ -48,7 +51,8 @@
         <activity
             android:name=".vdplay"
             android:label="Galeri Video" />
-        <activity android:name=".VideoPlayer"
+        <activity
+            android:name=".VideoPlayer"
             android:label="Video Player" />
     </application>
 
