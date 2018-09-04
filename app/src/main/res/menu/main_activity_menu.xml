@@ -7,13 +7,13 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         app:showAsAction="always"
-        android:title="View ads" />
+        android:title="+ Kesempatan" />
 
     <item
         android:id="@+id/action_mainMenu2"
-        android:icon="@drawable/funsional2"
+        android:icon="@drawable/ic_chance_answer"
         android:orderInCategory="10"
         android:title="Main Menu"
-        app:showAsAction="ifRoom|withText" /> />
+        app:showAsAction="ifRoom|withText" />
 
 </menu>

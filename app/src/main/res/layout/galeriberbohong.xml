@@ -48,13 +48,13 @@
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_margin="20dp"
-                    android:src="@drawable/clue1" />
+                    android:src="@drawable/victim" />
 
                 <ImageView
                     android:layout_width="128dp"
                     android:layout_height="128dp"
                     android:layout_margin="20dp"
-                    android:src="@drawable/galeri1" />
+                    android:src="@drawable/victim" />
             </LinearLayout>
 
         </LinearLayout>

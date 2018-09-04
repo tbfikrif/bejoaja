@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mzelzoghbi.zgallery.ZGallery;
@@ -36,7 +37,8 @@ import static com.babage.b370.QuestActivity.PREFS_NAME;
 
 public class Informan extends AppCompatActivity {
 
-    CircleImageView btnv,btng,btnc,imgv;
+    CircleImageView imgv;
+    ImageView btnc, btng, btnv;
     ArrayList<String> imagesList = new ArrayList<String>();
 
     SharedPreferences prefs;
@@ -55,10 +57,10 @@ public class Informan extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar);
 
-        btnv = (CircleImageView) findViewById(R.id.btnV);
-        btng = (CircleImageView) findViewById(R.id.btnG);
-        btnc = (CircleImageView) findViewById(R.id.btnC);
-        imgv = (CircleImageView) findViewById(R.id.imgv);
+        btnv = findViewById(R.id.btnV);
+        btng = findViewById(R.id.btnG);
+        btnc = findViewById(R.id.btnC);
+        imgv = findViewById(R.id.imgv);
 
         imagesList.add("https://image.ibb.co/ew843z/20170607_170607_0022.jpg");
         imagesList.add("https://preview.ibb.co/jfRzLe/20170607_170607_0030.jpg");
