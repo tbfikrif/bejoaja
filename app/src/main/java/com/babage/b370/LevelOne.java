@@ -45,6 +45,7 @@ public class LevelOne extends AppCompatActivity {
 
     List<ChatModel> lstChat = new ArrayList<>();
     EditText e1;
+    ImageView terima;
     String isi;
     String alur;
     int life=3;
@@ -609,90 +610,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                           dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
+                    DialogWrongAnswer();
 
                     isi="3";
                     alur="2a";
@@ -743,90 +663,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
-
+                    DialogWrongAnswer();
 
                     isi="3";
                     alur="2b";
@@ -987,91 +826,9 @@ public class LevelOne extends AppCompatActivity {
                             }
                         }, 4000); // Millisecond 1000 = 1 sec
 
+                        DialogCalled(v, dialog, pc, wm);
 
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                pc.start();
-                                // Get instance of Vibrator from current Context
-                                long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                                // Vibrate for 400 milliseconds
-                                v.vibrate(pattern,-1);
-                                dialog.setContentView(R.layout.telponberbohong);
-                                dialog.setCancelable(false);
-                                dialog.show();
-
-                            }
-                        }, 7600); // Millisecond 1000 = 1 sec
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                v.cancel();
-                                wm.start();
-
-                            }
-                        }, 18600); // Millisecond 1000 = 1 sec
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                dialog.dismiss();
-
-                            }
-                        }, 22900); // Millisecond 1000 = 1 sec
-
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                                fancy.setTitle("From : DeepSpeak Corporation");
-                                fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                                fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                                fancy.setNegativeBtnText("OKE");
-                                fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                                fancy.setPositiveBtnText("KELUAR");
-                                fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                                fancy.setAnimation(Animation.SIDE);
-                                fancy.isCancellable(false);
-                                fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                                fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                    @Override
-                                    public void OnClick() {
-
-                                        Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                        startActivity(intent);
-                                        LevelOne.this.finish();
-
-                                    }
-                                })
-                                        .OnNegativeClicked(new FancyAlertDialogListener() {
-                                            @Override
-                                            public void OnClick() {
-
-                                            }
-                                        })
-                                        .build();
-
-
-
-
-                            }
-                        }, 23900); // Millisecond 1000 = 1 sec
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                startActivity(intent);
-                                LevelOne.this.finish();
-                            }
-                        }, 28900); // Millisecond 1000 = 1 sec
-
-
+                        DialogWrongAnswer();
 
                         isi="4";
 
@@ -1222,91 +979,9 @@ public class LevelOne extends AppCompatActivity {
                             }
                         }, 4000); // Millisecond 1000 = 1 sec
 
+                        DialogCalled(v, dialog, pc, wm);
 
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                pc.start();
-                                // Get instance of Vibrator from current Context
-                                long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                                // Vibrate for 400 milliseconds
-                                v.vibrate(pattern,-1);
-                                dialog.setContentView(R.layout.telponberbohong);
-                                dialog.setCancelable(false);
-                                dialog.show();
-
-                            }
-                        }, 7600); // Millisecond 1000 = 1 sec
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                v.cancel();
-                                wm.start();
-
-                            }
-                        }, 18600); // Millisecond 1000 = 1 sec
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                dialog.dismiss();
-
-                            }
-                        }, 22900); // Millisecond 1000 = 1 sec
-
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                                fancy.setTitle("From : DeepSpeak Corporation");
-                                fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                                fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                                fancy.setNegativeBtnText("OKE");
-                                fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                                fancy.setPositiveBtnText("KELUAR");
-                                fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                                fancy.setAnimation(Animation.SIDE);
-                                fancy.isCancellable(false);
-                                fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                                fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                    @Override
-                                    public void OnClick() {
-
-                                        Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                        startActivity(intent);
-                                        LevelOne.this.finish();
-
-                                    }
-                                })
-                                        .OnNegativeClicked(new FancyAlertDialogListener() {
-                                            @Override
-                                            public void OnClick() {
-
-                                            }
-                                        })
-                                        .build();
-
-
-
-
-                            }
-                        }, 23900); // Millisecond 1000 = 1 sec
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                startActivity(intent);
-                                LevelOne.this.finish();
-                            }
-                        }, 28900); // Millisecond 1000 = 1 sec
-
+                        DialogWrongAnswer();
 
                         isi="4";
 
@@ -1383,90 +1058,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
-
+                    DialogWrongAnswer();
 
                     isi="5";
 
@@ -1618,89 +1212,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
+                    DialogWrongAnswer();
 
                     isi="5";
 
@@ -1889,90 +1403,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
-
+                    DialogWrongAnswer();
 
                     isi="6";
 
@@ -2023,89 +1456,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
+                    DialogWrongAnswer();
 
                     isi="6";
 
@@ -2180,90 +1533,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
+                    DialogWrongAnswer();
 
                     isi="7";
 
@@ -2397,90 +1669,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
-
+                    DialogWrongAnswer();
 
                     isi="7";
 
@@ -2553,90 +1744,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
+                    DialogWrongAnswer();
 
                     isi="8";
 
@@ -2786,89 +1896,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
+                    DialogWrongAnswer();
 
                     isi="8";
 
@@ -2942,90 +1972,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
+                    DialogWrongAnswer();
 
                     isi="akhir";
 
@@ -3076,89 +2025,9 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 4000); // Millisecond 1000 = 1 sec
 
+                    DialogCalled(v, dialog, pc, wm);
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 7600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 18600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 22900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelOne.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 23900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
+                    DialogWrongAnswer();
 
                     isi="akhir";
 
@@ -3300,7 +2169,7 @@ public class LevelOne extends AppCompatActivity {
                             dialog.setContentView(R.layout.telponberbohong);
                             dialog.setCancelable(false);
                             dialog.show();
-
+                            terima = dialog.findViewById(R.id.terima);
                         }
                     }, 4600); // Millisecond 1000 = 1 sec
 
@@ -3308,6 +2177,7 @@ public class LevelOne extends AppCompatActivity {
                         @Override
                         public void run() {
                             v.cancel();
+                            terima.setVisibility(View.GONE);
                             wm.start();
 
                         }
@@ -3322,13 +2192,21 @@ public class LevelOne extends AppCompatActivity {
                         }
                     }, 18900); // Millisecond 1000 = 1 sec
 
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
+                            startActivity(intent);
+                            LevelOne.this.finish();
+                        }
+                    }, 28900); // Millisecond 1000 = 1 sec
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
                             final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
-
                             fancy.setTitle("From : DeepSpeak Corporation");
                             fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
                             fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
@@ -3342,7 +2220,7 @@ public class LevelOne extends AppCompatActivity {
                             fancy.OnPositiveClicked(new FancyAlertDialogListener() {
                                 @Override
                                 public void OnClick() {
-
+                                    handler.removeCallbacksAndMessages(null);
                                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                                     startActivity(intent);
                                     LevelOne.this.finish();
@@ -3356,23 +2234,8 @@ public class LevelOne extends AppCompatActivity {
                                         }
                                     })
                                     .build();
-
-
-
-
                         }
                     }, 19900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelOne.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
-
-
                 }
             }
         });
@@ -3397,6 +2260,88 @@ public class LevelOne extends AppCompatActivity {
         }
     }
 
+    private void DialogWrongAnswer(){
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(LevelOne.this,QuestActivity.class);
+                startActivity(intent);
+                LevelOne.this.finish();
+            }
+        }, 28900); // Millisecond 1000 = 1 sec
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelOne.this);
+                fancy.setTitle("From : DeepSpeak Corporation");
+                fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
+                fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
+                fancy.setNegativeBtnText("OKE");
+                fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
+                fancy.setPositiveBtnText("KELUAR");
+                fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
+                fancy.setAnimation(Animation.SIDE);
+                fancy.isCancellable(false);
+                fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
+                fancy.OnPositiveClicked(new FancyAlertDialogListener() {
+                    @Override
+                    public void OnClick() {
+                        handler.removeCallbacksAndMessages(null);
+                        Intent intent = new Intent(LevelOne.this,QuestActivity.class);
+                        startActivity(intent);
+                        LevelOne.this.finish();
+                    }
+                })
+                        .OnNegativeClicked(new FancyAlertDialogListener() {
+                            @Override
+                            public void OnClick() {
+                            }
+                        })
+                        .build();
+
+            }
+        }, 23900); // Millisecond 1000 = 1 sec
+    }
+
+    private void DialogCalled(final Vibrator v, final Dialog dialog, final MediaPlayer pc, final MediaPlayer wm) {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                pc.start();
+                // Get instance of Vibrator from current Context
+                long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                // Vibrate for 400 milliseconds
+                v.vibrate(pattern,-1);
+                dialog.setContentView(R.layout.telponberbohong);
+                dialog.setCancelable(false);
+                dialog.show();
+                terima = dialog.findViewById(R.id.terima);
+
+            }
+        }, 7600); // Millisecond 1000 = 1 sec
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                v.cancel();
+                terima.setVisibility(View.GONE);
+                wm.start();
+
+            }
+        }, 18600); // Millisecond 1000 = 1 sec
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                dialog.dismiss();
+
+            }
+        }, 22900); // Millisecond 1000 = 1 sec
+    }
 
 }
 
