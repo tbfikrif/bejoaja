@@ -15,6 +15,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.mzelzoghbi.zgallery.ZGallery;
@@ -34,7 +35,8 @@ import static com.babage.b370.QuestActivity.PREFS_NAME;
 
 public class InformanDua extends AppCompatActivity {
 
-    CircleImageView btnv,btng,btnc,imgv;
+    CircleImageView imgv;
+    ImageView btnc, btng, btnv;
     ArrayList<String> imagesList = new ArrayList<String>();
 
     SharedPreferences prefs;
@@ -53,23 +55,27 @@ public class InformanDua extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar);
 
-        btnv = (CircleImageView) findViewById(R.id.btnV);
-        btng = (CircleImageView) findViewById(R.id.btnG);
-        btnc = (CircleImageView) findViewById(R.id.btnC);
-        imgv = (CircleImageView) findViewById(R.id.imgv);
+        btnv = findViewById(R.id.btnV);
+        btng = findViewById(R.id.btnG);
+        btnc = findViewById(R.id.btnC);
+        imgv = findViewById(R.id.imgv);
 
-        imagesList.add("https://image.ibb.co/ew843z/20170607_170607_0022.jpg");
-        imagesList.add("https://preview.ibb.co/jfRzLe/20170607_170607_0030.jpg");
-        imagesList.add("https://image.ibb.co/gYRc6K/1533013736723.jpg");
-        imagesList.add("https://preview.ibb.co/iXZEmK/1533013798894.jpg");
-        imagesList.add("https://preview.ibb.co/eJdw0e/1533013816514.jpg");
-        imagesList.add("https://preview.ibb.co/eKoqRK/1533013833097.jpg");
-        imagesList.add("https://preview.ibb.co/jdS0RK/1533014128823.jpg");
-        imagesList.add("https://preview.ibb.co/f0AFtz/1533014293149.jpg");
-        imagesList.add("https://preview.ibb.co/mNprYz/1533014302309.jpg");
-        imagesList.add("https://image.ibb.co/eWnpLe/1533014333293.jpg");
-        imagesList.add("https://preview.ibb.co/kgRARK/1533014368948.jpg");
-        imagesList.add("https://image.ibb.co/iUgwYz/1533014389572.jpg");
+        imagesList.add("https://image.ibb.co/bE84n9/P1010280_min.jpg");
+        imagesList.add("https://image.ibb.co/c2apLU/P1010279_min.jpg");
+        imagesList.add("https://image.ibb.co/n4i10U/P1010270_min.jpg");
+        imagesList.add("https://image.ibb.co/g5rbZp/P1010311_min.jpg");
+        imagesList.add("https://image.ibb.co/cx9Vup/P1010310_min.jpg");
+        imagesList.add("https://image.ibb.co/iZSTfU/P1010309_min.jpg");
+        imagesList.add("https://image.ibb.co/eK3OEp/P1010308_min.jpg");
+        imagesList.add("https://image.ibb.co/bL3en9/P1010290_min.jpg");
+        imagesList.add("https://image.ibb.co/kZ3OEp/P1010289_min.jpg");
+        imagesList.add("https://image.ibb.co/fkHTfU/P1010287_min.jpg");
+        imagesList.add("https://image.ibb.co/gH7iEp/P1010285_min.jpg");
+        imagesList.add("https://image.ibb.co/do0QS9/P1010278_min.jpg");
+        imagesList.add("https://image.ibb.co/eShiEp/P1010275_min.jpg");
+        imagesList.add("https://image.ibb.co/gCPKn9/P1010276_min.jpg");
+        imagesList.add("https://image.ibb.co/g8wofU/galeri_indra_2.jpg");
+        imagesList.add("https://image.ibb.co/m853Ep/galeri_indra_1.jpg");
 
         prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         btnv.setEnabled(false);
@@ -119,7 +125,7 @@ public class InformanDua extends AppCompatActivity {
                 .setToolbarTitleColor(ZColor.WHITE) // toolbar title color
                 .setGalleryBackgroundColor(ZColor.BLACK) // activity background color
                 .setToolbarColorResId(R.color.colorPrimary) // toolbar color
-                .setTitle("NEYSA GALLERY") // toolbar title
+                .setTitle("BIMA GALLERY") // toolbar title
                 .show();
 
     }

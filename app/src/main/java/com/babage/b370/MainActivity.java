@@ -84,6 +84,7 @@ public class MainActivity extends Activity {
             }
         });
         background = MediaPlayer.create(MainActivity.this, R.raw.background_mainmenu);
+        background.setLooping(true);
         click = MediaPlayer.create(this, R.raw.click2);
         //background.start();
 

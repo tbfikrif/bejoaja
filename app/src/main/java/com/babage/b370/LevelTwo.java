@@ -108,7 +108,7 @@ public class LevelTwo extends AppCompatActivity {
                     view.setOnClickListener(null);
 
                     // -- Open Image --
-                    ImageViewDialog(R.drawable.topeng2);
+                    ImageViewDialog(R.drawable.lv2_gedung);
                     // ----
 
 
@@ -122,9 +122,10 @@ public class LevelTwo extends AppCompatActivity {
                     view.setEnabled(false);
                     view.setOnClickListener(null);
 
-                    // -- Open Image --
-                    ImageViewDialog(R.drawable.topeng2);
-                    // ----
+                    // -- Play Video --
+                    Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
+                    intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/pkme6prg3x75ufa/lv2_video.mp4?dl=1");
+                    startActivity(intent);
 
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
@@ -135,10 +136,9 @@ public class LevelTwo extends AppCompatActivity {
                     view.setEnabled(false);
                     view.setOnClickListener(null);
 
-                    // -- Play Video --
-                    Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
-                    intent.putExtra(EXTRA_VIDEO_URI, "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
-                    startActivity(intent);
+                    // -- Open Image --
+                    ImageViewDialog(R.drawable.lv2_victim);
+                    // ----
 
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
@@ -168,7 +168,7 @@ public class LevelTwo extends AppCompatActivity {
                     view.setOnClickListener(null);
 
                     // -- Open Image --
-                    ImageViewDialog(R.drawable.topeng2);
+                    ImageViewDialog(R.drawable.lv2_reuni);
                     // ----
 
 

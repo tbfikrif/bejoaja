@@ -73,14 +73,14 @@ public class CustomAdapterImg extends BaseAdapter{
         bubbleTextView.setText(lstChat.get(position).chatMessage);
 
         if (position==18){
-            bubbleImageView.setImageResource(R.drawable.client);
+            bubbleImageView.setImageResource(R.drawable.lv2_gedung);
             bubbleImageView.getLayoutParams().width=420;
             bubbleImageView.getLayoutParams().height=230;
             bubbleImageView.requestLayout();
         }else if (position==58){
-            bubbleImageView.setImageResource(R.drawable.client);
-            bubbleImageView.getLayoutParams().width=420;
-            bubbleImageView.getLayoutParams().height=230;
+            bubbleImageView.setImageResource(R.drawable.lv2_reuni);
+            bubbleImageView.getLayoutParams().width=315;
+            bubbleImageView.getLayoutParams().height=420;
             bubbleImageView.requestLayout();
         }else if (position==74){
             bubbleImageView.setImageResource(R.drawable.client);
@@ -88,14 +88,14 @@ public class CustomAdapterImg extends BaseAdapter{
             bubbleImageView.getLayoutParams().height=230;
             bubbleImageView.requestLayout();
         }else if (position==77){
-            bubbleImageView.setImageResource(R.drawable.client);
+            bubbleImageView.setImageResource(R.drawable.lv2_video_thumbnail);
             bubbleImageView.getLayoutParams().width=420;
             bubbleImageView.getLayoutParams().height=230;
             bubbleImageView.requestLayout();
         }else if (position==78){
-            bubbleImageView.setImageResource(R.drawable.client);
-            bubbleImageView.getLayoutParams().width=420;
-            bubbleImageView.getLayoutParams().height=230;
+            bubbleImageView.setImageResource(R.drawable.lv2_victim);
+            bubbleImageView.getLayoutParams().width=315;
+            bubbleImageView.getLayoutParams().height=420;
             bubbleImageView.requestLayout();
         }else {
 

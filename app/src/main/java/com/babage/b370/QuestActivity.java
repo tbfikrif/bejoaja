@@ -102,7 +102,7 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
          * tidak hanya String seperti di kasus ini
          */
         dataSet.add("Dead Quiz");
-        dataSet.add("Who Am i?");
+        dataSet.add("Who Am I?");
         dataSet.add("Level Belum Tersedia");
         dataSet.add("Level Belum Tersedia");
         dataSet.add("Level Belum Tersedia");

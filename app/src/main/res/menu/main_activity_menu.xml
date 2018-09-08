@@ -5,6 +5,7 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/action_settings"
+        android:icon="@drawable/ic_ads1"
         android:orderInCategory="100"
         app:showAsAction="always"
         android:title="+ Kesempatan" />

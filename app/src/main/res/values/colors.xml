@@ -8,4 +8,6 @@
     <color name="background">#222222</color>
     <color name="backgroundThin">#4c4b4d</color>
     <color name="table">#492811</color>
+    <color name="call">#1DB522</color>
+    <color name="callEnd">#D9262A</color>
 </resources>

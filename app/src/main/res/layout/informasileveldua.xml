@@ -55,7 +55,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="16dp"
                     android:gravity="center_vertical"
-                    android:text="Who am i?"
+                    android:text="WHO AM I?"
                     android:textSize="20sp"
                     android:textColor="@color/textColor"
                     android:textStyle="bold"/>
@@ -81,12 +81,12 @@
                 android:layout_height="80dp"
                 android:layout_marginBottom="5dp"
                 android:layout_gravity="center"
-                android:src="@drawable/client"/>
+                android:src="@drawable/client2"/>
             <TextView
                 android:id="@+id/b1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama : Radit Kusuma"
+                android:text="Nama : Indra Firmansyah"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/textColor"
                 android:textAlignment="center"
@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/textColor"
-                android:text="Radit Kusuma adalah seorang pegawai biasa yang memergoki temannya terbunuh oleh seseorang yang tidak dikenal disaat dirinya sedang chatting bersama temannya tersebut."
+                android:text="Indra Firmansyah adalah seorang pegawai biasa yang memergoki temannya terbunuh oleh seseorang yang tidak dikenal disaat dirinya sedang chatting bersama temannya tersebut."
                 android:textAlignment="center"
                 android:textSize="15sp"/>
             <View
