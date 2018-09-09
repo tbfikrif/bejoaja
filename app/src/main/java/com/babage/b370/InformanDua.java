@@ -74,6 +74,7 @@ public class InformanDua extends AppCompatActivity {
         imagesList.add("https://image.ibb.co/fYcAup/tanggal_aniv.png");
         imagesList.add("https://image.ibb.co/gH7iEp/P1010285_min.jpg");
         imagesList.add("https://image.ibb.co/do0QS9/P1010278_min.jpg");
+        imagesList.add("https://image.ibb.co/kdu6Zp/nomor_telpon.png");
         imagesList.add("https://image.ibb.co/gn8TfU/username4.jpg");
         imagesList.add("https://image.ibb.co/gCPKn9/P1010276_min.jpg");
         imagesList.add("https://image.ibb.co/g8wofU/galeri_indra_2.jpg");
