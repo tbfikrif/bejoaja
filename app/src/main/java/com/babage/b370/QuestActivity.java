@@ -149,7 +149,7 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
                 //item.setEnabled(false);
                 scheduleNotification(getNotification("Ayo dapatkan 10 Chance Answer"), 600000);
             } else {
-                Toasty.warning(getApplicationContext(), "Ups, kamu terlalu sering menonton iklan", Toast.LENGTH_SHORT, true).show();
+                Toasty.warning(getApplicationContext(), "Saat ini iklan tidak tersedia", Toast.LENGTH_SHORT, true).show();
             }
 //                new Handler().postDelayed(new Runnable() {
 //                    @Override
