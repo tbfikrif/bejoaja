@@ -52,9 +52,17 @@ public class LevelTwo extends AppCompatActivity {
     EditText e1;
     String isi;
     String alur;
+    int stated=0;
     int life=3;
-    int answer=9;
-    boolean wasItClicked=true;
+    int answer=8;
+    boolean wasItClicked1=false;
+    boolean wasItClicked2=false;
+    boolean wasItClicked3=false;
+    boolean wasItClicked4=false;
+    boolean wasItClicked5=false;
+    boolean wasItClicked6=false;
+    boolean wasItClicked7=false;
+    boolean wasItClicked8=false;
     SharedPreferences prefs;
 
     @Override
@@ -95,104 +103,163 @@ public class LevelTwo extends AppCompatActivity {
                 int selectedItem = lstView.getPositionForView(view);
                 if (selectedItem==5){
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
-                    answer--;
+                    if (wasItClicked1==false) {
+
+                        wasItClicked1=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                    }else {
+
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+
+                    }
 
 
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
                 } else if(position==18){
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                    if (wasItClicked2==false) {
 
-                    // -- Open Image --
-                    ImageViewDialog(R.drawable.lv2_gedung);
-                    // ----
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_gedung);
+                        // ----
 
+                        wasItClicked2=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                    } else {
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_gedung);
+                        // ----
 
-                }else if(position==77){
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
 
-
-
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
-
-                    // -- Play Video --
-                    Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
-                    intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/pkme6prg3x75ufa/lv2_video.mp4?dl=1");
-                    startActivity(intent);
-
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
-
-                }else if(position==78){
+                    }
 
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                } else if(position==56){
 
-                    // -- Open Image --
-                    ImageViewDialog(R.drawable.lv2_victim);
-                    // ----
+                    if (wasItClicked3==false) {
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                        wasItClicked3=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                }else if(position==74){
+                    }else {
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+                    }
 
-                    final MediaPlayer mpChat = MediaPlayer.create(LevelTwo.this, R.raw.woman_scream);
-                    mpChat.start();
+                } else if(position==58){
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
-
-                }else if(position==56){
-
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
-
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
-
-                }else if(position==58){
-
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
-
-                    // -- Open Image --
-                    ImageViewDialog(R.drawable.lv2_reuni);
-                    // ----
+                    if (wasItClicked4==false) {
 
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_reuni);
+                        // ----
+
+                        wasItClicked4=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                    } else {
+
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_reuni);
+                        // ----
+
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+
+                    }
+
 
                 }else if(position==62){
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+
+                    if (wasItClicked5==false) {
+
+                        wasItClicked5=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                    } else {
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+
+                    }
+
+                } else if(position==74){
+
+                    if (wasItClicked6==false) {
+
+                        final MediaPlayer mpChat = MediaPlayer.create(LevelTwo.this, R.raw.woman_scream);
+                        mpChat.start();
+
+                        wasItClicked6=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                    } else {
+
+                        final MediaPlayer mpChat = MediaPlayer.create(LevelTwo.this, R.raw.woman_scream);
+                        mpChat.start();
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+
+                    }
+
+                }else if(position==77){
+
+                    if (wasItClicked7==false) {
 
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                        // -- Play Video --
+                        Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
+                        intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/pkme6prg3x75ufa/lv2_video.mp4?dl=1");
+                        startActivity(intent);
 
-                }else if(position==74){
+                        wasItClicked7=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                    } else {
+                        // -- Play Video --
+                        Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
+                        intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/pkme6prg3x75ufa/lv2_video.mp4?dl=1");
+                        startActivity(intent);
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                }else{
+                    }
+
+
+                } else if(position==78){
+
+                    if (wasItClicked8==false) {
+
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_victim);
+                        // ----
+
+                        wasItClicked8=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                    } else {
+
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_victim);
+                        // ----
+
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+
+
+                    }
+
+
+
+                } else {
 
                     int oldLife = prefs.getInt("changeAnswer", 5);
                     SharedPreferences.Editor editor = prefs.edit();
@@ -345,7 +412,7 @@ public class LevelTwo extends AppCompatActivity {
 
         lstChat.add(new ChatModel("Iyalah malah gue cuci kaki sekalian.", false));//55
 
-        lstChat.add(new ChatModel("Oh ya lu mau ikut kagak?", false));//56
+        lstChat.add(new ChatModel("Oh ya lu mau ikut kagak, gue diajak ke mini party gitu tiba-tiba?", false));//56
 
         lstChat.add(new ChatModel("Ikut apa?", true));//57
 
