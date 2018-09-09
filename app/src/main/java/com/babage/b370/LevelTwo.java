@@ -436,7 +436,7 @@ public class LevelTwo extends AppCompatActivity {
 
         lstChat.add(new ChatModel("Iya pasti gue bantu, cuman gue beresin kerjaan dulu, tanggal berapa lu butuh emang?", true));//24
 
-        lstChat.add(new ChatModel("10 oktober", false));//25
+        lstChat.add(new ChatModel("18 November", false));//25
 
         lstChat.add(new ChatModel("2 minggu lagi!", true));//26
 
@@ -526,23 +526,23 @@ public class LevelTwo extends AppCompatActivity {
 
         lstChat.add(new ChatModel("Dari dulu lu emang gak pernah berubah", true));//69
 
-        lstChat.add(new ChatModel("Ngapain harus berubah kalau gak ada yang perlu dirubah XD", false));//70
+        lstChat.add(new ChatModel("Ngapain harus berubah kalau gak ada yang perlu dirubah XD. Oh ya gue lagi ngirim video vlog gue, tapi lemot banget dah ini", false));//70
 
-        lstChat.add(new ChatModel("Bisa aja lu", true));//71
+        lstChat.add(new ChatModel("Bisa aja lu, oh ya mana coba, masih aja ya suka ngartis lu", true));//71
 
-        lstChat.add(new ChatModel("ben thasfhgfa", false));//72
+        lstChat.add(new ChatModel("dra tlfong gie", false));//72
 
-        lstChat.add(new ChatModel("Gila, kenapa lu", true));//73
+        lstChat.add(new ChatModel("Gila, kenapa lu, enggak lucu tau", true));//73
 
-        lstChat.add(new ChatModel("Hai,^^", false));//74//pesan suara
+        lstChat.add(new ChatModel("Hai,^^, saya harap bisa bertemu anda secepatnya", false));//74//pesan suara
 
-        lstChat.add(new ChatModel("Ben!, Lu kenapa Ben", true));//75
+        lstChat.add(new ChatModel("Bim!, Lu kenapa Bim", true));//75
 
-        lstChat.add(new ChatModel("Woy ben!!", true));//76
+        lstChat.add(new ChatModel("Woy bim!!", true));//76
 
-        lstChat.add(new ChatModel("Jika kamu mau selamat, jangan pernah ikut campur, atau kamu akan berarkhir sepert ini", false));//77//foto
+        lstChat.add(new ChatModel("Saya minta tolong jangan terlalu memikirkan bima, karena bima sudah tenang", false));//77//foto
 
-        lstChat.add(new ChatModel("Diam dan semua akan baik-baik saja", false));//78//Video
+        lstChat.add(new ChatModel("Lihat dia begitu tenang tertidur disana, ^^, jadi jika kamu berani ikut campur, mungkin selanjutnya yang tertidur seperti itu adalah kamu", false));//78//Video
 
 
     }
