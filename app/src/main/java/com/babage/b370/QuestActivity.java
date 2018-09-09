@@ -182,7 +182,8 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
     }
 
     private void loadRewardedVideoAd() {
-        mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917",
+        //ca-app-pub-3940256099942544/5224354917
+        mRewardedVideoAd.loadAd("ca-app-pub-3253553458537205/7891370377",
                 new AdRequest.Builder().build());
     }
 
