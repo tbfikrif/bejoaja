@@ -136,7 +136,7 @@ public class InformanDua extends AppCompatActivity {
 
         fancy.setTitle("Misi Identifikasi");
         fancy.setBackgroundColor(Color.parseColor("#ffffff")) ;
-        fancy.setMessage("Anda yakin ingin mengambil misi ini ?");
+        fancy.setMessage("Anda harus menghack handphone Bima , anda yakin ingin mengambil misi ini ?");
         fancy.setNegativeBtnText("Tidak");
         fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));
         fancy.setPositiveBtnText("Iya");

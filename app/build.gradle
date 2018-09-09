@@ -41,6 +41,7 @@ dependencies {
     implementation 'com.jaedongchicken:ytplayer:1.4.4'
     implementation 'com.github.droidbyme:DroidDialog:c6decc7167'
     implementation 'com.google.android.gms:play-services-ads:9.0.2'
+    implementation 'com.github.Shashank02051997:FancyGifDialog-Android:1.1'
 
 
 }
