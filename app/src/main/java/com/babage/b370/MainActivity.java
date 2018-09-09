@@ -30,6 +30,8 @@ import com.shashank.sony.fancydialoglib.Icon;
 
 import java.util.ArrayList;
 
+import es.dmoral.toasty.Toasty;
+
 public class MainActivity extends Activity {
 
     MediaPlayer background, click;
@@ -102,6 +104,7 @@ public class MainActivity extends Activity {
     protected void onStart() {
         super.onStart();
         background.start();
+        Toasty.warning(this, "Koneksi Internet Diperlukan", Toast.LENGTH_LONG, true).show();
     }
 
     public void playGame(View view){

@@ -7,28 +7,30 @@
     android:padding='10sp' >
 
     <EditText
-        android:drawableLeft="@drawable/ic_username"
+        android:drawableStart="@drawable/ic_username"
+        android:drawablePadding="10dp"
         android:textColorHint="@color/textColor"
         android:textColor="@color/textColor"
         android:textColorLink="@color/textColor"
         android:id='@+id/login_name'
         android:layout_width='fill_parent'
         android:layout_height='wrap_content'
-        android:hint='  Username'
+        android:hint='Username'
         android:singleLine='true' >
 
         <requestFocus />
     </EditText>
 
     <EditText
-        android:drawableLeft="@drawable/ic_password"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="10dp"
         android:textColorHint="@color/textColor"
         android:textColor="@color/textColor"
         android:textColorLink="@color/textColor"
         android:id='@+id/login_password'
         android:layout_width='match_parent'
         android:layout_height='wrap_content'
-        android:hint='  Password'
+        android:hint='Password'
         android:ems='10'
         android:inputType='textPassword' >
     </EditText>

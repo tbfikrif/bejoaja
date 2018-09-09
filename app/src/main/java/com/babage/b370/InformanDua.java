@@ -78,7 +78,7 @@ public class InformanDua extends AppCompatActivity {
         imagesList.add("https://image.ibb.co/m853Ep/galeri_indra_1.jpg");
 
         prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        btnv.setEnabled(false);
+
         btnv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,7 +136,7 @@ public class InformanDua extends AppCompatActivity {
 
         fancy.setTitle("Misi Identifikasi");
         fancy.setBackgroundColor(Color.parseColor("#ffffff")) ;
-        fancy.setMessage("Anda harus menghack handphone Bima , anda yakin ingin mengambil misi ini ?");
+        fancy.setMessage("Anda harus menghack handphone Bima, Anda yakin ingin mengambil misi ini ?");
         fancy.setNegativeBtnText("Tidak");
         fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));
         fancy.setPositiveBtnText("Iya");
@@ -193,9 +193,7 @@ public class InformanDua extends AppCompatActivity {
 
 
     public void goVideo(){
-        Intent i = new Intent(InformanDua.this, vdplay.class);
-        startActivity(i);
-        Toasty.warning(this, "Koneksi Internet Diperlukan", Toast.LENGTH_LONG, true).show();
+        Toasty.warning(this, "Tidak ada informasi video", Toast.LENGTH_SHORT, true).show();
 
     }
 

@@ -3,44 +3,31 @@ package com.babage.b370;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Vibrator;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.shashank.sony.fancydialoglib.Animation;
-import com.shashank.sony.fancydialoglib.FancyAlertDialog;
-import com.shashank.sony.fancydialoglib.FancyAlertDialogListener;
-import com.shashank.sony.fancydialoglib.Icon;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
 
 import static com.babage.b370.QuestActivity.PREFS_NAME;
@@ -51,10 +38,19 @@ public class LevelTwo extends AppCompatActivity {
     List<ChatModel> lstChat = new ArrayList<>();
     EditText e1;
     String isi;
+    ImageView tlpTerima;
     String alur;
+    int stated=0;
     int life=3;
-    int answer=9;
-    boolean wasItClicked=true;
+    int answer=8;
+    boolean wasItClicked1=false;
+    boolean wasItClicked2=false;
+    boolean wasItClicked3=false;
+    boolean wasItClicked4=false;
+    boolean wasItClicked5=false;
+    boolean wasItClicked6=false;
+    boolean wasItClicked7=false;
+    boolean wasItClicked8=false;
     SharedPreferences prefs;
 
     @Override
@@ -85,8 +81,15 @@ public class LevelTwo extends AppCompatActivity {
         alur="0";
 
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.none);
-        e1.setHint("Tidak Bekerja!");
+        e1.setHint("Chat Tidak Bekerja!");
         e1.setEnabled(false);
+        final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        final Dialog dialog= new Dialog(LevelTwo.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+        final MediaPlayer pc = MediaPlayer.create(LevelTwo.this, R.raw.phonecell);
+        final MediaPlayer wm = MediaPlayer.create(LevelTwo.this, R.raw.woman_scream);
+        final MediaPlayer voice1 = MediaPlayer.create(LevelTwo.this, R.raw.voice_lvl2_1);
+        final MediaPlayer voice2 = MediaPlayer.create(LevelTwo.this, R.raw.voice_lvl2_2);
+
 
 
         lstView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -95,102 +98,165 @@ public class LevelTwo extends AppCompatActivity {
                 int selectedItem = lstView.getPositionForView(view);
                 if (selectedItem==5){
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
-                    answer--;
+                    if (wasItClicked1==false) {
+
+                        wasItClicked1=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                    }else {
+
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+
+                    }
 
 
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
                 } else if(position==18){
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                    if (wasItClicked2==false) {
 
-                    // -- Open Image --
-                    ImageViewDialog(R.drawable.lv2_gedung);
-                    // ----
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_gedung);
+                        // ----
 
+                        wasItClicked2=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                    } else {
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_gedung);
+                        // ----
 
-                }else if(position==77){
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
 
-
-
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
-
-                    // -- Play Video --
-                    Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
-                    intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/pkme6prg3x75ufa/lv2_video.mp4?dl=1");
-                    startActivity(intent);
-
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
-
-                }else if(position==78){
+                    }
 
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                } else if(position==56){
 
-                    // -- Open Image --
-                    ImageViewDialog(R.drawable.lv2_victim);
-                    // ----
+                    if (wasItClicked3==false) {
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                        wasItClicked3=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                }else if(position==74){
+                    }else {
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+                    }
 
-                    final MediaPlayer mpChat = MediaPlayer.create(LevelTwo.this, R.raw.woman_scream);
-                    mpChat.start();
+                } else if(position==58){
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                    if (wasItClicked4==false) {
 
-                }else if(position==56){
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_reuni);
+                        // ----
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                        wasItClicked4=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                }else if(position==58){
+                    } else {
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_reuni);
+                        // ----
 
-                    // -- Open Image --
-                    ImageViewDialog(R.drawable.lv2_reuni);
-                    // ----
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                    }
+
 
                 }else if(position==62){
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                    if (wasItClicked5==false) {
 
-                }else if(position==74){
+                        wasItClicked5=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
-                    view.setEnabled(false);
-                    view.setOnClickListener(null);
+                    } else {
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
 
-                    answer--;
-                    Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+                    }
 
-                }else{
+                } else if(position==74){
+
+                    if (wasItClicked6==false) {
+
+                        final MediaPlayer mpChat = MediaPlayer.create(LevelTwo.this, R.raw.woman_scream);
+                        mpChat.start();
+
+                        wasItClicked6=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                    } else {
+
+                        final MediaPlayer mpChat = MediaPlayer.create(LevelTwo.this, R.raw.woman_scream);
+                        mpChat.start();
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+
+                    }
+
+                }else if(position==77){
+
+                    if (wasItClicked7==false) {
+
+
+                        // -- Play Video --
+                        Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
+                        intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/pkme6prg3x75ufa/lv2_video.mp4?dl=1");
+                        startActivity(intent);
+
+                        wasItClicked7=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                    } else {
+                        // -- Play Video --
+                        Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
+                        intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/pkme6prg3x75ufa/lv2_video.mp4?dl=1");
+                        startActivity(intent);
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+
+
+                    }
+
+
+                } else if(position==78){
+
+                    if (wasItClicked8==false) {
+
+
+                        stated=1;
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_victim);
+                        // ----
+
+                        wasItClicked8=true;
+                        answer--;
+                        Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
+
+                    } else {
+
+                        // -- Open Image --
+                        ImageViewDialog(R.drawable.lv2_victim);
+                        // ----
+
+                        Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
+
+
+                    }
+
+
+
+                } else {
 
                     int oldLife = prefs.getInt("changeAnswer", 5);
                     SharedPreferences.Editor editor = prefs.edit();
@@ -213,10 +279,61 @@ public class LevelTwo extends AppCompatActivity {
                 if (answer==0){
                     final DatabaseHelper dbHelper = new DatabaseHelper(LevelTwo.this);
                     dbHelper.addUser(new User("l2"));
-                    Toasty.success(LevelTwo.this,"Anda Berhasil", Toast.LENGTH_SHORT,true).show();
-                    Intent i = new Intent(LevelTwo.this,QuestActivity.class);
-                    startActivity(i);
-                    finish();
+
+
+                    if (stated==1) {
+                        //start phone
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                pc.start();
+                                // Get instance of Vibrator from current Context
+                                long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                                // Vibrate for 400 milliseconds
+                                v.vibrate(pattern, -1);
+                                dialog.setContentView(R.layout.telponindra);
+                                dialog.setCancelable(false);
+                                dialog.show();
+                                tlpTerima = dialog.findViewById(R.id.terima);
+                            }
+                        }, 4600); // Millisecond 1000 = 1 sec
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                v.cancel();
+                                tlpTerima.setVisibility(View.GONE);
+                                voice2.start();
+
+                            }
+                        }, 15600); // Millisecond 1000 = 1 sec
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                dialog.dismiss();
+
+
+                            }
+                        }, 30600); // Millisecond 1000 = 1 sec
+                            stated=0;
+                        e1.setEnabled(true);
+                        e1.setText("Jawab");
+                        e1.setTextColor(Color.WHITE);
+                        //endphone
+                    }
+
+                    e1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                            Toasty.warning(LevelTwo.this,"Bikin dialog tentang pelaku dan tebak no teleponnya", Toast.LENGTH_SHORT,true).show();
+
+
+                        }
+                    });
+
                 }
 
                 //jika salah menjawab selama 3x
@@ -229,6 +346,44 @@ public class LevelTwo extends AppCompatActivity {
                 }
             }
         });
+
+
+        //start phone
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                pc.start();
+                // Get instance of Vibrator from current Context
+                long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
+                // Vibrate for 400 milliseconds
+                v.vibrate(pattern,-1);
+                dialog.setContentView(R.layout.telponindra);
+                dialog.setCancelable(false);
+                dialog.show();
+                tlpTerima = dialog.findViewById(R.id.terima);
+            }
+        }, 4600); // Millisecond 1000 = 1 sec
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                v.cancel();
+                tlpTerima.setVisibility(View.GONE);
+                voice1.start();
+
+            }
+        }, 15600); // Millisecond 1000 = 1 sec
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                dialog.dismiss();
+
+            }
+        }, 51600); // Millisecond 1000 = 1 sec
+
+        //endphone
 
 
         lstChat.add(new ChatModel("Eh ngomong-ngomong malam minggu ke A* yuk?", false));//0
@@ -343,7 +498,7 @@ public class LevelTwo extends AppCompatActivity {
 
         lstChat.add(new ChatModel("Iyalah malah gue cuci kaki sekalian.", false));//55
 
-        lstChat.add(new ChatModel("Oh ya lu mau ikut kagak?", false));//56
+        lstChat.add(new ChatModel("Oh ya lu mau ikut kagak, gue diajak ke mini party gitu tiba-tiba?", false));//56
 
         lstChat.add(new ChatModel("Ikut apa?", true));//57
 
@@ -392,144 +547,10 @@ public class LevelTwo extends AppCompatActivity {
 
     }
 
-    public void dialog9() {
-
-        AlertDialog.Builder aldia= new AlertDialog.Builder(LevelTwo.this,R.style.MyDialogTheme);
-        aldia.setTitle("Jawaban:");
-        final EditText input = new EditText(LevelTwo.this);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT);
-        input.setLayoutParams(lp);
-        input.setTextColor(Color.RED);
-        aldia.setView(input);
-        aldia.setPositiveButton("KIRIM", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-
-                String YouEditTextValue = input.getText().toString();
-
-                if (YouEditTextValue.equalsIgnoreCase("Damian"))
-                {
-                    final DatabaseHelper dbHelper = new DatabaseHelper(LevelTwo.this);
-                    dbHelper.addUser(new User("l2"));
-                    Toasty.success(LevelTwo.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
-                    Intent intent = new Intent(LevelTwo.this,QuestActivity.class);
-                    startActivity(intent);
-                    LevelTwo.this.finish();
-                } else {
-
-                    life--;
-                    Toasty.error(LevelTwo.this,"Kesempatan Anda : "+life+"x Lagi!", Toast.LENGTH_SHORT,true).show();
-                }
-
-
-                if (life==0) {
-
-                    ListView lstView = (ListView)findViewById(R.id.listView);
-                    CustomAdapterImg adapter = new CustomAdapterImg(lstChat,LevelTwo.this);
-                    lstView.setAdapter(adapter);
-                    lstView.setDivider(null);
-                    lstView.setDividerHeight(0);
-                    final Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                    final Dialog dialog= new Dialog(LevelTwo.this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
-                    final MediaPlayer pc = MediaPlayer.create(LevelTwo.this, R.raw.phonecell);
-                    final MediaPlayer wm = MediaPlayer.create(LevelTwo.this, R.raw.woman_scream);
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            pc.start();
-                            // Get instance of Vibrator from current Context
-                            long[] pattern = {1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 1100, 500};
-                            // Vibrate for 400 milliseconds
-                            v.vibrate(pattern,-1);
-                            dialog.setContentView(R.layout.telponberbohong);
-                            dialog.setCancelable(false);
-                            dialog.show();
-
-                        }
-                    }, 4600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            v.cancel();
-                            wm.start();
-
-                        }
-                    }, 14600); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            dialog.dismiss();
-
-                        }
-                    }, 18900); // Millisecond 1000 = 1 sec
-
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(LevelTwo.this);
-
-                            fancy.setTitle("From : DeepSpeak Corporation");
-                            fancy.setBackgroundColor(Color.parseColor("#ffffff")) ; //Don't pass R.color.colorvalue
-                            fancy.setMessage("Client Anda Telah Dibunuh, Misi Anda Gagal!");
-                            fancy.setNegativeBtnText("OKE");
-                            fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));  //Don't pass R.color.colorvalue
-                            fancy.setPositiveBtnText("KELUAR");
-                            fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));  //Don't pass R.color.colorvalue
-                            fancy.setAnimation(Animation.SIDE);
-                            fancy.isCancellable(false);
-                            fancy.setIcon(R.mipmap.ic_launcher_foreground, Icon.Visible);
-                            fancy.OnPositiveClicked(new FancyAlertDialogListener() {
-                                @Override
-                                public void OnClick() {
-
-                                    Intent intent = new Intent(LevelTwo.this,QuestActivity.class);
-                                    startActivity(intent);
-                                    LevelTwo.this.finish();
-
-                                }
-                            })
-                                    .OnNegativeClicked(new FancyAlertDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-
-                                        }
-                                    })
-                                    .build();
-
-
-
-
-                        }
-                    }, 19900); // Millisecond 1000 = 1 sec
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            Intent intent = new Intent(LevelTwo.this,QuestActivity.class);
-                            startActivity(intent);
-                            LevelTwo.this.finish();
-                        }
-                    }, 28900); // Millisecond 1000 = 1 sec
-
-
-                }
-            }
-        });
-
-        AlertDialog aldiaer = aldia.create();
-        aldiaer.show();
-    }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+
     }
 
     private void ImageViewDialog(int resourceId) {

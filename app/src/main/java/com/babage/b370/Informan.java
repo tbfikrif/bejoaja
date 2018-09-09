@@ -191,7 +191,6 @@ public class Informan extends AppCompatActivity {
     public void goVideo(){
         Intent i = new Intent(Informan.this, vdplay.class);
         startActivity(i);
-        Toasty.warning(this, "Koneksi Internet Diperlukan", Toast.LENGTH_LONG, true).show();
 
     }
 
