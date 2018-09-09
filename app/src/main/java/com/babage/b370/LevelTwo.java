@@ -3,6 +3,7 @@ package com.babage.b370;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -10,12 +11,15 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -326,7 +330,8 @@ public class LevelTwo extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
 
-                            Toasty.warning(LevelTwo.this,"Bikin dialog tentang pelaku dan tebak no teleponnya", Toast.LENGTH_SHORT,true).show();
+                            DialogList();
+                            //Toasty.warning(LevelTwo.this,"Bikin dialog tentang pelaku dan tebak no teleponnya", Toast.LENGTH_SHORT,true).show();
 
 
                         }
@@ -569,6 +574,58 @@ public class LevelTwo extends AppCompatActivity {
 
     public String getURLForResource (int resourceId) {
         return Uri.parse("android.resource://"+R.class.getPackage().getName()+"/" +resourceId).toString();
+    }
+
+    private void DialogList(){
+//        AlertDialog.Builder builderSingle = new AlertDialog.Builder(LevelTwo.this);
+//        builderSingle.setIcon(R.mipmap.ic_launcher_round);
+//        builderSingle.setTitle("Siapakah tersangkanya?");
+//
+//        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(LevelTwo.this, android.R.layout.select_dialog_singlechoice);
+//        arrayAdapter.add("Hardik");
+//        arrayAdapter.add("Archit");
+//        arrayAdapter.add("Jignesh");
+//        arrayAdapter.add("Umang");
+//        arrayAdapter.add("Gatti");
+//
+//        builderSingle.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//            }
+//        });
+//
+//        builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                String strName = arrayAdapter.getItem(which);
+//                AlertDialog.Builder builderInner = new AlertDialog.Builder(LevelTwo.this);
+//                builderInner.setMessage(strName);
+//                builderInner.setTitle("Your Selected Item is");
+//                builderInner.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog,int which) {
+//                        dialog.dismiss();
+//                    }
+//                });
+//                builderInner.show();
+//            }
+//        });
+//        builderSingle.show();
+
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.layout_list_terduga);
+        final TextView list1 = dialog.findViewById(R.id.list1);
+
+        list1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toasty.info(LevelTwo.this, "Tersangka = " + list1.getText(), Toast.LENGTH_SHORT, true);
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 }
 

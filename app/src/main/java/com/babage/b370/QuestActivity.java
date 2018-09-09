@@ -79,11 +79,13 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
 
         ClickSound.getInstance().init(getApplicationContext());
         // Shared Preferences
-
 //        Editor editor = prefs.edit();
 //        editor.putInt("changeAnswer", 5);
 //        editor.apply();
 
+        Editor editor = prefs.edit();
+        editor.putBoolean("canWatchAds" , true);
+        editor.apply();
 
         initDataset();
 
@@ -145,7 +147,7 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
             if (prefs.getBoolean("canWatchAds", true)) {
                 rewardads();
                 //item.setEnabled(false);
-                scheduleNotification(getNotification("Ayo dapatkan 10 Chance Answer"), 1500000);
+                scheduleNotification(getNotification("Ayo dapatkan 10 Chance Answer"), 60000);
             } else {
                 Toasty.warning(getApplicationContext(), "Ups, kamu terlalu sering menonton iklan", Toast.LENGTH_SHORT, true).show();
             }

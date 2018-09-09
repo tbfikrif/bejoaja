@@ -218,7 +218,7 @@ public class InformanDua extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ClickSound.getInstance().playSound();
-                if ((userName.getText().toString().equals("bejo")) && (passWord.getText().toString().equals("123"))) {
+                if ((userName.getText().toString().equalsIgnoreCase("indrao")) && (passWord.getText().toString().equalsIgnoreCase("280292"))) {
 
                     Intent i = new Intent(InformanDua.this,LevelTwo.class);
                     startActivity(i);
