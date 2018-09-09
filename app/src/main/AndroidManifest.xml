@@ -39,7 +39,7 @@
             android:label="The Quiz"
             android:screenOrientation="portrait" />
         <activity android:name=".LevelTwo"
-            android:label="Bima"
+            android:label="Indra F"
             android:screenOrientation="portrait"
             />
         <activity

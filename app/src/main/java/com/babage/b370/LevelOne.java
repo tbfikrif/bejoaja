@@ -2131,10 +2131,12 @@ public class LevelOne extends AppCompatActivity {
                     editor.apply();
                     final DatabaseHelper dbHelper = new DatabaseHelper(LevelOne.this);
                     dbHelper.addUser(new User("l1"));
+
                     Toasty.success(LevelOne.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
                     Intent intent = new Intent(LevelOne.this,QuestActivity.class);
                     startActivity(intent);
                     LevelOne.this.finish();
+
                 } else {
 
 

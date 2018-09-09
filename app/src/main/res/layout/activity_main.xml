@@ -13,7 +13,6 @@
         android:background="#99000000"
         android:alpha="0.8">
 
-
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"

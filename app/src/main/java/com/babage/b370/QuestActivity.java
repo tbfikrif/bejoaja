@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,11 +30,17 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import com.shashank.sony.fancydialoglib.Animation;
+import com.shashank.sony.fancydialoglib.FancyAlertDialog;
+import com.shashank.sony.fancydialoglib.FancyAlertDialogListener;
+import com.shashank.sony.fancydialoglib.Icon;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+
+import es.dmoral.toasty.Toasty;
 
 /**
  * Created by Herdi_WORK on 15.09.16.
@@ -126,7 +133,9 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
         int id = item.getItemId();
         if (id == R.id.action_mainMenu2) {
             SharedPreferences prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-            Toast.makeText(getApplicationContext(),"Jumlah Chance Answer "+String.valueOf(prefs.getInt("changeAnswer", 5)),Toast.LENGTH_SHORT).show();
+            DialogCheckAnswer();
+            //Toast.makeText(getApplicationContext(),"Jumlah Chance Answer "+String.valueOf(prefs.getInt("changeAnswer", 5)),Toast.LENGTH_SHORT).show();
+
         } else if (id==R.id.action_settings){
 
                     rewardads();
@@ -221,5 +230,31 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
 
     }
 
+    private void DialogCheckAnswer() {
+        String changeAnswer = String.valueOf(prefs.getInt("changeAnswer", 5));
+        final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(this);
+        fancy.setTitle("Kesempatan Menjawab");
+        fancy.setBackgroundColor(Color.parseColor("#ffffff")) ;
+        fancy.setMessage("Tersisa " + changeAnswer + " Kesempatan!");
+        fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));
+        fancy.setPositiveBtnText("Ok");
+        fancy.setNegativeBtnText("Tutup");
+        fancy.setAnimation(Animation.POP);
+        fancy.isCancellable(true);
+        fancy.setIcon(R.mipmap.ic_launcher_round, Icon.Visible);
+        fancy.OnPositiveClicked(new FancyAlertDialogListener() {
+            @Override
+            public void OnClick() {
+
+            }
+        });
+        fancy.OnNegativeClicked(new FancyAlertDialogListener() {
+            @Override
+            public void OnClick() {
+
+            }
+        });
+        fancy.build();
+    }
 
 }
