@@ -608,7 +608,7 @@ public class LevelTwo extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 if (which == 3) {
                     String strName = arrayAdapter.getItem(which);
-                    AlertDialog.Builder builderInner = new AlertDialog.Builder(LevelTwo.this);
+                    AlertDialog.Builder builderInner = new AlertDialog.Builder(LevelTwo.this, R.style.MyDialogTheme);
                     builderInner.setTitle("Masukkan Nomor Telepon :");
                     final EditText input = new EditText(LevelTwo.this);
                     LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
