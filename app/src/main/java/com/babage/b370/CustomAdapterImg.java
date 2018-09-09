@@ -83,9 +83,9 @@ public class CustomAdapterImg extends BaseAdapter{
             bubbleImageView.getLayoutParams().height=420;
             bubbleImageView.requestLayout();
         }else if (position==74){
-            bubbleImageView.setImageResource(R.drawable.client);
-            bubbleImageView.getLayoutParams().width=420;
-            bubbleImageView.getLayoutParams().height=230;
+            bubbleImageView.setImageResource(R.drawable.pesansuara);
+            bubbleImageView.getLayoutParams().width=315;
+            bubbleImageView.getLayoutParams().height=100;
             bubbleImageView.requestLayout();
         }else if (position==77){
             bubbleImageView.setImageResource(R.drawable.lv2_video_thumbnail);

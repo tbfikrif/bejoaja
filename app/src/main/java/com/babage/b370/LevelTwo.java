@@ -171,7 +171,6 @@ public class LevelTwo extends AppCompatActivity {
                     ImageViewDialog(R.drawable.lv2_reuni);
                     // ----
 
-
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
 
@@ -179,7 +178,6 @@ public class LevelTwo extends AppCompatActivity {
 
                     view.setEnabled(false);
                     view.setOnClickListener(null);
-
 
                     answer--;
                     Toasty.success(LevelTwo.this,answer+" petunjuk tersisa.", Toast.LENGTH_SHORT,true).show();
