@@ -22,11 +22,18 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.shashank.sony.fancydialoglib.Animation;
+import com.shashank.sony.fancydialoglib.FancyAlertDialog;
+import com.shashank.sony.fancydialoglib.FancyAlertDialogListener;
+import com.shashank.sony.fancydialoglib.Icon;
+import com.shashank.sony.fancygifdialoglib.FancyGifDialog;
+import com.shashank.sony.fancygifdialoglib.FancyGifDialogListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -577,55 +584,145 @@ public class LevelTwo extends AppCompatActivity {
     }
 
     private void DialogList(){
-//        AlertDialog.Builder builderSingle = new AlertDialog.Builder(LevelTwo.this);
-//        builderSingle.setIcon(R.mipmap.ic_launcher_round);
-//        builderSingle.setTitle("Siapakah tersangkanya?");
-//
-//        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(LevelTwo.this, android.R.layout.select_dialog_singlechoice);
-//        arrayAdapter.add("Hardik");
-//        arrayAdapter.add("Archit");
-//        arrayAdapter.add("Jignesh");
-//        arrayAdapter.add("Umang");
-//        arrayAdapter.add("Gatti");
-//
-//        builderSingle.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                dialog.dismiss();
-//            }
-//        });
-//
-//        builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                String strName = arrayAdapter.getItem(which);
-//                AlertDialog.Builder builderInner = new AlertDialog.Builder(LevelTwo.this);
-//                builderInner.setMessage(strName);
-//                builderInner.setTitle("Your Selected Item is");
-//                builderInner.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog,int which) {
-//                        dialog.dismiss();
-//                    }
-//                });
-//                builderInner.show();
-//            }
-//        });
-//        builderSingle.show();
+        AlertDialog.Builder builderSingle = new AlertDialog.Builder(LevelTwo.this);
+        builderSingle.setTitle("Siapakah tersangkanya?");
 
-        final Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.layout_list_terduga);
-        final TextView list1 = dialog.findViewById(R.id.list1);
 
-        list1.setOnClickListener(new View.OnClickListener() {
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(LevelTwo.this, android.R.layout.select_dialog_singlechoice);
+        arrayAdapter.add("Pria Berbaju Putih");
+        arrayAdapter.add("Pria Berbaju Kemeja Kotak");
+        arrayAdapter.add("Calon Istri");
+        arrayAdapter.add("Wanita Anggota Baru");
+        arrayAdapter.add("Indra F (Client)");
+        arrayAdapter.add("Bima (Bunuh Diri)");
+
+        builderSingle.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Toasty.info(LevelTwo.this, "Tersangka = " + list1.getText(), Toast.LENGTH_SHORT, true);
+            public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
         });
 
-        dialog.show();
+        builderSingle.setAdapter(arrayAdapter, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (which == 3) {
+                    String strName = arrayAdapter.getItem(which);
+                    AlertDialog.Builder builderInner = new AlertDialog.Builder(LevelTwo.this);
+                    builderInner.setTitle("Masukkan Nomor Telepon :");
+                    final EditText input = new EditText(LevelTwo.this);
+                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.MATCH_PARENT);
+                    input.setLayoutParams(lp);
+                    input.setTextColor(Color.RED);
+                    builderInner.setView(input);
+                    builderInner.setPositiveButton("KIRIM", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog,int which) {
+                            String YouEditTextValue = input.getText().toString();
+                            int oldLife = prefs.getInt("changeAnswer", 5);
+                            if (YouEditTextValue.equalsIgnoreCase("089870513333"))
+                            {
+                                SharedPreferences.Editor editor = prefs.edit();
+                                editor.putInt("changeAnswer", oldLife + 5);
+                                editor.apply();
+                                final DatabaseHelper dbHelper = new DatabaseHelper(LevelTwo.this);
+                                dbHelper.addUser(new User("l1"));
+
+                                DialogEmail();
+                            } else {
+
+
+                                SharedPreferences.Editor editor = prefs.edit();
+                                editor.putInt("changeAnswer", oldLife - 1);
+                                editor.apply();
+                                oldLife--;
+                                Toasty.error(LevelTwo.this,"Kesempatan Anda : "+oldLife+"x Lagi!", Toast.LENGTH_SHORT,true).show();
+
+                            }
+
+                            if (oldLife==0) {
+                                Toasty.error(LevelTwo.this,"Kesempatan Anda habis, Misi Gagal!", Toast.LENGTH_SHORT,true).show();
+                                Intent intent = new Intent(LevelTwo.this,QuestActivity.class);
+                                startActivity(intent);
+                                LevelTwo.this.finish();
+                            }
+
+                        }
+                    });
+                    builderInner.show();
+                } else {
+                    int oldLife = prefs.getInt("changeAnswer", 5);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putInt("changeAnswer", oldLife - 1);
+                    editor.apply();
+
+                    Toasty.error(LevelTwo.this,oldLife-1+" kesempatan tersisa!.", Toast.LENGTH_SHORT,true).show();
+
+                    if (oldLife<0){
+                        Toasty.error(LevelTwo.this,"Kesempatanmu : Sudah Habis", Toast.LENGTH_SHORT,true).show();
+                        Intent i = new Intent(LevelTwo.this,QuestActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+                }
+            }
+        });
+        builderSingle.show();
+
+//        final Dialog dialog = new Dialog(this);
+//        dialog.setContentView(R.layout.layout_list_terduga);
+//        final TextView list1 = dialog.findViewById(R.id.list1);
+//        list1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toasty.info(LevelTwo.this, "Tersangka = " + list1.getText(), Toast.LENGTH_SHORT, true);
+//                dialog.dismiss();
+//            }
+//        });
+//        dialog.show();
+    }
+
+    private void DialogEmail(){
+        final MediaPlayer mp = MediaPlayer.create(LevelTwo.this, R.raw.none);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                mp.start();
+                new FancyGifDialog.Builder(LevelTwo.this)
+                        .setTitle("Email Masuk")
+                        .setMessage("Selamat Karena anda telah menyelesaikan misi ini!")
+                        .setNegativeBtnText("Tutup")
+                        .setPositiveBtnBackground("#E51F28")
+                        .setPositiveBtnText("Buka")
+                        .setNegativeBtnBackground("#4c4b4d")
+                        .setGifResource(R.drawable.gif_email)
+                        .isCancellable(false)
+                        .OnPositiveClicked(new FancyGifDialogListener() {
+                            @Override
+                            public void OnClick() {
+                                Toasty.success(LevelTwo.this,"Selamat! Kamu berhasil menemukan tersangkanya", Toast.LENGTH_SHORT,true).show();
+                                Intent intent = new Intent(LevelTwo.this, QuestActivity.class);
+                                startActivity(intent);
+                                LevelTwo.this.finish();
+                            }
+                        })
+                        .OnNegativeClicked(new FancyGifDialogListener() {
+                            @Override
+                            public void OnClick() {
+                                Toasty.success(LevelTwo.this,"Selamat! Kamu berhasil menemukan tersangkanya", Toast.LENGTH_SHORT,true).show();
+                                Intent intent = new Intent(LevelTwo.this, QuestActivity.class);
+                                startActivity(intent);
+                                LevelTwo.this.finish();
+                            }
+                        })
+                        .build();
+
+            }
+        }, 4600); // Millisecond 1000 = 1 sec
     }
 }
 

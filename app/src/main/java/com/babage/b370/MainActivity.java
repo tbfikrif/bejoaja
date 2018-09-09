@@ -72,11 +72,7 @@ public class MainActivity extends Activity {
                 ClickSound.getInstance().playSound();
                     final Dialog dialog = new Dialog(MainActivity.this);
                     dialog.setContentView(R.layout.panduanpermainan);
-
-                    //AlertDialog.Builder builder = new AlertDialog.Builder(QuestActivity.this);
-                    //View view = getLayoutInflater().inflate(R.layout.informasiberbohong, null);
                     Button okButton = dialog.findViewById(R.id.btnOk);
-                    //final AlertDialog dialog = builder.create();
                     okButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -84,7 +80,6 @@ public class MainActivity extends Activity {
                             dialog.dismiss();
                         }
                     });
-
                     dialog.show();
             }
         });
