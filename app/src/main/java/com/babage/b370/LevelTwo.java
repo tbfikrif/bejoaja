@@ -62,7 +62,7 @@ public class LevelTwo extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.ic_chatbar_round);
+        getSupportActionBar().setLogo(R.mipmap.ic_chatbar_lvl2_round);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         setContentView(R.layout.activity_level_two);
         prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
@@ -211,7 +211,7 @@ public class LevelTwo extends AppCompatActivity {
 
                         // -- Play Video --
                         Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
-                        intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/pkme6prg3x75ufa/lv2_video.mp4?dl=1");
+                        intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/fpfjovpzhannfkx/live%20level2.mp4?dl=1");
                         startActivity(intent);
 
                         wasItClicked7=true;
@@ -221,7 +221,7 @@ public class LevelTwo extends AppCompatActivity {
                     } else {
                         // -- Play Video --
                         Intent intent = new Intent(LevelTwo.this, VideoPlayer.class);
-                        intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/pkme6prg3x75ufa/lv2_video.mp4?dl=1");
+                        intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/fpfjovpzhannfkx/live%20level2.mp4?dl=1");
                         startActivity(intent);
                         Toasty.success(LevelTwo.this,"Petunjuk Sudah Dipilih", Toast.LENGTH_SHORT,true).show();
 

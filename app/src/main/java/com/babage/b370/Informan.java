@@ -83,7 +83,6 @@ public class Informan extends AppCompatActivity {
 
                 goVideo();
 
-
             }
         });
 
@@ -93,7 +92,6 @@ public class Informan extends AppCompatActivity {
 
                 goGallery();
 
-
             }
         });
 
@@ -102,7 +100,6 @@ public class Informan extends AppCompatActivity {
             public void onClick(View view) {
 
                 goChat();
-
 
             }
         });

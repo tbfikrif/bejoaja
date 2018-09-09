@@ -33,6 +33,8 @@ import com.shashank.sony.fancydialoglib.Animation;
 import com.shashank.sony.fancydialoglib.FancyAlertDialog;
 import com.shashank.sony.fancydialoglib.FancyAlertDialogListener;
 import com.shashank.sony.fancydialoglib.Icon;
+import com.shashank.sony.fancygifdialoglib.FancyGifDialog;
+import com.shashank.sony.fancygifdialoglib.FancyGifDialogListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +44,7 @@ import es.dmoral.toasty.Toasty;
 import static com.babage.b370.QuestActivity.PREFS_NAME;
 
 public class LevelOne extends AppCompatActivity {
+    public static final String EXTRA_VIDEO_URI = "com.babage.b370.VIDEO_URI";
 
     List<ChatModel> lstChat = new ArrayList<>();
     EditText e1;
@@ -2125,17 +2128,48 @@ public class LevelOne extends AppCompatActivity {
                 int oldLife = prefs.getInt("changeAnswer", 5);
                 if (YouEditTextValue.equalsIgnoreCase("Damian"))
                 {
-
+                    final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putInt("changeAnswer", oldLife + 5);
                     editor.apply();
                     final DatabaseHelper dbHelper = new DatabaseHelper(LevelOne.this);
                     dbHelper.addUser(new User("l1"));
 
-                    Toasty.success(LevelOne.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
-                    Intent intent = new Intent(LevelOne.this,QuestActivity.class);
-                    startActivity(intent);
-                    LevelOne.this.finish();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            mp.start();
+                            new FancyGifDialog.Builder(LevelOne.this)
+                                    .setTitle("Email Masuk")
+                                    .setMessage("Ada email masuk dari DeepSpeak")
+                                    .setNegativeBtnText("Tutup")
+                                    .setPositiveBtnBackground("#E51F28")
+                                    .setPositiveBtnText("Buka")
+                                    .setNegativeBtnBackground("#4c4b4d")
+                                    .setGifResource(R.drawable.gif_email)   //Pass your Gif here
+                                    .isCancellable(true)
+                                    .OnPositiveClicked(new FancyGifDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+                                            //Toasty.success(LevelOne.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
+                                            // -- Play Video --
+                                            Intent intent = new Intent(LevelOne.this, VideoPlayerLevel1.class);
+                                            intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/ssfy0oouads475a/pembunuh%20level1.mp4?dl=1");
+                                            startActivity(intent);
+                                            LevelOne.this.finish();
+                                        }
+                                    })
+                                    .OnNegativeClicked(new FancyGifDialogListener() {
+                                        @Override
+                                        public void OnClick() {
+                                            Toast.makeText(LevelOne.this,"Cancel",Toast.LENGTH_SHORT).show();
+                                        }
+                                    })
+                                    .build();
+
+                        }
+                    }, 4600); // Millisecond 1000 = 1 sec
 
                 } else {
 

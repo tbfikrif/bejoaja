@@ -109,6 +109,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     final DatabaseHelper dbHelper = new DatabaseHelper(view.getContext());
                     User user = dbHelper.queryUser("l1");
                     if (user != null) {
+                        click.start();
+                        distortion.start();
                         //Bundle mBundle = new Bundle();
                         //mBundle.putString("user", user.getValue());
                         Intent intent = new Intent(view.getContext(), InformanDua.class);
@@ -129,7 +131,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         //Bundle mBundle = new Bundle();
                         //mBundle.putString("user", user.getValue());
                         //intent.putExtras(mBundle);
-                        Toasty.success(view.getContext(), "Masih dikembangkan", Toast.LENGTH_SHORT, true).show();
+                        Toasty.info(view.getContext(), "Masih dikembangkan", Toast.LENGTH_SHORT, true).show();
                     } else {
                         Toasty.error(view.getContext(), "Level Dikunci", Toast.LENGTH_SHORT, true).show();
                     }
