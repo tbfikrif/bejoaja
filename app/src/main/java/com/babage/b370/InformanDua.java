@@ -64,18 +64,22 @@ public class InformanDua extends AppCompatActivity {
         imagesList.add("https://image.ibb.co/c2apLU/P1010279_min.jpg");
         imagesList.add("https://image.ibb.co/n4i10U/P1010270_min.jpg");
         imagesList.add("https://image.ibb.co/g5rbZp/P1010311_min.jpg");
+        imagesList.add("https://image.ibb.co/chuZLU/tanggal_wedding.png");
         imagesList.add("https://image.ibb.co/cx9Vup/P1010310_min.jpg");
         imagesList.add("https://image.ibb.co/iZSTfU/P1010309_min.jpg");
-        imagesList.add("https://image.ibb.co/hDDfAU/nomor2.jpg");
+        imagesList.add("https://image.ibb.co/bV33fU/nomor5.jpg");
         imagesList.add("https://image.ibb.co/bL3en9/P1010290_min.jpg");
         imagesList.add("https://image.ibb.co/kZ3OEp/P1010289_min.jpg");
         imagesList.add("https://image.ibb.co/fkHTfU/P1010287_min.jpg");
+        imagesList.add("https://image.ibb.co/fYcAup/tanggal_aniv.png");
         imagesList.add("https://image.ibb.co/gH7iEp/P1010285_min.jpg");
         imagesList.add("https://image.ibb.co/do0QS9/P1010278_min.jpg");
-        imagesList.add("https://image.ibb.co/ntOrH9/username.jpg");
+        imagesList.add("https://image.ibb.co/gn8TfU/username4.jpg");
         imagesList.add("https://image.ibb.co/gCPKn9/P1010276_min.jpg");
         imagesList.add("https://image.ibb.co/g8wofU/galeri_indra_2.jpg");
         imagesList.add("https://image.ibb.co/m853Ep/galeri_indra_1.jpg");
+        imagesList.add("https://image.ibb.co/gqbg0U/tanggal_lahir_pacar.png");
+        imagesList.add("https://image.ibb.co/f44C79/tanggal_lahir.png");
 
         prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
