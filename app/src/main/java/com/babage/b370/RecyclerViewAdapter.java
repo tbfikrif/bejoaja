@@ -94,7 +94,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 click = MediaPlayer.create(view.getContext(), R.raw.click2);
                 distortion = MediaPlayer.create(view.getContext(), R.raw.hit_distortion);
 
-
                 if (position==0){
 
                     click.start();

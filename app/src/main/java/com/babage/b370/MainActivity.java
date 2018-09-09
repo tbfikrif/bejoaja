@@ -51,6 +51,7 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
+        ClickSound.getInstance().init(getApplicationContext());
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +69,7 @@ public class MainActivity extends Activity {
 //                                droidDialog.dismiss();
 //                            }
 //                        }).show();
+                ClickSound.getInstance().playSound();
                     final Dialog dialog = new Dialog(MainActivity.this);
                     dialog.setContentView(R.layout.panduanpermainan);
 
@@ -78,6 +80,7 @@ public class MainActivity extends Activity {
                     okButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            ClickSound.getInstance().playSound();
                             dialog.dismiss();
                         }
                     });
@@ -117,6 +120,7 @@ public class MainActivity extends Activity {
 
     public void exitGame(View view){
 
+        ClickSound.getInstance().playSound();
         final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(this);
 
         fancy.setTitle("Terimakasih");
@@ -140,6 +144,7 @@ public class MainActivity extends Activity {
                 .OnNegativeClicked(new FancyAlertDialogListener() {
                     @Override
                     public void OnClick() {
+                        ClickSound.getInstance().playSound();
 
                     }
                 })
@@ -149,6 +154,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
+        ClickSound.getInstance().playSound();
         final FancyAlertDialog.Builder fancy= new FancyAlertDialog.Builder(this);
 
         fancy.setTitle("Terimakasih");
@@ -173,6 +179,7 @@ public class MainActivity extends Activity {
                 .OnNegativeClicked(new FancyAlertDialogListener() {
                     @Override
                     public void OnClick() {
+                        ClickSound.getInstance().playSound();
 
                     }
                 })

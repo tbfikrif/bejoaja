@@ -57,6 +57,8 @@ public class Informan extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar);
 
+        ClickSound.getInstance().init(getApplicationContext());
+
         btnv = findViewById(R.id.btnV);
         btng = findViewById(R.id.btnG);
         btnc = findViewById(R.id.btnC);
@@ -80,7 +82,7 @@ public class Informan extends AppCompatActivity {
         btnv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ClickSound.getInstance().playSound();
                 goVideo();
 
             }
@@ -89,7 +91,7 @@ public class Informan extends AppCompatActivity {
         btng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ClickSound.getInstance().playSound();
                 goGallery();
 
             }
@@ -98,7 +100,7 @@ public class Informan extends AppCompatActivity {
         btnc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ClickSound.getInstance().playSound();
                 goChat();
 
             }
@@ -107,6 +109,7 @@ public class Informan extends AppCompatActivity {
         imgv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ClickSound.getInstance().playSound();
                 goInformation();
             }
         });
@@ -142,6 +145,7 @@ public class Informan extends AppCompatActivity {
         fancy.OnPositiveClicked(new FancyAlertDialogListener() {
             @Override
             public void OnClick() {
+                ClickSound.getInstance().playSound();
                 int oldLife = prefs.getInt("changeAnswer", 5);
                 if (oldLife > 0) {
                     Intent i = new Intent(getApplicationContext(),LevelOne.class);
@@ -155,7 +159,7 @@ public class Informan extends AppCompatActivity {
                 .OnNegativeClicked(new FancyAlertDialogListener() {
                     @Override
                     public void OnClick() {
-
+                        ClickSound.getInstance().playSound();
                     }
                 })
                 .build();
@@ -176,6 +180,7 @@ public class Informan extends AppCompatActivity {
                     okButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            ClickSound.getInstance().playSound();
                             dialog.dismiss();
                         }
                     });

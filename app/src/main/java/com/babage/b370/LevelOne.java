@@ -2128,48 +2128,13 @@ public class LevelOne extends AppCompatActivity {
                 int oldLife = prefs.getInt("changeAnswer", 5);
                 if (YouEditTextValue.equalsIgnoreCase("Damian"))
                 {
-                    final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putInt("changeAnswer", oldLife + 5);
                     editor.apply();
                     final DatabaseHelper dbHelper = new DatabaseHelper(LevelOne.this);
                     dbHelper.addUser(new User("l1"));
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            mp.start();
-                            new FancyGifDialog.Builder(LevelOne.this)
-                                    .setTitle("Email Masuk")
-                                    .setMessage("Ada email masuk dari DeepSpeak")
-                                    .setNegativeBtnText("Tutup")
-                                    .setPositiveBtnBackground("#E51F28")
-                                    .setPositiveBtnText("Buka")
-                                    .setNegativeBtnBackground("#4c4b4d")
-                                    .setGifResource(R.drawable.gif_email)   //Pass your Gif here
-                                    .isCancellable(true)
-                                    .OnPositiveClicked(new FancyGifDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-                                            //Toasty.success(LevelOne.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
-                                            // -- Play Video --
-                                            Intent intent = new Intent(LevelOne.this, VideoPlayerLevel1.class);
-                                            intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/ssfy0oouads475a/pembunuh%20level1.mp4?dl=1");
-                                            startActivity(intent);
-                                            LevelOne.this.finish();
-                                        }
-                                    })
-                                    .OnNegativeClicked(new FancyGifDialogListener() {
-                                        @Override
-                                        public void OnClick() {
-                                            Toast.makeText(LevelOne.this,"Cancel",Toast.LENGTH_SHORT).show();
-                                        }
-                                    })
-                                    .build();
-
-                        }
-                    }, 4600); // Millisecond 1000 = 1 sec
+                    DialogEmail();
 
                 } else {
 
@@ -2377,6 +2342,47 @@ public class LevelOne extends AppCompatActivity {
 
             }
         }, 22900); // Millisecond 1000 = 1 sec
+    }
+
+    private void DialogEmail(){
+        final MediaPlayer mp = MediaPlayer.create(LevelOne.this, R.raw.none);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                mp.start();
+                new FancyGifDialog.Builder(LevelOne.this)
+                        .setTitle("Email Masuk")
+                        .setMessage("Selamat Karena anda telah menyelesaikan misi ini!")
+                        .setNegativeBtnText("Tutup")
+                        .setPositiveBtnBackground("#E51F28")
+                        .setPositiveBtnText("Buka")
+                        .setNegativeBtnBackground("#4c4b4d")
+                        .setGifResource(R.drawable.gif_email)
+                        .isCancellable(false)
+                        .OnPositiveClicked(new FancyGifDialogListener() {
+                            @Override
+                            public void OnClick() {
+                                Intent intent = new Intent(LevelOne.this, VideoPlayerLevel1.class);
+                                intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/ssfy0oouads475a/pembunuh%20level1.mp4?dl=1");
+                                startActivity(intent);
+                                LevelOne.this.finish();
+                            }
+                        })
+                        .OnNegativeClicked(new FancyGifDialogListener() {
+                            @Override
+                            public void OnClick() {
+                                Intent intent = new Intent(LevelOne.this, VideoPlayerLevel1.class);
+                                intent.putExtra(EXTRA_VIDEO_URI, "https://www.dropbox.com/s/ssfy0oouads475a/pembunuh%20level1.mp4?dl=1");
+                                startActivity(intent);
+                                LevelOne.this.finish();
+                            }
+                        })
+                        .build();
+
+            }
+        }, 4600); // Millisecond 1000 = 1 sec
     }
 
 }

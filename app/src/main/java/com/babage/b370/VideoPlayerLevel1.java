@@ -57,7 +57,6 @@ public class VideoPlayerLevel1 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         // next button clicked
-                        Toasty.success(VideoPlayerLevel1.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
                         Intent intents = new Intent(VideoPlayerLevel1.this,QuestActivity.class);
                         startActivity(intents);
                         finish();
@@ -65,7 +64,6 @@ public class VideoPlayerLevel1 extends AppCompatActivity {
                 }, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toasty.success(VideoPlayerLevel1.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
                         Intent intents = new Intent(VideoPlayerLevel1.this,QuestActivity.class);
                         startActivity(intents);
                         finish();
@@ -86,7 +84,7 @@ public class VideoPlayerLevel1 extends AppCompatActivity {
                 video.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        Toasty.success(VideoPlayerLevel1.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
+                        //Toasty.success(VideoPlayerLevel1.this, "Misi Berhasil!, GZ.", Toast.LENGTH_SHORT, true).show();
                         Intent intents = new Intent(VideoPlayerLevel1.this,QuestActivity.class);
                         startActivity(intents);
                         finish();

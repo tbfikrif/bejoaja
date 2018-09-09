@@ -1,5 +1,7 @@
 package com.babage.b370;
 
+import android.app.AlarmManager;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -11,6 +13,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
@@ -25,6 +28,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.babage.b370.notification.NotificationPublisher;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
@@ -73,7 +77,7 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
         dataSet = new ArrayList<>();
         prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
 
-
+        ClickSound.getInstance().init(getApplicationContext());
         // Shared Preferences
 
 //        Editor editor = prefs.edit();
@@ -132,40 +136,44 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_mainMenu2) {
-            SharedPreferences prefs = this.getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+            ClickSound.getInstance().playSound();
             DialogCheckAnswer();
             //Toast.makeText(getApplicationContext(),"Jumlah Chance Answer "+String.valueOf(prefs.getInt("changeAnswer", 5)),Toast.LENGTH_SHORT).show();
 
         } else if (id==R.id.action_settings){
-
-                    rewardads();
-                    item.setEnabled(false);
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        Intent intent = new Intent(QuestActivity.this, QuestActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        PendingIntent pendingIntent = PendingIntent.getActivity(QuestActivity.this, 0, intent, 0);
-
-                        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(QuestActivity.this)
-                                .setSmallIcon(R.mipmap.ic_launcher_foreground)
-                                .setContentTitle("Ads Tersedia")
-                                .setContentText("Segara dapatkan 10 chance answer")
-                                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                                // Set the intent that will fire when the user taps the notification
-                                .setContentIntent(pendingIntent)
-                                .setAutoCancel(true);
-                        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(QuestActivity.this);
-
-                        // notificationId is a unique int for each notification that you must define
-                        notificationManager.notify(1, mBuilder.build());
-
-                        item.setEnabled(true);
-                    }
-                }, 30000);//30 menit // Millisecond 1000 = 1 sec
+            ClickSound.getInstance().playSound();
+            if (prefs.getBoolean("canWatchAds", true)) {
+                rewardads();
+                //item.setEnabled(false);
+                scheduleNotification(getNotification("Ayo dapatkan 10 Chance Answer"), 1500000);
+            } else {
+                Toasty.warning(getApplicationContext(), "Ups, kamu terlalu sering menonton iklan", Toast.LENGTH_SHORT, true).show();
             }
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//
+//                        Intent intent = new Intent(QuestActivity.this, QuestActivity.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                        PendingIntent pendingIntent = PendingIntent.getActivity(QuestActivity.this, 0, intent, 0);
+//
+//                        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(QuestActivity.this)
+//                                .setSmallIcon(R.mipmap.ic_launcher_foreground)
+//                                .setContentTitle("Ads Tersedia")
+//                                .setContentText("Segara dapatkan 10 chance answer")
+//                                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+//                                // Set the intent that will fire when the user taps the notification
+//                                .setContentIntent(pendingIntent)
+//                                .setAutoCancel(true);
+//                        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(QuestActivity.this);
+//
+//                        // notificationId is a unique int for each notification that you must define
+//                        notificationManager.notify(1, mBuilder.build());
+//
+//                        item.setEnabled(true);
+//                    }
+//                }, 30000);//30 menit // Millisecond 1000 = 1 sec
+        }
 
 
 
@@ -190,12 +198,13 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
     @Override
     public void onRewarded(RewardItem reward) {
         int oldLife = prefs.getInt("changeAnswer", 5);
-        SharedPreferences.Editor editor = prefs.edit();
+        Editor editor = prefs.edit();
         editor.putInt("changeAnswer", oldLife + 10);
         editor.apply();
 
-        Toast.makeText(getApplicationContext(),"Anda mendapatkan 10 chance answer",Toast.LENGTH_SHORT).show();
-
+        Toasty.success(getApplicationContext(), "Anda mendapatkan 10 chance answer", Toast.LENGTH_SHORT, true).show();
+        editor.putBoolean("canWatchAds" , false);
+        editor.apply();
         // Reward the user.
     }
 
@@ -237,25 +246,51 @@ public class QuestActivity extends AppCompatActivity implements RewardedVideoAdL
         fancy.setTitle("Kesempatan Menjawab");
         fancy.setBackgroundColor(Color.parseColor("#ffffff")) ;
         fancy.setMessage("Tersisa " + changeAnswer + " Kesempatan!");
+        fancy.setNegativeBtnBackground(Color.parseColor("#4c4b4d"));
         fancy.setPositiveBtnBackground(Color.parseColor("#E51F28"));
         fancy.setPositiveBtnText("Ok");
         fancy.setNegativeBtnText("Tutup");
         fancy.setAnimation(Animation.POP);
         fancy.isCancellable(true);
-        fancy.setIcon(R.mipmap.ic_launcher_round, Icon.Visible);
+        fancy.setIcon(R.mipmap.ic_chance_answer_round, Icon.Visible);
         fancy.OnPositiveClicked(new FancyAlertDialogListener() {
             @Override
             public void OnClick() {
-
+                ClickSound.getInstance().playSound();
             }
         });
         fancy.OnNegativeClicked(new FancyAlertDialogListener() {
             @Override
             public void OnClick() {
-
+                ClickSound.getInstance().playSound();
             }
         });
         fancy.build();
+    }
+
+    private void scheduleNotification(Notification notification, int delay) {
+
+        Intent notificationIntent = new Intent(this, NotificationPublisher.class);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        long futureInMillis = SystemClock.elapsedRealtime() + delay;
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
+    }
+
+    private Notification getNotification(String content) {
+        Intent intent = new Intent(QuestActivity.this, QuestActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(QuestActivity.this, 0, intent, 0);
+
+        Notification.Builder builder = new Notification.Builder(this);
+        builder.setContentTitle("Iklan Tersedia");
+        builder.setContentText(content);
+        builder.setContentIntent(pendingIntent);
+        builder.setSmallIcon(R.mipmap.ic_launcher_round);
+        return builder.build();
     }
 
 }

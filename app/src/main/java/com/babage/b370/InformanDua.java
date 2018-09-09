@@ -60,6 +60,8 @@ public class InformanDua extends AppCompatActivity {
         btnc = findViewById(R.id.btnC);
         imgv = findViewById(R.id.imgv);
 
+        ClickSound.getInstance().init(getApplicationContext());
+
         imagesList.add("https://image.ibb.co/bE84n9/P1010280_min.jpg");
         imagesList.add("https://image.ibb.co/c2apLU/P1010279_min.jpg");
         imagesList.add("https://image.ibb.co/n4i10U/P1010270_min.jpg");
@@ -87,9 +89,8 @@ public class InformanDua extends AppCompatActivity {
         btnv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ClickSound.getInstance().playSound();
                 goVideo();
-
 
             }
         });
@@ -97,9 +98,8 @@ public class InformanDua extends AppCompatActivity {
         btng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ClickSound.getInstance().playSound();
                 goGallery();
-
 
             }
         });
@@ -107,9 +107,8 @@ public class InformanDua extends AppCompatActivity {
         btnc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                ClickSound.getInstance().playSound();
                 goChat();
-
 
             }
         });
@@ -117,6 +116,7 @@ public class InformanDua extends AppCompatActivity {
         imgv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ClickSound.getInstance().playSound();
                 goInformation();
             }
         });
@@ -152,7 +152,7 @@ public class InformanDua extends AppCompatActivity {
         fancy.OnPositiveClicked(new FancyAlertDialogListener() {
             @Override
             public void OnClick() {
-
+                ClickSound.getInstance().playSound();
                 int oldLife = prefs.getInt("changeAnswer", 5);
                 if (oldLife==0){
                     Toasty.error(getApplicationContext(), "Kesempatan Jawab Anda Habis!", Toast.LENGTH_SHORT, true).show();
@@ -167,7 +167,7 @@ public class InformanDua extends AppCompatActivity {
                 .OnNegativeClicked(new FancyAlertDialogListener() {
                     @Override
                     public void OnClick() {
-
+                        ClickSound.getInstance().playSound();
                     }
                 })
                 .build();
@@ -188,6 +188,7 @@ public class InformanDua extends AppCompatActivity {
                     okButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            ClickSound.getInstance().playSound();
                             dialog.dismiss();
                         }
                     });
@@ -216,7 +217,7 @@ public class InformanDua extends AppCompatActivity {
         alertDialogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                ClickSound.getInstance().playSound();
                 if ((userName.getText().toString().equals("bejo")) && (passWord.getText().toString().equals("123"))) {
 
                     Intent i = new Intent(InformanDua.this,LevelTwo.class);
@@ -240,6 +241,7 @@ public class InformanDua extends AppCompatActivity {
         }).setNegativeButton("BACK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                ClickSound.getInstance().playSound();
                 dialog.cancel();
             }
         }).show();

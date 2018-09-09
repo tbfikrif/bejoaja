@@ -90,8 +90,6 @@ public class LevelTwo extends AppCompatActivity {
         final MediaPlayer voice1 = MediaPlayer.create(LevelTwo.this, R.raw.voice_lvl2_1);
         final MediaPlayer voice2 = MediaPlayer.create(LevelTwo.this, R.raw.voice_lvl2_2);
 
-
-
         lstView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

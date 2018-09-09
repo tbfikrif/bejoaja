@@ -23,7 +23,7 @@ public class IntroScreen extends Activity {
     private static int WELCOME_TIMEOUT = 18300;
     ConstraintLayout cd;
     MediaPlayer keystroke;
-
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class IntroScreen extends Activity {
         Effects.getInstance().init(getApplicationContext());
         Effects.getInstance().playSound();
 
-           final Handler handler = new Handler();
+           handler = new Handler();
 
            handler.postDelayed(new Runnable() {
                @Override
@@ -69,5 +69,14 @@ public class IntroScreen extends Activity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        handler.removeCallbacksAndMessages(null);
+        Intent mainGo = new Intent(IntroScreen.this, MainActivity.class);
+        Effects.getInstance().stopSound();
+        startActivity(mainGo);
+        finish();
     }
 }
